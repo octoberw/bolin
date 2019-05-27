@@ -1,0 +1,131 @@
+/* pages/myClean/myClean.wxss */
+.myCleanflex {
+    display: flex;
+    flex-flow: row nowrap;
+    font-size: 26rpx;
+    padding: 30rpx 30rpx 40rpx 30rpx;
+    background-color: #fff
+}
+
+.myCleanflex view {
+    padding-right: 43rpx;
+    color: #999;
+}
+
+.fontColor {
+    font-weight: 700;
+    color: #333 !important
+}
+
+.myCleanBody {
+    background-color: #f2f2f2;
+    padding: 40rpx 30rpx;
+}
+
+.myCleanList {
+    background-color: #fff;
+    padding: 30rpx 20rpx;
+    border-radius: 6rpx;
+    margin-bottom: 30rpx;
+}
+
+.myCleanListFlex {
+    display: flex;
+    flex-flow: row nowrap;
+    padding-bottom: 42rpx;
+    border-bottom: 1px solid #f2f2f2;
+}
+
+.myCleanImage {
+    width: 110rpx;
+    height: 110rpx;
+    border-radius: 50%;
+    overflow: hidden;
+    background-color: #aaa;
+    margin-right: 14rpx;
+}
+
+.myCleanRight {
+    flex: 1;
+}
+
+.myCleanS {
+    display: flex;
+    align-items: center
+}
+
+.myCleanName {
+    font-size: 28rpx;
+    font-weight: 700;
+    color: #333;
+    margin-right: 15rpx;
+}
+
+.myCleanJP {
+    display: inline-block;
+    font-size: 22rpx;
+    color: #fbdaa2;
+    padding: 8rpx 18rpx;
+    background-color: #1a1a1a;
+    border-radius: 26rpx;
+    line-height:24rpx;
+}
+
+.myCleanState {
+    font-size: 22rpx;
+    color: #999;
+    flex: 1;
+    text-align: right;
+}
+
+.myCleanDate {
+    font-size: 22rpx;
+    color: #333;
+    margin-top: 14rpx;
+}
+
+.myCleanTimes {
+    font-size: 20rpx;
+    color: #999;
+    margin-top: 7rpx;
+    margin-right: 10rpx;
+}
+
+.myCleanX {
+    display: flex;
+    align-items: flex-start
+}
+
+.myCleanXRight {
+    flex: 1;
+    line-height: 25rpx;
+    text-align: right;
+}
+
+.myCleanXRight>text:first-child {
+    font-size: 22rpx;
+    color: #333;
+}
+
+.myCleanXRight>text:last-child {
+    font-size: 32rpx;
+    color: #333;
+}
+
+.myCleanBtn {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.myCleanBtn button {
+    margin: 20rpx 0 0 0;
+    padding: 14rpx 40rpx;
+    font-size: 20rpx;
+    color: #333;
+    line-height: 1;
+    background-color: #fff;
+}
+
+.myCleanBtn>button:first-child {
+    margin-right: 10rpx;
+}

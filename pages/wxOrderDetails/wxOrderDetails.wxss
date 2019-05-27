@@ -1,0 +1,278 @@
+/* pages/wxOrderDetails/wxOrderDetails.wxss */
+/* pages/myCleanDetails/myCleanDetails.wxss */
+.myCleanListFlexHei {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: center;
+    padding: 42rpx 30rpx;
+    background-color: #333;
+}
+
+.myCleanListFlexHui {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: center;
+    padding: 42rpx 30rpx;
+    background-color: #666;
+}
+
+.flex_column {
+    display: flex;
+    flex-flow: column nowrap;
+}
+
+.flex_row {
+    display: flex;
+    justify-content: space-between;
+}
+
+.myCleanRight {
+    flex: 1;
+}
+
+.myCleanS {
+    display: flex;
+    align-items: flex-start
+}
+
+.myCleanName {
+    font-size: 22rpx;
+    color: #999;
+}
+
+.size_22_333 {
+    font-size: 22rpx;
+    color: #333;
+}
+
+.myCleanJP {
+    font-size: 22rpx;
+    color: #fbdaa2;
+}
+
+.myCleanState {
+    font-size: 22rpx;
+    color: #fff;
+    flex: 1;
+    text-align: right;
+}
+
+.myCleanTimes {
+    font-size: 32rpx;
+    color: #fff;
+}
+
+.myCleanX {
+    display: flex;
+    align-items: flex-start;
+    margin-top: 20rpx;
+}
+
+.myCleanXRight {
+    flex: 1;
+    line-height: 25rpx;
+    text-align: right;
+    color: #fff;
+}
+
+.align_right {
+    text-align: right;
+    margin-top: 30rpx;
+    color: #333;
+}
+
+
+.bgc-val {
+    display: flex;
+    flex-flow: column nowrap;
+    background-color: #fff;
+}
+
+.com-title {
+    font-size: 26rpx;
+    color: #333;
+    font-weight: 700;
+}
+
+.com-xx {
+    text-align: center;
+    font-size: 46rpx;
+    color: #fbdaa2;
+}
+
+.com-xx>text {
+    padding: 0 6rpx;
+}
+
+.com-fw {
+    display: flex;
+    flex-flow: row wrap;
+}
+
+.com-fw>text {
+    font-size: 18rpx;
+    color: #999;
+    padding: 15rpx 20rpx;
+    border-radius: 6rpx;
+    border: 1rpx solid #ddd;
+    margin-right: 12rpx;
+    margin-top: 20rpx;
+}
+
+.click-fw {
+    background-color: #333;
+    color: #fff !important;
+    border: 0;
+}
+
+.com-val {
+    box-sizing: border-box;
+    width: 100%;
+    padding: 20rpx 0;
+}
+
+.com-img {
+    display: block;
+    width: 120rpx;
+    height: 120rpx;
+    border-radius: 6rpx;
+    border: 1rpx dotted #ddd;
+    margin-top: 28rpx;
+    background-color: #eaeaea;
+}
+
+.com-img>text {
+    font-size: 47rpx;
+    color: #999;
+}
+
+.myCleanXRight>text:first-child {
+    font-size: 22rpx;
+}
+
+.myCleanXRight>text:last-child {
+    font-size: 32rpx;
+}
+
+.bgc {
+    background-color: #f2f2f2;
+}
+
+.details_dz {
+    display: flex;
+    background-color: #fff;
+    font-size: 26rpx;
+    padding: 30rpx;
+}
+
+.details_dz>text:first-child {
+    color: #333;
+    margin-right: 40rpx;
+}
+
+.details_dz>text:last-child {
+    color: #999;
+    flex: 1;
+}
+
+.details_fw {
+    display: flex;
+}
+
+.details_fw_right {
+    flex: 1;
+    text-align: right;
+}
+
+.inBotton {
+    padding-bottom: 30rpx;
+    border-bottom: 1rpx solid #f2f2f2;
+}
+
+.size_24_333 {
+    font-size: 24rpx;
+    color: #333;
+}
+
+.size_24_999 {
+    font-size: 24rpx;
+    color: #999;
+}
+
+.padding_right {
+    padding-right: 20rpx;
+}
+
+.fw_date {
+    font-size: 26rpx;
+    color: #333;
+}
+
+.fw_time {
+    padding: 15rpx 14rpx;
+    font-size: 20rpx;
+    color: #333;
+    border: 1rpx solid #f2f2f2;
+    border-radius: 6rpx;
+    margin-left: 16rpx;
+}
+
+.footerHei {
+    position: fixed;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-around;
+    bottom: 0;
+    width: 100%;
+    font-size: 32rpx;
+    color: #fbdaa2;
+    text-align: center;
+    padding: 34rpx 0;
+    background-color: #333;
+}
+
+.text_right {
+    text-align: right;
+}
+
+.margin_maxTop {
+    margin-top: 18rpx;
+}
+
+.margin_smallTop {
+    margin-top: 2rpx;
+}
+
+.border_bottom {
+    border-bottom: 18rpx solid #f2f2f2;
+}
+
+.input-placeholder {
+    font-size: 22rpx;
+    color: #999;
+}
+
+.bgc_fff {
+    background-color: #fff;
+}
+
+.footImage {
+    width: 422rpx;
+    height: 57rpx;
+    padding: 57rpx 0;
+    margin: 0 auto;
+    display: block;
+    padding-bottom: 170rpx;
+}
+
+.popup-text {
+    box-sizing: border-box;
+    width: 100%;
+    height: 176rpx;
+    padding: 20rpx;
+    font-size: 22rpx;
+    border-radius: 4rpx;
+    border: 1rpx solid #f2f2f2;
+}

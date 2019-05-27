@@ -1,0 +1,76 @@
+<!-- pages/myCleanCommentDone/myCleanCommentDone.wxml -->
+<scroll-view class="scrollView" scroll-x="false" scroll-y="false" upper-threshold="50" lower-threshold="50" scroll-top="0" scroll-left="0" scroll-into-view="" scroll-with-animation="false" enable-back-to-top="false" bindscrolltoupper="" bindscrolltolower="" bindscroll="">
+    <view class="myCleanListFlexHei">
+        <image class="myCleanImage" src="../../image/image_ay1.png" mode="cover"></image>
+        <view class="myCleanRight">
+            <view class="myCleanS">
+                <text class="myCleanName">李阿姨</text>
+                <text class="myCleanJP">金牌保洁人</text>
+                <text class="myCleanState">待服务</text>
+            </view>
+            <view class="myCleanX">
+                <text class="myCleanTimes">好评率:96 | 5人已预约</text>
+                <view class="myCleanXRight">
+                    <text c lass="">￥</text>
+                    <text class="">30.00</text>
+                </view>
+            </view>
+        </view>
+    </view>
+    <view class="details_dz">
+        <text class="">服务地址</text>
+        <text class="">广州市海珠区阅江路琶洲塔公园旁保利天悦花园A栋113-11楼</text>
+    </view>
+    <view class="details_dz margin_maxTop">
+        <text class="">联系电话</text>
+        <text class="text_right">12222222222</text>
+    </view>
+    <view class="details_dz margin_smallTop details_fw">
+        <text class="">服务单价</text>
+        <view class="details_fw_right">
+            <text class="rmb">￥</text>
+            <text class="rmb_y">15</text>
+            <text class="rmb_t">/小时</text>
+        </view>
+    </view>
+    <view class="details_dz margin_smallTop">
+        <text class="">服务时间</text>
+        <view class="details_fw_right">
+            <text class="fw_date">2019/08/09</text>
+            <text class="fw_time">15:00~16:00</text>
+            <text class="fw_time">16:00~17:00</text>
+        </view>
+    </view>
+    <view class="details_dz margin_maxTop">
+        <text class="">服务单号</text>
+        <text class="text_right">4005666666666666</text>
+    </view>
+    <view class="details_dz margin_smallTop">
+        <text class="">下单时间</text>
+        <text class="text_right">2019/08/09</text>
+    </view>
+    <view class="details_dz margin_smallTop border_bottom">
+        <text class="">完成时间</text>
+        <text class="text_right">2019/08/09</text>
+    </view>
+    <view class="details_dz">
+        <text class="">我的评价:</text>
+        <view class="pj_flex">
+            <view class="pj_xx">
+                <text class="iconfont iconicon_xingxing"></text>
+                <text class="iconfont iconicon_xingxing"></text>
+                <text class="iconfont iconicon_xingxing"></text>
+                <text class="iconfont iconicon_xingxing"></text>
+                <text class="iconfont iconicon_xingxing"></text>
+            </view>
+            <view class="">
+                <text class="fw_time fw_time_left">服务非常到位</text>
+                <text class="fw_time fw_time_left">态度很好</text>
+            </view>
+            <text class="pj_val">平时工作太忙，没时间打扫卫生，预约保洁阿姨后很快就上门开始清洁工作了，边角缝隙处都很仔细打扫，地板非常干净！太赞了！</text>
+            <text class="pj_val">平时工作太忙，没时间打扫卫生，预约保洁阿姨后很快就上门开始清洁工作了，边角缝隙处都很仔细打扫，地板非常干净！太赞了！</text>
+            <text class="pj_val">平时工作太忙，没时间打扫卫生，预约保洁阿姨后很快就上门开始清洁工作了，边角缝隙处都很仔细打扫，地板非常干净！太赞了！</text>
+        </view>
+    </view>
+</scroll-view>
+<view class="footerHui">已完成</view>

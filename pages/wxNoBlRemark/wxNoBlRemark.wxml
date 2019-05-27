@@ -1,0 +1,15 @@
+<!-- pages/wxNoBlRemark/wxNoBlRemark.wxml -->
+<view class="title-border"></view>
+<view class="bgc-val">
+    <view class="com-val">
+        <textarea name="" id="" placeholder="请填写备注信息..." catchtouchmove='{{true}}'></textarea>
+        <button class="com-img">
+            <text class="iconfont iconicon_zengjiatupian"></text>
+        </button>
+    </view>
+    <view class="com-fw">
+        <text class="">需要电工胶带以及钳子</text>
+        <text class="">天花板脱离需要扶梯</text>
+    </view>
+</view>
+<view class="com-foot" catchtap="gotoNoBlOrder">提交</view>

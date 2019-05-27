@@ -1,0 +1,40 @@
+<!-- pages/wxOrderList/wxOrderList.wxml -->
+<view class="myCleanflex title-border">
+    <view data-num="{{index}}" class="{{num==index?'fontColor':''}}" wx:for="{{arr}}" wx:key="index" bindtap="bindViewTap">
+        {{item}}
+    </view>
+</view>
+<view class="myCleanBody" catchtap="gotoDetails">
+    <view class="myCleanList" wx:for="{{cleaner}}" wx:key="item.id" bindtap="gotoWxDetails">
+        <view class="myCleanListFlex">
+            <view class="myCleanRight">
+                <view class="myCleanS">
+                    <text class="font_28_333">地漏维修(检测)</text>
+                    <text class="myCleanState">待服务</text>
+                </view>
+                <view class="myCleanX">
+                    <view class="myCleanDate">服务时间</view>
+                    <view class="myCleanTimes">2019/08/09</view>
+                    <block wx:for="{{item.times}}" wx:key="index">
+                        <text class="myCleanTimes">{{item}}</text>
+                    </block>
+                </view>
+                <view class="myCleanX" style="margin-top:12rpx;">
+                    <view class="myCleanDate">联系电话</view>
+                    <view class="myCleanTimes">13149333333</view>
+                </view>
+                <view class="myCleanX" style="margin-top:12rpx;">
+                    <view class="myCleanDate">服务地址</view>
+                    <view class="myCleanTimes overflowEllipsis">广东省广州市海珠区金碧花园12层层层层层层层层</view>
+                    <view class="myCleanXRight">
+                        <text class="">￥</text>
+                        <text class="">30.00</text>
+                    </view>
+                </view>
+            </view>
+        </view>
+        <view class="myCleanBtn">
+            <button catchtap="gotoComment">立即评论</button>
+        </view>
+    </view>
+</view>

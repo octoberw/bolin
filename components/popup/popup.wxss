@@ -1,0 +1,59 @@
+/* components/popup/popup.wxss */
+.popup-bgc {
+    position: absolute;
+    width: 100vw;
+    /* height: 100vh; */
+    height: 140vh;
+    z-index: 100;
+    background-color: rgba(0, 0, 0, .2);
+    top: 0;
+    left: 0;
+}
+
+.popup-val {
+    position: fixed;
+    width: 440rpx;
+    z-index: 999;
+    top: 50%;
+    left: 50%;
+    padding: 50rpx 25rpx;
+    transform: translate(-50%, -50%);
+    background-color: #fff;
+    border-radius: 6rpx;
+}
+
+.popup-title {
+    display: block;
+    font-size: 32rpx;
+    font-weight: 700;
+    color: #333;
+    text-align: center;
+    margin-bottom: 28rpx;
+}
+
+.popup-foot {
+    display: flex;
+    justify-content: space-around;
+}
+
+.popup-foot>view {
+    width: 100%;
+    padding: 18rpx 0;
+    margin: 0;
+    margin-top: 50rpx;
+    border: 0;
+    border-radius: 6rpx;
+    text-align: center;
+    font-size: 22rpx;
+    line-height: 22rpx;
+}
+
+.popup-foot>view:first-child {
+    background-color: #ddd;
+    color: #999;
+}
+
+.popup-foot>view:last-child {
+    background-color: #333;
+    color: #fbdaa2;
+}

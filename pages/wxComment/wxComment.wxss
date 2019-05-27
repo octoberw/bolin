@@ -1,0 +1,102 @@
+/* pages/wxComment/wxComment.wxss */
+.tap_border {
+    border-top: 1px solid #ddd;
+}
+
+.title {
+    display: inline-block;
+    padding: 60rpx 28rpx 0 28rpx;
+    font-size: 32rpx;
+    font-weight: 700;
+}
+
+.border_bottom {
+    border-bottom: 1rpx solid #ddd;
+}
+
+.big_border_bottom>view:last-child {
+    border-bottom: 20rpx solid #f2f2f2;
+}
+
+.flex_row {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+}
+
+.flex_column {
+    display: flex;
+    flex-flow: column nowrap;
+}
+
+.flex_one {
+    flex: 1;
+}
+
+.val_padding {
+    padding: 48rpx 28rpx 30rpx 28rpx;
+}
+
+.image_tx {
+    width: 85rpx;
+    height: 85rpx;
+    border-radius: 50%;
+    background-color: #aaa;
+    margin-right: 18rpx;
+}
+
+.phone_size {
+    font-size: 24rpx;
+    color: #333;
+}
+
+.xingxing_size {
+    font-size: 24rpx;
+    color: #fbdaa2;
+}
+
+.xingxing_size>text {
+    margin-right: 8rpx;
+}
+
+.time_size {
+    font-size: 20rpx;
+    color: #999;
+}
+
+.val_size {
+    padding-top: 10rpx;
+    font-size: 24rpx;
+    color: #333;
+    line-height: 36rpx;
+}
+
+.style_phone {
+    justify-content: space-between;
+}
+
+.val_image {
+    margin-top: 28rpx;
+}
+
+.val_image>image {
+    width: 80rpx;
+    height: 80rpx;
+    margin-right: 10rpx;
+    background-color: #aaa;
+    border-radius: 3rpx;
+}
+
+.align_self_right {
+    align-self: flex-end;
+}
+
+.align_self_right>text {
+    font-size: 26rpx;
+    color: #333;
+}
+
+.align_self_right>text:first-child {
+    font-size: 36rpx;
+    margin-right: 10rpx;
+}

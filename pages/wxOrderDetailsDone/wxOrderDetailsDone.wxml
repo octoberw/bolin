@@ -1,0 +1,103 @@
+<view class="myCleanListFlexHei">
+    <view class="flex_column">
+        <text class="myCleanName" style="color:#fff">服务单号</text>
+        <text class="myCleanJP">4005666666666666</text>
+    </view>
+    <text class="myCleanTimes">已完成</text>
+</view>
+<view class="bgc">
+    <view class="details_dz">
+        <text class="">服务地址</text>
+        <text class="">广州市海珠区阅江路琶洲塔公园旁保利天悦花园A栋113-11楼</text>
+    </view>
+    <view class="details_dz margin_maxTop">
+        <text class="">联系电话</text>
+        <text class="text_right">12222222222</text>
+    </view>
+    <view class="details_dz margin_smallTop">
+        <text class="">服务时间</text>
+        <view class="details_fw_right">
+            <text class="fw_date">2019/08/09</text>
+            <text class="fw_time">15:00~16:00</text>
+            <text class="fw_time">16:00~17:00</text>
+        </view>
+    </view>
+    <view class="details_dz margin_maxTop flex_column">
+        <text class="inBotton" style="margin-right:0">服务项目</text>
+        <view class="inBotton margin_maxTop">
+            <view class="flex_row">
+                <view class="">
+                    <text class="size_24_333 padding_right">地漏维修</text>
+                    <text class="size_24_999">检测 (￥20.00/项)</text>
+                </view>
+                <view class="">
+                    <text class="size_24_333">1.0</text>
+                    <text class="size_24_999">/个</text>
+                </view>
+            </view>
+            <view class="flex_row">
+                <view class="">
+                    <text class="size_24_333 padding_right">其他</text>
+                    <text class="size_24_999">积分 (满100抵购0.1元)</text>
+                </view>
+                <view class="">
+                    <text class="size_24_333">-￥5</text>
+                    <text class="size_24_999">元</text>
+                </view>
+            </view>
+        </view>
+        <view class="align_right">
+            <text class="myCleanName">实付：</text>
+            <text class="size_22_333">￥</text>
+            <text class="">15</text>
+            <text class="myCleanName">元</text>
+        </view>
+    </view>
+    <view class="details_dz margin_maxTop flex_column">
+        <text class="inBotton" style="margin-right:0">服务项目</text>
+        <view class="bgc-val">
+            <view class="com-fw">
+                <text class="">地板修复</text>
+                <text class="">瓷砖脱落</text>
+                <text class="">地板修复</text>
+                <text class="">地漏堵塞</text>
+            </view>
+            <view class="com-val">
+                <text class="size_22_333">状况描述：</text>
+                <text class="myCleanName">家里天花板脱离，客厅、次卧、书房的天花板有很多地方脱落，阳台最为严重，需要尽快检查！</text>
+                <image class="com-img" src="" mode="aspectFit|aspectFill|widthFix"></image>
+            </view>
+        </view>
+    </view>
+    <view class="details_dz margin_maxTop border_bottom">
+        <text class="">下单时间</text>
+        <text class="text_right">2019/08/09</text>
+    </view>
+    <view class="details_dz flex_column border_bottom">
+        <text class="inBotton" style="margin-right:0">服务评价</text>
+        <view class="flex_row xingxing_padding_35" style="justify-content:flex-start;align-items:center">
+            <text class="phone_size">我的评价：</text>
+            <view class="xingxing_size">
+                <text class="iconfont iconicon_xingxing"></text>
+                <text class="iconfont iconicon_xingxing"></text>
+                <text class="iconfont iconicon_xingxing"></text>
+                <text class="iconfont iconicon_xingxing"></text>
+                <text class="iconfont iconicon_xingxing"></text>
+            </view>
+        </view>
+        <view class="bgc-val">
+            <view class="com-fw">
+                <text class="">服务态度很好</text>
+                <text class="">平台很专业</text>
+            </view>
+            <view class="com-val">
+                <text class="size_22_333">评价详情：</text>
+                <text class="myCleanName">师傅维修得很好，一开就觉得是一个很油经验的人，他还会提供很多保养信息，下次继续选择泊邻维修！</text>
+                <image class="com-img" src="" mode="aspectFit|aspectFill|widthFix"></image>
+            </view>
+        </view>
+    </view>
+    <view class="bgc_fff">
+        <image class="footImage" src="../../image/wx/img_dibulianxi.png" mode="aspectFit"></image>
+    </view>
+</view>

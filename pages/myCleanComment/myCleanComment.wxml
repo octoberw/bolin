@@ -1,0 +1,54 @@
+<!--pages/myCleanComment/myCleanComment.wxml-->
+<view class="myCleanListFlexHei">
+    <image class="myCleanImage" src="../../image/image_ay1.png" mode="cover"></image>
+    <view class="myCleanRight">
+        <view class="myCleanS">
+            <text class="myCleanName">李阿姨</text>
+            <text class="myCleanJP">金牌保洁人</text>
+            <text class="myCleanState">待服务</text>
+        </view>
+        <view class="myCleanX">
+            <text class="myCleanTimes">好评率:96 | 5人已预约</text>
+            <view class="myCleanXRight">
+                <text class="">￥</text>
+                <text class="">30.00</text>
+            </view>
+        </view>
+    </view>
+</view>
+<view class="bgc">
+    <view class="details_dz">
+        <text class="">服务地址</text>
+        <text class="">广州市海珠区阅江路琶洲塔公园旁保利天悦花园A栋113-11楼</text>
+    </view>
+    <view class="details_dz margin_maxTop">
+        <text class="">联系电话</text>
+        <text class="text_right">12222222222</text>
+    </view>
+    <view class="details_dz margin_smallTop details_fw">
+        <text class="">服务单价</text>
+        <view class="details_fw_right">
+            <text class="rmb">￥</text>
+            <text class="rmb_y">15</text>
+            <text class="rmb_t">/小时</text>
+        </view>
+    </view>
+    <view class="details_dz margin_smallTop">
+        <text class="">服务时间</text>
+        <view class="details_fw_right">
+            <text class="fw_date">2019/08/09</text>
+            <text class="fw_time">15:00~16:00</text>
+            <text class="fw_time">16:00~17:00</text>
+        </view>
+    </view>
+    <view class="details_dz margin_maxTop">
+        <text class="">服务单号</text>
+        <text class="text_right">4005666666666666</text>
+    </view>
+    <view class="details_dz margin_smallTop border_bottom">
+        <text class="">下单时间</text>
+        <text class="text_right">2019/08/09</text>
+    </view>
+</view>
+<view class="footerHei" bindtap="showComment">立即评论</view>
+<comment id="comment" catchsuccess="_hideComSucc" catcherror="_hideComErr"></comment>

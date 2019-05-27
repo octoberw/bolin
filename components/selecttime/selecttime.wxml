@@ -1,0 +1,55 @@
+<!--components/selectTime/selectTime.wxml-->
+<view class="time_bgc" style="display:{{hideview}}" catchtouchmove='{{true}}'>
+    <view class="time_sel_bgc">
+        <view class="time_sel_sjd">
+            <text class="">请选择时间段</text>
+            <text class="">已选择 13:00~14:00</text>
+        </view>
+        <view class="time_flex">
+            <view class="time_sel_day">
+                <text>4月10日 今天</text>
+                <text>4月10日 周二</text>
+                <text>4月10日 周三</text>
+                <text>4月10日 周四</text>
+                <text>4月10日 周五</text>
+                <text>4月10日 周六</text>
+                <text>4月10日 周日</text>
+            </view>
+            <!-- <scroll-view class="" scroll-y> -->
+                <view class="time_sel_right" ref="timeWrap">
+                    <view class="time_sel_right_val">
+                        <view>
+                            <text class="">上午</text>
+                            <view>
+                                <text class="huise">8:00~9:00</text>
+                                <text>9:00~10:00(已约满)</text>
+                                <text class="">10:00~11:00(已约满)</text>
+                                <text class="">11:00~12:00(已约满)</text>
+                            </view>
+                        </view>
+                        <view>
+                            <text class="">下午</text>
+                            <view>
+                                <text class="bg">13:00~14:00</text>
+                                <text class="">14:00~15:00</text>
+                                <text class="">15:00~16:00</text>
+                                <text class="">16:00~17:00</text>
+                            </view>
+                        </view>
+                        <view class="padding-bottom">
+                            <text class="">晚上</text>
+                            <view>
+                                <text class="">19:00~20:00</text>
+                                <text class="">20:00~21:00</text>
+                                <text class="">21:00~22:00</text>
+                            </view>
+                        </view>
+                    </view>
+                </view>
+            <!-- </scroll-view> -->
+        </view>
+        <view>
+            <view class="foot" bindtap="_success">确认</view>
+        </view>
+    </view>
+</view>

@@ -1,0 +1,113 @@
+<!-- pages/wxMTST/wxMTST.wxml -->
+<image class="title_image" src="../../image/wx/img_xqybanner.png" mode="aspectFit|aspectFill|widthFix" lazy-load="false" binderror="" bindload=""></image>
+<view class="padding_bottom">
+    <view class="flex_row border_ddd">
+        <text class="text_width border_ddd_right border_ddd_bottom bgc_f2f2f2">项目名称</text>
+        <text class="text_width border_ddd_right border_ddd_bottom bgc_f2f2f2">非泊邻价格</text>
+        <text class="text_width border_ddd_bottom bgc_f2f2f2">泊邻价格</text>
+        <text class="text_width border_ddd_right color_333">马桶检测</text>
+        <text class="text_width border_ddd_right color_333">￥20</text>
+        <view class="text_width color_333">
+            <text class="" style="margin-right:6rpx;">￥0</text>
+            <text class="" style="font-size:16rpx; text-decoration:line-through;">￥20</text>
+        </view>
+    </view>
+    <view class="flex_column" style="padding-top:28rpx">
+        <text class="title_font">温馨提示</text>
+        <text class="val_font">1.该价格仅为检测费用，专业维修人员将会评估维修情况及难容程度，进行报维修价格，泊邻用户可以0元享受检测服务，非泊邻用户需支付相应检测费用。
+        </text>
+    </view>
+</view>
+<view class="padding_bottom" style="padding-bottom:60rpx">
+    <view class="flex_column flex_column_center">
+        <text class="title">服务说明</text>
+        <text class="little_title">多种类别，多种选择</text>
+    </view>
+    <view class="flex_row border_ddd" style="border-radius=0;">
+        <text class="text_width border_ddd_right border_ddd_bottom color_fff bgc_333">项目名称</text>
+        <text class="text_width border_ddd_right border_ddd_bottom color_fff bgc_333">价格</text>
+        <text class="text_width border_ddd_bottom color_fff bgc_333">上门起步</text>
+        <text class="text_width border_ddd_right border_ddd_bottom">水龙头维修(普修)</text>
+        <text class="text_width border_ddd_right border_ddd_bottom">￥50/个起</text>
+        <text class="text_width border_ddd_bottom "></text>
+        <text class="text_width border_ddd_right border_ddd_bottom">水龙头维修(混水)</text>
+        <text class="text_width border_ddd_right border_ddd_bottom">￥70/个起</text>
+        <text class="text_width border_ddd_bottom "></text>
+        <text class="text_width border_ddd_right border_ddd_bottom">龙头断丝处理</text>
+        <text class="text_width border_ddd_right border_ddd_bottom">￥150起</text>
+        <text class="text_width border_ddd_bottom "></text>
+        <text class="text_width border_ddd_right border_ddd_bottom">感应龙头安装</text>
+        <text class="text_width border_ddd_right border_ddd_bottom">￥80/个起</text>
+        <text class="text_width border_ddd_bottom "></text>
+        <text class="text_width border_ddd_right border_ddd_bottom">花洒/沐浴头安装</text>
+        <text class="text_width border_ddd_right border_ddd_bottom">￥80/套起</text>
+        <text class="text_width border_ddd_bottom "></text>
+        <text class="text_width border_ddd_right border_ddd_bottom">面盆水龙头</text>
+        <text class="text_width border_ddd_right border_ddd_bottom">￥60/个</text>
+        <text class="text_width border_ddd_bottom ">￥80起</text>
+        <text class="text_width border_ddd_right border_ddd_bottom">洗衣机龙头</text>
+        <text class="text_width border_ddd_right border_ddd_bottom">￥25/个</text>
+        <text class="text_width border_ddd_bottom ">￥80起</text>
+        <text class="text_width border_ddd_right border_ddd_bottom">三角阀</text>
+        <text class="text_width border_ddd_right border_ddd_bottom">￥25/个</text>
+        <text class="text_width border_ddd_bottom ">￥80起</text>
+        <text class="text_width border_ddd_right ">龙头单件拆除</text>
+        <text class="text_width border_ddd_right ">￥12/个</text>
+        <text class="text_width">￥80起</text>
+    </view>
+</view>
+<image class="" src="../../image/wx/img_xiangqingye.png" style="width:100%;height:805rpx;border-bottom: 20rpx solid #f2f2f2;"></image>
+<view class="padding_bottom">
+    <view class="flex_column flex_column_center" style="margin-bottom:40rpx;">
+        <text class="title">服务流程 · 下单须知</text>
+        <text class="little_title">泊邻用户优享免费检测</text>
+    </view>
+    <image class="" src="../../image/wx/img_liucheng.png" style="width:100%;height:319rpx"></image>
+    <view class="flex_column">
+        <text class="" style="font-size:22rpx;color:#333;font-weight:700;margin-top:40rpx">
+            下单须知：
+        </text>
+        <view class="flex_column font_18rpx margin_top">
+            <text class="">1.预约服务</text>
+            <text class="color_999">请您在下单后15分钟内完成支付，若您未完成支付，系统会自动取消您的订单</text>
+        </view>
+        <view class="flex_column font_18rpx margin_top">
+            <text class="">2.服务取消</text>
+            <text class="color_999"> 服务未开始前，您可以通过APP自行操作取消服务，在距服务开始时间数小时内取消服务会收取一定的退单费用。服务开始后，您无法自行取消服务，请拨打客服电话。
+            </text>
+        </view>
+        <view class="flex_column font_18rpx margin_top">
+            <text class="">3.服务更改</text>
+            <text class="color_999">服务开始前的数小时内，您可以拨打客服电话变更服务信息(如服务人员、服务时间等)一旦服务开始，就不能变更了</text>
+        </view>
+        <view class="flex_column font_18rpx margin_top">
+            <text class="">4.服务爽约</text>
+            <text class="color_999">因客户未提前联系服务人员或工作人员导致服务没有进行的，系统将不退还预定时间支付的费用；因服务人员未提前联系客户导致服务没有进行的，可协商再次服务时间或退还客户预定时支付的全部费用。
+            </text>
+        </view>
+        <view class="flex_column font_18rpx margin_top">
+            <text class="">5.服务进行</text>
+            <text class="color_999">服务开始前：请您提前准备好服务所需要的消耗品及服务人员不便携带的部分清洁工具，并确认家中留人及有水有电；服务过程中：您可以交代服务人员您的清洁重点以及合理需求。服务过程中如您需要离开，请与服务人员沟通，并在服务结束之前回到家中。根据您的房屋居室及物品数量和洁净程度，可能会出现服务提前结束、超时、或服务过程中有增加服务项目的情况，在服务人员提交完成信息后，您可以通过进行补付或查看退款金额。服务完成后：请您仔细检查服务人员的服务成果，如无问题请在服务确认单上签字以表示服务完成。
+            </text>
+        </view>
+        <view class="flex_column font_18rpx margin_top">
+            <text class="">6.服务评价</text>
+            <text class="color_999">我们真诚的邀请您对本次服务做出客观的评价，并尽可能的给予我们建议与意见。</text>
+        </view>
+    </view>
+</view>
+<view class="padding_bottom flex_row" style="justify-content: space-between;padding:32rpx 28rpx;">
+    <text class="color_333 size_26">咨询热线</text>
+    <view class="size_26">
+        <text class="iconfont iconicon_dianhua color_333"></text>
+        <text class="color_333" style="margin-left:20rpx">400-8888-8888</text>
+    </view>
+</view>
+<view class="flex_row border_top_ddd">
+    <view class="width_318 font_size_48">
+        <text class="">￥20</text>
+        <text class="size_24">起</text>
+    </view>
+    <view class="font_size height_98" style="border-right:1rpx solid #ddd;">泊邻用户下单</view>
+    <view class="font_size height_98 color_fff">立即下单</view>
+</view>

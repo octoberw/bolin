@@ -1,0 +1,11 @@
+<!-- components/popup/popup.wxml -->
+<view class="popup-bgc" style="display:{{hideview}}" catchtouchmove='{{true}}'>
+    <view class="popup-val">
+        <text class="popup-title" selectable="false" space="false" decode="false">{{title}}</text>
+        <slot></slot>
+        <view class="popup-foot">
+            <view bindtap="_error" style="margin-right:20rpx; display:{{showError}}">{{error}}</view>
+            <view bindtap="_success">{{success}}</view>
+        </view>
+    </view>
+</view>

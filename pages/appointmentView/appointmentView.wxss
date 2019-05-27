@@ -1,0 +1,254 @@
+/* pages/appointmentView/appointmentView.wxss */
+.myCleanListFlexHei {
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    padding: 42rpx 30rpx;
+    background-color: #333;
+}
+
+.myCleanListFlexHui {
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    padding: 42rpx 30rpx;
+    background-color: #666;
+}
+
+.myCleanImage {
+    width: 110rpx;
+    height: 110rpx;
+    border-radius: 50%;
+    overflow: hidden;
+    background-color: #aaa;
+    margin-right: 14rpx;
+}
+
+.myCleanRight {
+    flex: 1;
+}
+
+.myCleanS {
+    display: flex;
+    align-items: flex-start
+}
+
+.myCleanName {
+    font-size: 28rpx;
+    font-weight: 700;
+    color: #fff;
+    margin-right: 15rpx;
+}
+
+.myCleanJP {
+    display: inline-block;
+    font-size: 22rpx;
+    color: #fbdaa2;
+    padding: 8rpx 18rpx;
+    background-color: #1a1a1a;
+    border-radius: 28rpx;
+    line-height: 24rpx;
+}
+
+.myCleanState {
+    font-size: 22rpx;
+    color: #fff;
+    flex: 1;
+    text-align: right;
+}
+
+
+.myCleanTimes {
+    font-size: 20rpx;
+    color: #fff;
+}
+
+.myCleanX {
+    display: flex;
+    align-items: center;
+    margin-top: 20rpx;
+}
+
+.myCleanX>text:first-child {
+    margin-right: 6rpx;
+    color: #999;
+}
+
+.myCleanXRight {
+    flex: 1;
+    line-height: 25rpx;
+    text-align: right;
+    color: #fff;
+}
+
+.myCleanXRight>text:first-child {
+    font-size: 22rpx;
+}
+
+.myCleanXRight>text:last-child {
+    font-size: 32rpx;
+}
+
+.border-bottom {
+    border-bottom: 17rpx solid #f2f2f2;
+}
+
+.val {
+    padding: 40rpx 28rpx;
+    display: flex;
+    flex-flow: column nowrap;
+}
+
+.flex-dizhi {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: flex-start;
+    border-bottom: 1rpx solid #f2f2f2;
+    padding-bottom: 25rpx;
+}
+
+.flex-menpai {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: flex-end;
+    margin-top: 45rpx;
+}
+
+.flex-menpai>view {
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: flex-end;
+    border-bottom: 1rpx solid #f2f2f2;
+    padding-bottom: 15rpx;
+}
+
+.flex-menpai>view:first-child {
+    margin-right: 50rpx;
+}
+
+.flex-menpai>view>text:first-child {
+    line-height: 52rpx;
+    margin-right: 33rpx;
+}
+
+.flex-menpai>view>input:last-child {
+    flex: 1;
+    align-self: flex-end;
+}
+
+.flex-phone {
+    display: flex;
+    flex-flow: row nowrap;
+    border-bottom: 1rpx solid #f2f2f2;
+    margin-top: 40rpx;
+    padding-bottom: 15rpx;
+}
+
+.title-fontSize {
+    font-size: 26rpx;
+    color: #333;
+    font-weight: 700;
+}
+
+.val-fontSize {
+    font-size: 26rpx;
+    color: #999;
+    height: 52rpx;
+    min-height: 52rpx
+}
+
+.input-placeholder {
+    height: 52rpx;
+    min-height: 52rpx;
+    font-size: 26rpx;
+}
+
+.flex-phone>text {
+    line-height: 52rpx;
+    margin-right: 33rpx;
+}
+
+.val-padding {
+    padding: 30rpx 28rpx;
+    line-height: 48rpx;
+}
+
+.yuan {
+    font-size: 32rpx;
+    font-weight: 700;
+}
+
+.flex-fw {
+    align-items: center;
+}
+
+.appoint_body_w {
+    width: 100%;
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+}
+
+.appoint_body_ty {
+    color: #999;
+    font-size: 20rpx;
+    padding-left: 15rpx;
+}
+
+.appoint_body_ty_d {
+    position: absolute;
+    width: 28rpx;
+    height: 28rpx;
+    border-radius: 50%;
+    border: 1rpx solid #ddd;
+}
+
+.appoint_body_ty_d>text {
+    position: absolute;
+    width: 16rpx;
+    height: 16rpx;
+    top: 4rpx;
+    left: 4rpx;
+    border-radius: 50px;
+    background-color: #999;
+}
+
+.appoint_body_ty>text:first-child {
+    float: left;
+}
+
+.appoint_body_ty>text:first-child {
+    float: left;
+    color: #999;
+}
+
+.foot {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    line-height: 50px;
+    font-size: 32rpx;
+    text-align: center;
+    background: #333;
+    color: #fbdaa2;
+}
+
+.fwxy {
+    width: 396rpx;
+    height: 300rpx;
+    font-size: 18rpx;
+    line-height: 32rpx;
+    color: #333;
+}
+
+.radio_wq{
+    width: 24rpx;
+    height: 24rpx;
+    border-radius: 50%;
+    border: 1rpx solid #ddd;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

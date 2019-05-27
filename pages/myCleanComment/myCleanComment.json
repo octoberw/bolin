@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+    "comment": "/components/comment/comment"
+  },
+  "navigationBarTitleText": "泊邻生活/订单详情"
+}

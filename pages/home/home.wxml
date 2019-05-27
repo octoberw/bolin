@@ -1,0 +1,7 @@
+<!-- pages/home/home.wxml -->
+<view class="flex">
+    <view class="baojie" bindtap="gotoRimClean"></view>
+    <text class="">保洁</text>
+    <view class="baojie" bindtap="gotoWxHome"></view>
+    <text class="">维修</text>
+</view>

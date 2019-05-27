@@ -1,0 +1,63 @@
+{
+  "pages": [
+    "pages/home/home",
+    "pages/wxOrderList/wxOrderList",
+    "pages/wxOrderDetails/wxOrderDetails",
+    "pages/wxNoBlRemark/wxNoBlRemark",
+    "pages/wxNoBlOrder/wxNoBlOrder",
+    "pages/wxNoBlDescribe/wxNoBlDescribe",
+    "pages/wxHome/wxHome",
+    "pages/wxSecHome/wxSecHome",
+    "pages/wxOrderDetailsDone/wxOrderDetailsDone",
+    "pages/wxComment/wxComment",
+    "pages/wxOrderDetailsCancel/wxOrderDetailsCancel",
+    "pages/homeMy/homeMy",
+    "pages/wxMTST/wxMTST",
+    "pages/dailyClean/dailyClean",
+    "pages/appointmentView/appointmentView",
+    "pages/confirmOrder/confirmOrder",
+    "pages/rimClean/rimClean",    
+    "pages/location/location",
+    "pages/myCleanCommentDone/myCleanCommentDone",
+    "pages/myCleanComment/myCleanComment",
+    "pages/myCleanDetails/myCleanDetails",
+    "pages/myClean/myClean",
+    "pages/homeHouse/homeHouse",
+    "pages/homeLandlord/homeLandlord",
+    "pages/homeCommunity/homeCommunity"
+  ],
+  "permission": {
+    "scope.userLocation": {
+      "desc": "你的位置信息将用于小程序位置接口的效果展示"
+    }
+  },
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTextStyle": "black"
+  },
+  "sitemapLocation": "sitemap.json",
+  "tabBar": {
+    "list": [{
+        "pagePath": "pages/home/home",
+        "text": "首页"
+      },
+      {
+        "pagePath": "pages/homeHouse/homeHouse",
+        "text": "房子"
+      },
+      {
+        "pagePath": "pages/homeLandlord/homeLandlord",
+        "text": "房东"
+      },
+      {
+        "pagePath": "pages/homeCommunity/homeCommunity",
+        "text": "社区"
+      },
+      {
+        "pagePath": "pages/homeMy/homeMy",
+        "text": "我的"
+      }
+    ]
+  }
+}

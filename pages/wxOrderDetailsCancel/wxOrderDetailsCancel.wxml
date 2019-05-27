@@ -1,0 +1,95 @@
+<!-- pages/wxOrderDetailsCancel/wxOrderDetailsCancel.wxml -->
+<view class="{{cancel?'myCleanListFlexHui':'myCleanListFlexHei'}}">
+    <view class="flex_column">
+        <text class="myCleanName" style="color:#fff">服务单号</text>
+        <text class="myCleanJP">4005666666666666</text>
+    </view>
+    <text class="myCleanTimes">待分配</text>
+</view>
+<view class="bgc">
+    <view class="details_dz">
+        <text class="">服务地址</text>
+        <text class="">广州市海珠区阅江路琶洲塔公园旁保利天悦花园A栋113-11楼</text>
+    </view>
+    <view class="details_dz margin_maxTop">
+        <text class="">联系电话</text>
+        <text class="text_right">12222222222</text>
+    </view>
+    <view class="details_dz margin_smallTop">
+        <text class="">服务时间</text>
+        <view class="details_fw_right">
+            <text class="fw_date">2019/08/09</text>
+            <text class="fw_time">15:00~16:00</text>
+            <text class="fw_time">16:00~17:00</text>
+        </view>
+    </view>
+    <view class="details_dz margin_maxTop flex_column">
+        <text class="inBotton" style="margin-right:0">服务项目</text>
+        <view class="inBotton margin_maxTop">
+            <view class="flex_row">
+                <view class="">
+                    <text class="size_24_333 padding_right">地漏维修</text>
+                    <text class="size_24_999">检测 (￥20.00/项)</text>
+                </view>
+                <view class="">
+                    <text class="size_24_333">1.0</text>
+                    <text class="size_24_999">/个</text>
+                </view>
+            </view>
+            <view class="flex_row">
+                <view class="">
+                    <text class="size_24_333 padding_right">其他</text>
+                    <text class="size_24_999">积分 (满100抵购0.1元)</text>
+                </view>
+                <view class="">
+                    <text class="size_24_333">-￥5</text>
+                    <text class="size_24_999">元</text>
+                </view>
+            </view>
+        </view>
+        <view class="align_right">
+            <text class="myCleanName">实付：</text>
+            <text class="size_22_333">￥</text>
+            <text class="">15</text>
+            <text class="myCleanName">元</text>
+        </view>
+    </view>
+    <view class="details_dz margin_maxTop flex_column">
+        <text class="inBotton" style="margin-right:0">服务项目</text>
+        <view class="bgc-val">
+            <view class="com-fw">
+                <text class="">地板修复</text>
+                <text class="">瓷砖脱落</text>
+                <text class="">地板修复</text>
+                <text class="">地漏堵塞</text>
+            </view>
+            <view class="com-val">
+                <text class="size_22_333">状况描述：</text>
+                <text class="myCleanName">家里天花板脱离，客厅、次卧、书房的天花板有很多地方脱落，阳台最为严重，需要尽快检查！</text>
+                <image class="com-img" src="" mode="aspectFit|aspectFill|widthFix"></image>
+            </view>
+        </view>
+    </view>
+    <view class="details_dz margin_maxTop border_bottom">
+        <text class="">下单时间</text>
+        <text class="text_right">2019/08/09</text>
+    </view>
+    <view class="bgc_fff details_dz flex_column padding_bottom_50" style="display:{{display_qxxq}}">
+        <text class="inBotton">状况详情</text>
+        <view class="foot_cancel">
+            <text class="size_22_333">取消时间：</text>
+            <text class="myCleanName">2019年4月9日 10:00:00</text>
+        </view>
+        <view class="foot_cancel">
+            <text class="size_22_333">取消原因：</text>
+            <text class="myCleanName">支付超时(20分钟超时支付，系统自动关闭)</text>
+        </view>
+    </view>
+    <view class="bgc_fff" style="display:{{display_img}}">
+        <image class="footImage" src="../../image/wx/img_dibulianxi.png" mode="aspectFit"></image>
+    </view>
+</view>
+<popup id="popup" title="取消服务" bind:error="_error" bind:success="_success" style="height:140vh">
+    <textarea class="popup-text" placeholder="请输入取消服务的原因..." adjust-position="{{true}}" fixed="{{true}}" name="" id=""></textarea>
+</popup>
+<view class="{{cancel?'footerHui':'footerHei'}}" bindtap="showPopup">{{foot}}</view>

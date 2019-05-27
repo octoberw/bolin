@@ -1,0 +1,95 @@
+<!-- pages/wxHome/wxHome.wxml -->
+<image class="title_image" src="../../image/wx/img_banner.png" mode="aspectFit|aspectFill|widthFix" lazy-load="false" binderror="" bindload=""></image>
+<view class="body_padding">
+    <view class="flex_row">
+        <text class="title_font">管道疏通</text>
+        <text class="small_title_font">| 价格透明，服务更好</text>
+    </view>
+    <view class="two flex_row" bindtap="gotoSecHome">
+        <view class="flex_row two_style">
+            <view class="flex_column">
+                <text class="two_font">管道维修通道</text>
+                <text class="small_two_font">价格透明</text>
+            </view>
+            <image class="small_image" src="../../image/wx/icon_shuiguan.png" mode="aspectFit|aspectFill|widthFix" lazy-load="false" binderror="" bindload=""></image>
+        </view>
+        <view class="flex_row two_style">
+            <view class="flex_column">
+                <text class="two_font">电路检测维修</text>
+                <text class="small_two_font">安全保险</text>
+            </view>
+            <image class="small_image" src="../../image/wx/icon_dianlu.png" mode="aspectFit|aspectFill|widthFix" lazy-load="false" binderror="" bindload=""></image>
+        </view>
+    </view>
+    <view class="table flex_row" bindtap="gotoMTWX">
+        <view class="flex_row three_style three_border_bottom three_border_right">
+            <view class="flex_column">
+                <text class="three_font">更换水龙头</text>
+                <text class="small_three_font">检查更换</text>
+            </view>
+            <image class="" src="../../image/wx/icon_shuilongtou.png" style="width:49rpx; height:57rpx; margin-right:8rpx"></image>
+        </view>
+        <view class="flex_row three_style three_border_bottom">
+            <view class="flex_column">
+                <text class="three_font">安装卫浴用品</text>
+                <text class="small_three_font">花洒浴具安装</text>
+            </view>
+            <image class="" src="../../image/wx/icon_weiyu.png" style="width:55rpx; height:56rpx; margin-right:5rpx"></image>
+        </view>
+        <view class="flex_row three_style three_border_bottom three_border_right">
+            <view class="flex_column">
+                <text class="three_font">安装照明灯具</text>
+                <text class="small_three_font">安装检测</text>
+            </view>
+            <image class="" src="../../image/wx/icon_deng.png" style="width:39rpx; height:56rpx; margin-right:12rpx"></image>
+        </view>
+        <view class="flex_row three_style three_border_bottom">
+            <view class="flex_column">
+                <text class="three_font">维修家具</text>
+                <text class="small_three_font">翻新修复</text>
+            </view>
+            <image class="" src="../../image/wx/icon_jiaju.png" style="width:42rpx; height:57rpx; margin-right:9rpx"></image>
+        </view>
+        <view class="flex_row three_style three_border_right">
+            <view class="flex_column">
+                <text class="three_font">渗水防水补漏</text>
+                <text class="small_three_font">施工修补</text>
+            </view>
+            <image class="" src="../../image/wx/icon_loushui.png" style="width:60rpx; height:54rpx;" ></image>            
+        </view>
+        <view class="flex_row three_style">
+            <view class="flex_column">
+                <text class="three_font">装修翻新墙面</text>
+                <text class="small_three_font">墙面刷新</text>
+            </view>
+            <image class="" src="../../image/wx/icon_qiangmian.png" style="width:57rpx; height:57rpx;" ></image>                        
+        </view>
+    </view>
+    <view class="margin_top" bindtap="gotoComment">
+        <text class="title_font">服务评价</text>
+        <text class="small_title_font">| 价格透明，服务更好</text>
+        <view class="image-tx img_margin_top">
+            <image class="" src="../../image/image_1.png" mode="aspectFit|aspectFill|widthFix"></image>
+            <image class="" src="../../image/image_2.png" mode="aspectFit|aspectFill|widthFix"></image>
+            <image class="image-tx-big" src="../../image/image_3.png" mode="aspectFit|aspectFill|widthFix"></image>
+            <image class="" src="../../image/image_4.png" mode="aspectFit|aspectFill|widthFix"></image>
+            <image class="" src="../../image/image_5.png" mode="aspectFit|aspectFill|widthFix"></image>
+        </view>
+        <view class="eva_pf">
+            <view class="eva_pf_title">
+                <text class="">Liart_9354  评分 :</text>
+                <view class="">
+                    <text class="iconfont iconicon_xingxing"></text>
+                    <text class="iconfont iconicon_xingxing"></text>
+                    <text class="iconfont iconicon_xingxing"></text>
+                    <text class="iconfont iconicon_xingxing"></text>
+                    <text class="iconfont iconicon_xingxing"></text>
+                </view>
+            </view>
+            <text class="">平时工作太忙，没时间打扫卫生，预约保洁阿姨后很快就上门开始清洁工作了，边角缝隙处理都很仔细打扫，地板非常干净！太赞了！</text>
+        </view>
+    </view>
+    <view class="logo">
+        <image class="logo" src="../../image/img_logo.png" mode=""></image>
+    </view>
+</view>

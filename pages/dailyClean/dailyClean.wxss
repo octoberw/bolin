@@ -1,0 +1,369 @@
+/* pages/dailyClean/dailyClean.wxss */
+.map {
+    width: 100%;
+    height: 800rpx;
+}
+
+.input {
+    display: flex;
+    width: 100%;
+    background-color: #fff;
+    flex-flow: row nowrap;
+    box-sizing: border-box;
+    align-items: center;
+    padding: 16rpx;
+    margin-bottom: 5rpx;
+}
+
+.input>text {
+    font-size: 32rpx;
+    color: #999;
+    margin: 0 16rpx;
+}
+
+.input>input {
+    flex: 1;
+    font-size: 26rpx;
+    color: #999;
+}
+
+/* 强制不换行 */
+.scroll-view {
+    width: 100%;
+    white-space: nowrap;
+    margin-top: 15rpx;
+}
+
+.scroll-view-vv {
+    box-sizing: border-box;
+}
+
+/* scroll-view下不能用flex布局,用外嵌套一个view的方法解决 */
+.scroll-view-vv>view {
+    display: inline-block;
+}
+
+.scroll-view-vv>view:first-child {
+    margin-left: 8rpx;
+}
+
+.scroll-view-vv>view:last-child {
+    margin-right: 28rpx;
+}
+
+.clean-zb {
+    position: relative;
+    display: flex;
+    width: 490rpx;
+    height: 182rpx;
+    margin-left: 20rpx;
+    flex-flow: row nowrap;
+    padding: 20rpx;
+    color: #fff;
+    border-radius: 6rpx;
+    background-color: #333;
+}
+
+.scroll-view-hn-ve {
+    vertical-align: top;
+}
+
+.clean-zb-padding {
+    padding: 0 48rpx;
+}
+
+.clean-zb-padding>text {
+    align-self: center;
+}
+
+.clean-zb-tj {
+    display: flex;
+    flex-flow: column nowrap;
+    margin-right:70rpx
+}
+
+.clean-zb-padding>view {
+    align-self: center;
+}
+
+.clean-zb-tj>text:first-child {
+    font-size: 28rpx;
+    color: #fbdaa2;
+    margin-bottom: 14rpx;
+}
+
+.clean-zb-tj>text:last-child {
+    font-size: 20rpx;
+    color: #fff;
+}
+
+.clean-image {
+    width: 80rpx;
+    height: 80rpx;
+    border-radius: 50%;
+    background-color: #aaa;
+}
+
+.clean-right {
+    flex: 1;
+    margin: 0 0 0 14rpx;
+}
+
+.clean {
+    display: flex;
+    align-items: stretch;
+}
+
+.clean-name {
+    font-size: 28rpx;
+}
+
+.clean-style {
+    display: inline-block;
+    font-size: 22rpx;
+    color: #fbdaa2;
+    padding: 5rpx 16rpx 7rpx 16rpx;
+    border-radius: 30rpx;
+    background-color: #1a1a1a;
+    margin-left: 16rpx;
+}
+
+.clean-dw {
+    font-size: 28rpx;
+    color: #999;
+    padding-top: 9rpx;
+}
+
+.clean-hp {
+    font-size: 20rpx;
+    color: #fff;
+    padding-left: 8rpx;
+    padding-top: 9rpx;
+}
+
+.clean-yy {
+    display: flex;
+    align-items: baseline;
+    font-size: 20rpx;
+    color: #999;
+    margin-top: 25rpx;
+}
+
+.clean-rmb {
+    font-size: 22rpx;
+    color: #fbdaa2;
+}
+
+.clean-y {
+    font-size: 30rpx;
+    color: #fbdaa2;
+    margin-right: 10rpx;
+}
+
+.clean-yy-btn {
+    position: absolute;
+    right: 20rpx;
+    bottom: 20rpx;
+    font-size: 22rpx;
+    padding: 13rpx 33rpx;
+    color: #333;
+    border-radius: 6rpx;
+    background-color: #FBDAA2;
+}
+
+.val {
+    padding: 28rpx;
+}
+
+.border-bottom {
+    border-bottom: 1rpx solid #f2f2f2;
+}
+
+.title {
+    display: flex;
+    flex-flow: column nowrap;
+    padding-bottom: 34rpx;
+}
+
+.title-top {
+    font-size: 32rpx;
+    color: #333;
+    font-weight: 700;
+    margin-bottom: 12rpx;
+}
+
+.title-center {
+    font-size: 22rpx;
+    color: #666;
+    margin-bottom: 25rpx;
+}
+
+.title-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 24rpx;
+    color: #ccc;
+}
+
+.title-bottom>text:first-child {
+    color: #f0f0f0;
+    font-size: 40rpx;
+}
+
+.title-bottom>view:last-child {
+    display: inline-block;
+    color: #f0f0f0;
+    font-size: 40rpx;
+    transform: rotate(180deg);
+}
+
+.body {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 69rpx 64rpx;
+}
+
+.body>text {
+    font-size: 110rpx;
+    color: #cdcdcd;
+    padding-right: 30rpx;
+}
+
+.body>view {
+    display: flex;
+    flex-flow: column nowrap;
+}
+
+.body>view>text:first-child {
+    font-size: 30rpx;
+    color: #333;
+    margin-bottom: 12rpx;
+}
+
+.body>view>text:last-child {
+    font-size: 24rpx;
+    color: #999;
+}
+
+.margin-top {
+    margin-top: 90rpx;
+}
+
+.title>image {
+    width: 100%;
+}
+
+.body-gj {
+    display: flex;
+    flex-flow: row;
+    justify-content: space-around;
+    padding: 42rpx 0;
+    border: 1rpx solid #f2f2f2;
+    border-radius: 6rpx;
+    margin-top: 15rpx;
+}
+
+.body-gj>view {
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+}
+
+.body-gj>view>text:first-child {
+    font-size: 56rpx;
+    color: #cdcdcd;
+    padding-bottom: 12rpx;
+}
+
+.body-gj>view>text:last-child {
+    font-size: 22rpx;
+    color: #999;
+}
+
+.fw-margin-top {
+    margin-top: 36rpx;
+}
+
+.image-tx {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    padding: 17rpx 66rpx 10rpx 66rpx;
+}
+
+.image-tx-big {
+    width: 107rpx !important;
+    height: 107rpx !important;
+}
+
+.image-tx>image {
+    width: 66rpx;
+    height: 66rpx;
+    background-color: #aaa;
+    border-radius: 50%;
+}
+
+.eva_pf {
+    position: relative;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    padding: 0 40rpx;
+    width: 100%;
+    height: 125px;
+    background-color: #333;
+    border-radius: 3px;
+    top: 24px;
+}
+
+.eva_pf:before {
+    content: "";
+    position: absolute;
+    top: -10px;
+    right: 50%;
+    transform: translateX(50%);
+    width: 0;
+    height: 0;
+    border-left: 10px solid transparent;
+    border-bottom: 10px solid #333;
+    border-right: 10px solid transparent;
+}
+
+.eva_pf_title {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20rpx;
+}
+
+.eva_pf_title>text {
+    font-size: 28rpx;
+    color: #fff;
+    margin-right: 10rpx;
+}
+
+.eva_pf_title>view {
+    display: flex;
+    align-items: center;
+}
+
+.eva_pf_title>view>text {
+    font-size: 20rpx;
+    color: #fbdaa2;
+    margin-right: 6rpx;
+}
+
+.eva_pf>text {
+    font-size: 24rpx;
+    line-height: 40rpx;
+    color: #999;
+}
+
+.logo {
+    width: 273rpx;
+    height: 57rpx;
+    margin: 36rpx auto;
+}

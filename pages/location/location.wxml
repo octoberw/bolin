@@ -1,0 +1,28 @@
+<!-- pages/location/location.wxml -->
+<view>
+  <map id="" class="map" longitude="{{longitude}}" latitude="{{latitude}}" scale="{{scale}}" markers="{{markers}}" bindregionchange="" bindtap="" bindupdated=""></map>
+  <view class="location_body">
+    <view class="bottom">
+      <view class="location_body_z">
+        <text class="iconfont iconicon_tishi"></text>
+        <text>注：请在服务人员服务范围内搜索您的地址</text>
+      </view>
+    </view>
+    <view class="location_body_xdz">
+      <text>小区/大厦/街道</text>
+      <input type="text"></input>
+      <text class="iconfont iconicon_guanbi"></text>
+    </view>
+    <view class="location_body_dz" v-show="showlocat">
+      <view>
+        <view wx:for="{{locat}}" wx:key="{{index}}">
+          <text>{{item.locat1}}</text>
+          <text>{{item.locat2}}</text>
+        </view>
+      </view>
+    </view>
+  </view>
+  <view>
+    <view class="foot" bindtap="gotoAppointmentView">确认</view>
+  </view>
+</view>

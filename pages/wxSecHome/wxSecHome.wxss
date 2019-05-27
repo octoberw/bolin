@@ -1,0 +1,120 @@
+/* pages/wxSecHome/wxSecHome.wxss */
+/* pages/wxHome/wxHome.wxss */
+.title_image {
+    width: 100%;
+    height: 350rpx;
+}
+
+.body_padding {
+    padding: 70rpx 28rpx;
+}
+
+.flex_row {
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+}
+
+.flex_column {
+    display: flex;
+    flex-flow: column nowrap;
+}
+
+.title_font {
+    font-size: 32rpx;
+    font-weight: 700;
+    color: #333;
+    padding-right: 10rpx;
+}
+
+.small_title_font {
+    font-size: 22rpx;
+    color: #999;
+}
+
+.small_image {
+    width: 78rpx;
+    height: 84rpx;
+}
+
+.two {
+    margin-top: 40rpx;
+    margin-bottom: 50rpx;
+    justify-content: space-around;
+    align-items: flex-end;
+}
+
+.two_style {
+    align-items: center;
+}
+
+.two_font {
+    font-size: 24rpx;
+    color: #333;
+}
+
+.small_two_font {
+    font-size: 24rpx;
+    color: #999;
+}
+
+.table {
+    flex-wrap: wrap;
+    border: 1rpx solid #f2f2f2;
+    border-radius: 6rpx;
+}
+
+.three_style {
+    width: 347rpx;
+    justify-content: space-between;
+    padding: 35rpx 34rpx;
+    background-color: #fff;
+}
+
+.three_font {
+    font-size: 22rpx;
+    color: #333;
+}
+
+.small_three_font {
+    font-size: 20rpx;
+    color: #999;
+}
+
+.icon_big_image {
+    width: 70rpx;
+    height: 70rpx;
+    color: #cdcdcd;
+    margin-bottom: 15rpx;
+}
+
+.icon_font {
+    font-size: 50rpx;
+    color: #cdcdcd;
+}
+
+.icon_bgc {
+    background-color: #333;
+}
+
+.three_border_bottom {
+    border-bottom: 1rpx solid #f2f2f2;
+}
+
+.three_border_right {
+    border-right: 1rpx solid #f2f2f2;
+}
+
+.logo {
+    width: 273rpx;
+    height: 57rpx;
+    margin: 36rpx auto;
+}
+
+.margin_top {
+    margin-top: 70rpx;
+}
+
+.img_margin_top {
+    margin-top: 56rpx;
+}

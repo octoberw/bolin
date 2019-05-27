@@ -1,0 +1,20 @@
+<!-- pages/wxNoBlDescribe/wxNoBlDescribe.wxml -->
+<view class="title-border"></view>
+<view class="bgc-val">
+    <text class="com-title">常见状况</text>
+    <view class="com-fw">
+        <text class="click-fw">天花板脱离</text>
+        <text class="click-fw">天花板漏水</text>
+        <text class="">地板修复</text>
+        <text class="">瓷砖脱落</text>
+        <text class="">地板修复</text>
+        <text class="">地漏堵塞</text>
+    </view>
+    <view class="com-val">
+        <textarea name="" id="" placeholder="你可以详细描述现场状况(选填)" catchtouchmove='{{true}}'></textarea>
+        <button class="com-img">
+            <text class="iconfont iconicon_zengjiatupian"></text>
+        </button>
+    </view>
+</view>
+<view class="com-foot" catchtap="gotoNoBlOrder">提交</view>
