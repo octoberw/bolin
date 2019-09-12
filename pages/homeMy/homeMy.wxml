@@ -1,27 +1,108 @@
 <!-- index.wxml -->
 <view class="container">
-  <view class="userinfo">
+  <view class="userinfo flex_row">
     <button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo">
       获取头像昵称
     </button>
     <block wx:else>
       <image class="userinfo-avatar" src="{{userInfo.avatarUrl}}" mode="cover"></image>
-      <text class="userinfo-nickname">{{userInfo.nickName}}</text>
+      <view class=" flex_column" style="align-items:flex-start;">
+        <text class="userinfo-nickname size_28 color_333" style="margin-bottom:10px;font-weight:700;">{{userInfo.nickName}}</text>
+        <view class=" flex_row">
+          <image class="shuoming" style="margin-right:5px" bindtap="showjifen" src="../../image/home/icon_shuoming.png"></image>
+          <text class=" size_22 color_333 line_height" style="margin-right:10px">积分:{{point}}</text>
+          <text class=" size_20 color_999 jfmx" bindtap="showHomeMyJfmx">积分明细</text>
+        </view>
+      </view>
     </block>
   </view>
   <view class="usermotto">
-    <text class="user-motto">我的服务</text>
-    <text class='user-shu'>|</text>
-    <text class='user-fwdj'>泊邻专业服务到家</text>
-    <view class="usergn">
-      <view bindtap="bindViewTap">
-        <view class="usergn-click"></view>
-        <text class="usergn-text">保洁</text>
+    <text class="user-motto">我的订单</text>
+    <view class=" flex_row jus_between">
+      <view class="flex_column" bindtap="gotocz">
+        <image class="img_50" src="../../image/home/icon_changzu.png"></image>
+        <text class="usergn-text size_22 color_333">品牌公寓</text>
       </view>
-      <view bindtap="gotoWxOrderList">
-        <view class="usergn-click"></view>
-        <text class="usergn-text">维修</text>
+      <view class="flex_column" bindtap="gotoms">
+        <image class="img_50" src="../../image/home/icon_minsu.png"></image>
+        <text class="usergn-text size_22 color_333">民宿酒店</text>
+      </view>
+      <view class="flex_column" bindtap="bindViewTap">
+        <image class="img_50" src="../../image/home/icon_baojie.png"></image>
+        <text class="usergn-text size_22 color_333">保洁服务</text>
+      </view>
+      <view class="flex_column" bindtap="gotoWxOrderList">
+        <image class="img_50" src="../../image/home/icon_weixiu.png"></image>
+        <text class="usergn-text size_22 color_333">上门维修</text>
+      </view>
+      <view class="flex_column" bindtap="">
+        <image class="img_50" src="../../image/home/icon_shangcheng.png"></image>
+        <text class="usergn-text size_22 color_333">商城订单</text>
       </view>
     </view>
   </view>
+  <view class="usermotto" >
+      <text class="user-motto">我的收藏</text>
+      <view class=" flex_row">
+        <view class="flex_column" bindtap="gotoSCJ">
+          <image class="img_50" src="../../image/home/icon_user_scj.png"></image>
+          <text class="usergn-text size_22 color_333">收藏夹</text>
+        </view>
+      </view>
+  </view>
+  <view class="usermotto ">
+      <text class="user-motto">帮助与反馈</text>
+      <view class=" flex_row jus_between">
+        <view class="flex_column pos_r" >
+          <image class="img_50" src="../../image/home/icon_user_zxkf.png"></image>
+          <text class="usergn-text size_22 color_333">在线客服</text>
+          <button class="default pos_a" open-type="contact" style="z-index: 999;opacity: 0;"></button>
+        </view>
+        <view class="flex_column" bindtap="openfankui">
+          <image class="img_50" src="../../image/home/icon_user_yjfk.png"></image>
+          <text class="usergn-text size_22 color_333">意见反馈</text>
+        </view>
+        <navigator class="flex_column" url="/pages/homeMyRZXZ/homeMyRZXZ">
+          <image class="img_50" src="../../image/home/icon_user_rzxz.png"></image>
+          <text class="usergn-text size_22 color_333">入住须知</text>
+        </navigator>
+        <view class="flex_column">
+          <image class="img_50" src=""></image>
+          <text class="usergn-text size_22 color_333"></text>
+        </view>
+        <view class="flex_column">
+          <image class="img_50" src=""></image>
+          <text class="usergn-text size_22 color_333"></text>
+        </view>
+      </view>
+  </view>
+</view>
+
+<!-- 意见反馈 -->
+<view class="popup-bgc" style="display:{{hideview}}" catchtouchmove='{{true}}'>
+    <form class="" report-submit="false" bindsubmit="sendfankui" bindreset="">
+      <view class="popup-val">
+        <text class="popup-title" >意见反馈</text>
+        <textarea class=" size_22 999" placeholder="有什么话想和我们说的，我们很期待您的意见和反馈:-)"></textarea>
+        <view class="popup-foot">
+            <button  bindtap="_error" style="margin-right:20rpx;">取消</button>
+            <button form-type="submit"  bindtap="_success">提交反馈</button>
+        </view>
+    </view>
+    </form>
+</view>
+
+<!-- 积分说明 -->
+<view class="popup-bgc" style="display:{{hidejifen}}" catchtouchmove='{{true}}'>
+      <view class="padding_40_25">
+        <view class=" size_28 color_333" style="text-align:center;margin-bottom:15px">积分说明</view>
+        <text class=" size_18 color_333 margin_22_10">1、用户在平台下单，并确定为有效订单后，根据订单的金额，可以获得积分（消费满1元得1分积分，不足1元则不计入积分）。消费额只计算订单实际支付金额 。
+          2、若发生因特殊情况取消订单时，积分将退还至用户积分，如定金抵押类订单则不予退还积分。
+          3、用户可在自己账户中的“积分明细”中查询到您的积分详情。
+          4、积分规则由泊邻生活制定，并依据国家相关法律法规予以解释和修改。规则以网站公布为准，泊邻保留解释权。  
+        </text>
+        <view class="popup-foot">
+            <button form-type="submit"  bindtap="closejifen">我已经了解</button>
+        </view>
+    </view>
 </view>

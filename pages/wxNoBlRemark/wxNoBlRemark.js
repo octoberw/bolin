@@ -5,13 +5,25 @@ Page({
    * 页面的初始数据
    */
   data: {
-
+    contentBeizhu: ''
   },
 
-  gotoNoBlOrder() {
-    wx.navigateTo({
-      url: '../wxNoBlOrder/wxNoBlOrder',
+  gotoNoBlOrder(e) {
+    this.setData({
+      contentBeizhu: e.detail.value.content
+    })
+    var pages = getCurrentPages(); //  获取页面栈
+    var prevPage = pages[pages.length - 2]; // 上一个页面
+    prevPage.setData({
+      contentBeizhu: e.detail.value.content, // 状况描述的图片
+    })
+    wx.navigateBack({
+      delta: 1
     });
+
+    // wx.navigateTo({
+    //   url: '../wxNoBlOrder/wxNoBlOrder',
+    // });
   },
 
   /**

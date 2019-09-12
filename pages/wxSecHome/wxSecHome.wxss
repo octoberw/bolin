@@ -1,5 +1,3 @@
-/* pages/wxSecHome/wxSecHome.wxss */
-/* pages/wxHome/wxHome.wxss */
 .title_image {
     width: 100%;
     height: 350rpx;
@@ -106,8 +104,8 @@
 }
 
 .logo {
-    width: 273rpx;
-    height: 57rpx;
+    width: 448rpx;
+    height: 223rpx;
     margin: 36rpx auto;
 }
 

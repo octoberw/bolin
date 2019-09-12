@@ -1,3 +1,7 @@
+import api from '../../api/api'
+import {
+  maintainIndex
+} from '../../api/bjUrl/wx'
 // pages/wxHome/wxHome.js
 Page({
 
@@ -5,24 +9,27 @@ Page({
    * 页面的初始数据
    */
   data: {
-
+    list: [], // 全部内容
+    evaluateList: [] //评论内容
   },
 
-  gotoSecHome() {
+  gotoSecHome(e) {
+    var secondid = e.target.dataset.secondid
     wx.navigateTo({
-      url: '../wxSecHome/wxSecHome',
+      url: `../wxSecHome/wxSecHome?secondid=${secondid}`,
     });
   },
 
-  gotoMTWX() {
+  gotoMTWX(e) {
+    var thirdid = e.target.dataset.thirdid
     wx.navigateTo({
-      url: '../wxMTST/wxMTST',
+      url: `../wxMTST/wxMTST?thirdid=${thirdid}`,
     });
   },
 
   gotoComment() {
     wx.navigateTo({
-      url: '../wxComment/wxComment',
+      url: '../wxComment/wxComment?fr=wx',
     });
   },
 
@@ -44,7 +51,16 @@ Page({
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
-
+    var that = this
+    api.get(maintainIndex, {})
+      .then(res => {
+        that.setData({
+          evaluateList: res.evaluateList,
+          list: res.list
+        })
+        console.log(that.data.evaluateList)
+        console.log(that.data.list)
+      })
   },
 
   /**

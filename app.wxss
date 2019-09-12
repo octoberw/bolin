@@ -11,10 +11,84 @@
 @import './styles/iconfont.wxss';
 
 view,
-text {
+text,
+textarea,
+button {
   box-sizing: border-box;
+}
+
+text {
+  display: inline-block;
+}
+
+button {
+  padding: 0;
+  border-radius: 0;
+  margin: 0;
+  border: 0;
 }
 
 .title-border {
   border-top: 1px solid #f2f2f2;
 }
+
+.title-bottom {
+  border-bottom: 1px solid #f2f2f2;
+}
+
+/* 隐藏滚动条 */
+::-webkit-scrollbar {
+  width: 0;
+  height: 0;
+  color: transparent;
+}
+
+.pingfang_24{
+  position: absolute;
+  left: 0;
+  top: 0;
+  font-size: 24rpx;
+}
+
+.pingfang_12{
+  font-size: 14rpx;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+.pingfang_posr {
+  position: relative;
+  width: 30rpx;
+  height: 30rpx;
+}
+
+
+.zwdd {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.zwdd_col {
+  display: inline-flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  margin-top: 267rpx;
+}
+
+.img_288 {
+  width: 288rpx;
+  height: 209rpx;
+}
+
+.zwdd_font {
+  font-size: 26rpx;
+  font-family: PingFang SC;
+  font-weight: 500;
+  color: rgba(153, 153, 153, 1);
+  line-height: 36rpx;
+}
+
+
+

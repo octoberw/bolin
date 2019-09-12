@@ -1,0 +1,51 @@
+<!-- pages/myClean/myClean.wxml -->
+<view class="myCleanflex title-border">
+    <view data-num="{{index}}" class="{{num==index?'fontColor':''}}" wx:for="{{arr}}" wx:key="index" bindtap="bindViewTap">
+        {{item}}
+    </view>
+</view>
+<view class="" wx:if="{{order}}">
+    <view class="paading_40_30">
+        <block wx:for="{{order}}" wx:key="item.id">
+            <view data-sn="{{item.sn}}" data-status="{{item.status}}" data-evaluate="{{item.is_evaluate}}" class="myCleanBody" catchtap="gotoDetails">
+                <view class="myCleanList">
+                    <view class="myCleanListFlex">
+                        <image class="myCleanImage" src="{{cleaner[item.cleanerId].avator}}" mode="cover"></image>
+                        <view class="myCleanRight">
+                            <view class="myCleanS">
+                                <text class="myCleanName">{{cleaner[item.cleanerId].nickName}}</text>
+                                <text class="myCleanJP" wx:if="{{cleaner[item.cleanerId].is_gold==='true'}}">金牌保洁人</text>
+                                <text class="myCleanState" wx:if="{{item.status==='finish'}}">已完成</text>
+                                <text class="myCleanState" wx:if="{{item.status==='cancel'}}">已取消</text>
+                                <text class="myCleanState" wx:if="{{item.status==='service'}}">待服务</text>
+                                <text class="myCleanState" wx:if="{{item.status==='noPay'}}">待支付</text>
+                                <text class="myCleanState" wx:if="{{item.status==='checking'}}">待审核</text>
+                            </view>
+                            <view class="myCleanDate">{{item.date}}</view>
+                            <view class="myCleanX">
+                                <block wx:for="{{item.timePeriod}}" wx:key="index">
+                                    <text class="myCleanTimes">{{item}}</text>
+                                </block>
+                            </view>
+                            <view class="myCleanXRight">
+                                <text class="">￥</text>
+                                <text class="">{{item.cost}}</text>
+                            </view>
+                        </view>
+                    </view>
+                    <view class="myCleanBtn" >
+                        <button data-sn="{{item.sn}}" data-status="{{item.status}}" catchtap="gotoDetails" wx:if="{{item.status==='finish'}}">立即评论</button>
+                        <button data-sn="{{item.sn}}" data-status="{{item.status}}" catchtap="gotoDetails" wx:if="{{item.status==='service'||item.status==='cancel'}}">查看详情</button>
+                        <button data-sn="{{item.sn}}" data-status="{{item.status}}" catchtap="gotoDetails" wx:if="{{item.status==='noPay'}}">立即支付</button>
+                    </view>
+                </view>
+            </view>
+        </block>
+    </view>
+</view>
+<view  wx:else class="zwdd title-border">
+    <view class="zwdd_col">
+        <image class="img_288" src="../../image/icon_zwdd.png"></image>
+        <text class="zwdd_font">暂无相关订单，快去逛逛吧！</text>
+    </view>
+</view>

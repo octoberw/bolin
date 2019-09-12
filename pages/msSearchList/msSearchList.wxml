@@ -1,0 +1,187 @@
+<!-- pages/zfSearchList/zfSearchList.wxml -->
+<view class="" id="centerID">
+    <view class="flex_row  w690">
+        <view class="iconfont iconicon_sousuo size_26 color_999 transform_90"></view>
+        <input name="searchVal" class="size_26 color_999 w100" value="" type="text|number|idcard|digit|time|date" bindblur="sousuo" placeholder="请输入小区或商圈名"></input>
+    </view>   
+    <!-- 选项栏 -->
+    <view class="flex_row border" >
+        <view class="flex_row" bindtap="gotoTop_showWZ" >
+            <text class="size_26 color_333">位置</text>
+            <view class="iconfont iconicon_gengduo size_20 color_999 transform_90"></view>
+        </view>
+        <view class="flex_row" bindtap="gotoTop_showLX">
+            <text class="size_26 color_333">日期</text>
+            <view class="iconfont iconicon_gengduo size_20 color_999 transform_90"></view>
+        </view>
+        <view class="flex_row" bindtap="gotoTop_showZJ">
+            <text class="size_26 color_333">价格</text>
+            <view class="iconfont iconicon_gengduo size_20 color_999 transform_90"></view>
+        </view>
+        <view class="flex_row" bindtap="gotoTop_showSX">
+            <text class="size_26 color_333">筛选</text>
+            <view class="iconfont iconicon_gengduo size_20 color_999 transform_90"></view>
+        </view>
+    </view>
+</view>
+
+<!-- 租金 -->
+<view data-name="mask" class="bgc_000" style="display:{{zujin}}" catchtouchmove="true" catchtap="closeZJ">
+    <view class="flex_column bgc_fff">
+        <text class="size_26 color_333 padding_32" style="font-weight:700">自定义</text>
+        <text data-money="100-1000" class="size_26 color_999 padding_32" bindtap="bindZujin">100-1000元</text>
+        <text data-money="1000-2000" class="size_26 color_999 padding_32" bindtap="bindZujin">1000-2000元</text>
+        <text data-money="2000-3000" class="size_26 color_999 padding_32" bindtap="bindZujin">2000-3000元</text>
+        <text data-money="3000-4000" class="size_26 color_999 padding_32" bindtap="bindZujin">3000-4000元</text>
+        <form class="" report-submit="false" bindsubmit="bindInputMoney" bindreset="">
+            <view class="padding_40 flex_column">
+                <text class="size_22 color_333 margin_b_20">请输入自定义范围</text>
+                <view class="flex_row" style="justify-content: space-between;">        
+                    <view class="input_280 flex_row" >
+                        <input name="min" class="" value="" type="number" ></input>
+                        <text class="size_22 color_333">元</text>
+                    </view>
+                    <text class="">-</text>        
+                    <view class="flex_row input_280">
+                        <input name="max"  class="" value="" type="number" ></input>
+                        <text class="size_22 color_333">元</text>
+                    </view>
+                </view>
+            </view>
+            <view class="flex_row foot" style="justify-content: space-between;">
+                <button form-type="reset" class="size_24 color_333" style="width:100%;background-color:#fff">重置</button>
+                <button form-type="submit" class="size_24 color_333" style="width:100%;background-color:#fff">确定</button>
+            </view>
+        </form>
+    </view>
+</view>
+
+<!-- 租房类型 -->
+<!-- <view data-name="mask" class="bgc_000" style="display:{{leixing}}" catchtouchmove="true" catchtap="closeLX">
+    <view class="flex_column bgc_fff">
+    </view>
+</view> -->
+
+<!-- 选项筛选 -->
+<view data-name="mask" class="bgc_000" style="display:{{shaixuan}};justify-content:flex-end;" catchtouchmove="true" catchtap="closeSX">
+    <view data-name="mask" class="bgc_000" style="display:{{shaixuan}};justify-content:flex-end;" catchtouchmove="true" catchtap="closeSX">
+        <view class="flex_column bgc_fff " style="width:80%">
+            <scroll-view class="shaixuan" scroll-y>
+            <text class="padding_28_sx size_26 color_333 margin_bottom_30" style="font-weight:700">类型</text>
+            <view class="padding_28_sx margin_b_15 flex_row" style="flex-wrap:wrap">
+                <text class="size_20 color_999 padding_20_48 {{leixingVid[0]=='on'?'click':''}}" bindtap="clickBtnLeixing">自营</text>
+                <text class="size_20 color_999 padding_20_48 {{leixingVid[1]=='on'?'click':''}}"  bindtap="clickBtnLeixing">非自营</text>
+            </view>
+            <text class="padding_28_sx size_26 color_333 margin_bottom_30" style="font-weight:700">人数</text>
+            <view class="padding_28_sx margin_b_15 flex_column padding_r_20" style="flex-wrap:wrap;padding-right: 29rpx;">
+               <view class="flex_row between">
+                   <view>
+                       <text class=" size_24 color_333">成人</text>
+                       <text class=" size_24 color_999">(18岁及以上)</text>
+                   </view>
+                   <view>
+                       <text class=" w45_h45 size_24 color_999" bindtap="minus">-</text>
+                       <text class="w65_h45 size_24 color_999">{{bigPeople}}</text>
+                       <text class=" size_24 bgc_333 color_999 color_js w45_h45" bindtap="add">+</text>
+                   </view>
+               </view>
+               <view class="flex_row between">
+                   <view>
+                       <text class=" size_24 color_333">儿童</text>
+                       <text class=" size_24 color_999">(0-17岁)</text>
+                   </view>
+                   <view>
+                       <text class=" w45_h45 size_24 color_999" bindtap="smallminus">-</text>
+                       <text class="w65_h45 size_24 color_999">{{smallPeople}}</text>
+                       <text class=" size_24 bgc_333 color_999 color_js w45_h45" bindtap="smalladd">+</text>
+                   </view>
+               </view>
+               <text class=" size_20 color_999 margin_t_35">注：18周岁及以上为成人，0-17周岁儿童请参照各民宿入住政策</text>
+            </view>
+                <view class="padding_28_sx flex_column">  
+                <block wx:for="{{attributeList}}" wx:key="">
+                    <text class="size_26 color_333 margin_bottom_30" style="font-weight:700">{{item.parent}}</text>
+                    <view class="margin_b_15 grid" style="flex-wrap:wrap">
+                        <block wx:for="{{item.children}}" wx:key="">
+                            <text data-id='{{item.id}}' class="size_20 color_999 padding_20_48 {{vid[item.id]==item.id?'click':''}}" bindtap="clickBtn">{{item.name}}</text>
+                        </block>
+                    </view>
+                </block>     
+                </view>
+            </scroll-view>
+            <view class="flex_row size_24 color_333" style="justify-content:space-around; ">
+                <view class="border_sx_cz" bindtap="reset">重置</view>
+                <view class="border_sx_qd" bindtap="click">确定</view>
+            </view>
+        </view>
+    </view>
+</view>
+
+<!-- 房间位置 -->
+<view data-name="mask" class="bgc_000" style="display:{{weizhi}}" catchtouchmove="true" catchtap="closeWZ">
+    <view class="flex_row bgc_fff align_item height_632">
+        <view class="flex_column bgc_f2f2f2_qy" >
+            <view data-num1="{{index}}" id="{{item.id}}" class="bgc_fff_qy" style="{{num1==index?'background-color:#fff':'background-color:#f2f2f2'}}" wx:for="{{weizhiList}}" wx:key="index"  catchtap="bindChange">
+                <text class="color_333 size_26 {{num1==index?'border_qy_333':'border_qy_fff'}}" >{{item.name}}</text>    
+            </view>
+        </view> 
+        <scroll-view scroll-y  class="flex_column flex_1" style="border-right:1rpx solid #f2f2f2">
+            <view data-num="{{index}}" data-index="{{index}}" class="padding_20_50 {{num==index?'color_333_weight':'color_999_weight'}}" wx:for="{{secWeizhiList}}" wx:key="index" bindtap="bindChangeChild">
+                <text class="size_24">{{item.name}}</text>    
+            </view>
+        </scroll-view>
+        <scroll-view scroll-y  class="flex_column flex_1" >
+            <view  data-num2="{{index}}" class="padding_20_50 color_999" wx:for="{{thirWeizhiList}}" wx:key="index" bindtap="bindChangeSecChild">
+                <text class="size_24">{{item.name}}</text>    
+            </view>
+        </scroll-view>
+    </view>
+</view>
+
+<view class="">
+    <!-- <view class="flex_row biaoqianView">
+        <text class="size_22 color_333 biaoqian">地铁周边</text>
+        <text class="size_22 color_333 biaoqian">开放式厨房</text>
+        <text class="size_22 color_333 biaoqian">绿化带多</text>
+        <text class="size_22 color_333 biaoqian">精品好房</text>
+    </view> -->
+    <view wx:if="{{xianshi=='less'}}" style="margin: 10px 0 0 0;" class="size_24 color_333 jieguo">该条件下房源较少，为您补充推荐{{homeStayLen}}个</view>
+    <view wx:if="{{xianshi=='more'}}" style="margin: 10px 0 0 0;" class="size_24 color_333 jieguo">泊邻为您找到相关结果{{res.total}}个</view>
+    <block wx:for="{{res.homeStay}}" wx:key=""> 
+        <view class="">
+            {{item.newId}}
+        </view>
+        <view class="" bindtap="toHouse" data-outline="{{item.outLink}}" data-num="{{item.num}}" data-types="{{item.types}}">
+            <view class="flex_column padding_0_28">
+                <view class="posr">                
+                    <image class=" image_692_415" src="{{item.avator}}"></image>
+                    <image class=" image_80_80" src="{{headAndStar[item.id[0].parentId].headImage}}"></image>
+                </view>
+                <view class="flex_column flex_1">
+                    <!-- <text class="size_18 color_999" >{{item.area}}m2 | {{item.houseType}}</text> -->
+                    <text class="size_20 color_999" >{{item.houseType}} | 可住{{item.peopleCounting}} | {{item.bed}}</text>
+                    <text class="size_28 color_333 overflow_ell" style="font-weight:700">{{item.types=='self'?'自营':'非自营'}} | {{item.title}}</text>
+                    <view class="">
+                        <text class="size_20 color_e2ab51">￥</text>
+                        <text class="size_30 color_e2ab51">{{item.roomRate}}</text>
+                        <text class="size_20 color_999">/天</text>
+                </view>
+                <view class="margin_b_15">
+                    <block wx:for="{{item.id}}" wx:key="">
+                        <text class="size_20 color_999" style="padding:8rpx 20rpx;border:1rpx solid #ddd; margin-right:10rpx">{{item.name}}</text>
+                    </block>
+                </view>
+            </view>
+            <view class=" flex_row between">
+                <view class="">   
+                    <block wx:for="{{headAndStar[item.id[0].parentId].star}}" wx:key="">
+                        <text class="iconfont iconicon_xingxing color_js w32_h30 margin_r_8"></text>
+                    </block>     
+                </view>
+                <text class="size_22 color_333">{{item.orderPeople}}人已定</text>            
+            </view>
+        </view>  
+        <view class="border_f2f2f2" style="margin:0 28rpx"></view>
+    </view>
+    </block>
+</view>

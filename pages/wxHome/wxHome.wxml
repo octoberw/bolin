@@ -1,70 +1,36 @@
 <!-- pages/wxHome/wxHome.wxml -->
 <image class="title_image" src="../../image/wx/img_banner.png" mode="aspectFit|aspectFill|widthFix" lazy-load="false" binderror="" bindload=""></image>
 <view class="body_padding">
-    <view class="flex_row">
-        <text class="title_font">管道疏通</text>
-        <text class="small_title_font">| 价格透明，服务更好</text>
-    </view>
-    <view class="two flex_row" bindtap="gotoSecHome">
-        <view class="flex_row two_style">
-            <view class="flex_column">
-                <text class="two_font">管道维修通道</text>
-                <text class="small_two_font">价格透明</text>
-            </view>
-            <image class="small_image" src="../../image/wx/icon_shuiguan.png" mode="aspectFit|aspectFill|widthFix" lazy-load="false" binderror="" bindload=""></image>
+    <block wx:for="{{list}}" wx:key="">
+        <view class="flex_row title_margin">
+            <text class="title_font">{{item.name}}</text>
+            <text class="small_title_font">| {{item.info}}</text>
         </view>
-        <view class="flex_row two_style">
-            <view class="flex_column">
-                <text class="two_font">电路检测维修</text>
-                <text class="small_two_font">安全保险</text>
-            </view>
-            <image class="small_image" src="../../image/wx/icon_dianlu.png" mode="aspectFit|aspectFill|widthFix" lazy-load="false" binderror="" bindload=""></image>
+        <view class="two gird_2" bindtap="gotoSecHome">
+            <!-- 二级维修页 -->
+            <block  wx:for="{{item.second}}" wx:key="">
+                <view data-secondId="{{item.id}}" class="flex_row two_style">
+                    <view  class="flex_column">
+                        <text data-secondId="{{item.id}}" class="two_font">{{item.name}}</text>
+                        <text data-secondId="{{item.id}}" class="small_two_font">{{item.info}}</text>
+                    </view>
+                    <image data-secondId="{{item.id}}" class="small_image" src="{{item.avator}}" lazy-load="false" binderror="" bindload=""></image>
+                </view>
+            </block>
         </view>
-    </view>
-    <view class="table flex_row" bindtap="gotoMTWX">
-        <view class="flex_row three_style three_border_bottom three_border_right">
-            <view class="flex_column">
-                <text class="three_font">更换水龙头</text>
-                <text class="small_three_font">检查更换</text>
-            </view>
-            <image class="" src="../../image/wx/icon_shuilongtou.png" style="width:49rpx; height:57rpx; margin-right:8rpx"></image>
+        <view class="table flex_row" bindtap="gotoMTWX">
+            <!-- 三级服务详情页 -->
+            <block wx:for="{{item.third}}" wx:key="">
+                <view data-thirdId="{{item.id}}" class="flex_row three_style three_border_bottom three_border_right" style="height:70px;">
+                    <view  class="flex_column">
+                        <text data-thirdId="{{item.id}}" class="three_font">{{item.name}}</text>
+                        <text data-thirdId="{{item.id}}" class="small_three_font">{{item.info}}</text>
+                    </view>
+                    <image data-thirdId="{{item.id}}" class="" src="{{item.avator}}" style="width:49rpx; height:57rpx; margin-right:8rpx"></image>
+                </view>
+            </block>
         </view>
-        <view class="flex_row three_style three_border_bottom">
-            <view class="flex_column">
-                <text class="three_font">安装卫浴用品</text>
-                <text class="small_three_font">花洒浴具安装</text>
-            </view>
-            <image class="" src="../../image/wx/icon_weiyu.png" style="width:55rpx; height:56rpx; margin-right:5rpx"></image>
-        </view>
-        <view class="flex_row three_style three_border_bottom three_border_right">
-            <view class="flex_column">
-                <text class="three_font">安装照明灯具</text>
-                <text class="small_three_font">安装检测</text>
-            </view>
-            <image class="" src="../../image/wx/icon_deng.png" style="width:39rpx; height:56rpx; margin-right:12rpx"></image>
-        </view>
-        <view class="flex_row three_style three_border_bottom">
-            <view class="flex_column">
-                <text class="three_font">维修家具</text>
-                <text class="small_three_font">翻新修复</text>
-            </view>
-            <image class="" src="../../image/wx/icon_jiaju.png" style="width:42rpx; height:57rpx; margin-right:9rpx"></image>
-        </view>
-        <view class="flex_row three_style three_border_right">
-            <view class="flex_column">
-                <text class="three_font">渗水防水补漏</text>
-                <text class="small_three_font">施工修补</text>
-            </view>
-            <image class="" src="../../image/wx/icon_loushui.png" style="width:60rpx; height:54rpx;" ></image>            
-        </view>
-        <view class="flex_row three_style">
-            <view class="flex_column">
-                <text class="three_font">装修翻新墙面</text>
-                <text class="small_three_font">墙面刷新</text>
-            </view>
-            <image class="" src="../../image/wx/icon_qiangmian.png" style="width:57rpx; height:57rpx;" ></image>                        
-        </view>
-    </view>
+    </block>
     <view class="margin_top" bindtap="gotoComment">
         <text class="title_font">服务评价</text>
         <text class="small_title_font">| 价格透明，服务更好</text>

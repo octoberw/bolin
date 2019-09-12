@@ -1,0 +1,86 @@
+<!-- pages/msHome/msHome.wxml -->
+<image class="banner" src="../../image/ms/img_ms_banner.png"></image>
+<view class="flex_row align_item_center sousuo_view" bindtap="gotoSarch">
+    <image class="sousuo " src="../../image/ms/icon_sousuo.png"></image>
+    <input class=" size_26 color_999" value="" placeholder="{{location}}"></input>
+</view>
+<view class="select flex_column jus_bet">
+    <view class=""  bindtap="gotoDestination">
+        <text class="size_26 color_999 margin_b_15">目的地</text>
+        <view class="flex_row align_item_center jus_bet">
+            <text class="size_36 color_333" style="font-weight:700">{{location}}</text>
+            <text class="iconfont iconicon_gengduo color_999"></text>
+        </view>
+    </view>
+    <view class="flex_row jus_bet" bindtap="gotoSelectTime">
+        <view class="">
+            <text class="size_26 color_999 margin_b_15">入住时间</text>
+            <view class="flex_row align_item_end">
+                <text class="size_36 color_333 margin_r_15" style="font-weight:700">{{checkInDate}}</text>
+                <!-- <text class="size_26 color_999">{{inWeek}}</text>       周几 -->
+            </view>
+        </view>
+        <view class="">
+            <text class="size_26 color_999 margin_b_15">离店时间</text>
+            <view class="flex_row align_item_end">
+                <text class="size_36 color_333 margin_r_15" style="font-weight:700">{{checkOutDate}}</text>
+                <!-- <text class="size_26 color_999">{{outWeek}}</text>      周几 -->
+            </view>
+        </view>
+        <view class=" flex_column jus_bet">
+            <text class="size_26 color_fff margin_b_15">1</text>
+            <view class="flex_row align_item_center">
+                <text class="size_20 color_999">共住{{days}}晚</text>
+                <text class="iconfont iconicon_gengduo color_999"></text>
+            </view>
+        </view>
+    </view>
+    <view class="" bindtap="gotoTop_showRS">
+        <text class="size_26 color_999 margin_b_15">人数</text>
+        <view class="flex_row align_item_center jus_bet">
+            <text class="size_36 color_999" value="">{{allPeople?allPeople:'请输入选择人数'}}</text>
+            <text class="iconfont iconicon_gengduo color_999"></text>
+        </view>
+    </view>
+    <button class="sousuo_btn size_33" type="default" bindtap="sousuo">搜索房源</button>
+</view>
+<!-- 选择人数 -->
+<view data-name="mask" class="bgc_000" style="display:{{renshu}}; top:0;" catchtouchmove="true" catchtap="closeRS">
+    <view class="flex_column bgc_fff" style="position:absolute;bottom:0;">
+        <view class=" flex_row between padding_39_29">
+            <text class=" size_26 color_333">请选择人数</text>
+            <text class=" size_26 color_999">已选择{{bigPeople}}成人，{{smallPeople}}儿童</text>
+        </view>
+        <view class="border_1"></view>
+        <view class="padding_39_29 flex_column padding_r_20" style="flex-wrap:wrap">
+            <view class="flex_row between margin_b_35">
+                <view>
+                    <text class=" size_26 color_333">成人</text>
+                    <text class=" size_26 color_999">(18岁及以上)</text>
+                </view>
+                <view class="">
+                    <text class=" w45_h45 size_26 color_999" bindtap="minus">-</text>
+                    <text class="w65_h45 size_26 color_999">{{bigPeople}}</text>
+                    <text class=" size_26 bgc_333 color_fbdaa2 color_js w45_h45" bindtap="add">+</text>
+                </view>
+            </view>
+            <view class="flex_row between margin_b_35">
+                <view>
+                    <text class=" size_26 color_333">儿童</text>
+                    <text class=" size_26 color_999">(0-17岁)</text>
+                </view>
+                <view>
+                    <text class=" w45_h45 size_26 color_999" bindtap="smallminus">-</text>
+                    <text class="w65_h45 size_26 color_999">{{smallPeople}}</text>
+                    <text class=" size_26 bgc_333 color_fbdaa2 color_js w45_h45" bindtap="smalladd">+</text>
+                </view>
+            </view>
+            <text class=" size_20 color_999 margin_t_35 margin_b_40">注：18周岁及以上为成人，0-17周岁儿童请参照各民宿入住政策</text>
+        </view>
+        <view class="flex_row foot" style="justify-content: space-between;">
+            <view class="size_33 color_333" bindtap="chongzhi">重置</view>
+            <view class="size_33 color_fbdaa2 bgc_333" bindtap="sendRS">确定</view>
+        </view>
+    </view>
+</view>
+<!-- <image class="logo" src="../../image/ms/img_logo@2x.png"></image> -->

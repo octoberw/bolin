@@ -30,6 +30,10 @@
 .com-xx {
     text-align: center;
     font-size: 46rpx;
+    color: #999
+}
+
+.color_fbdaa2 {
     color: #fbdaa2;
 }
 
@@ -96,10 +100,24 @@
     position: fixed;
     z-index: 999;
     bottom: 0;
+    left: 0;
     width: 100%;
     font-size: 32rpx;
     color: #fbdaa2;
     text-align: center;
-    padding: 34rpx 0;
+    padding: 14rpx 0;
     background-color: #333;
+    border-radius: 0;
+}
+
+.image {
+    width: 118rpx;
+    height: 118rpx;
+    border-radius: 6rpx;
+    overflow: hidden;
+    margin-right: 15rpx;
+}
+
+.flex_row {
+    display: flex;
 }

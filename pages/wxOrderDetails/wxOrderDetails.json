@@ -1,6 +1,7 @@
 {
   "usingComponents": {
-    "popup": "/components/popup/popup"
+    "popupcancel": "/components/popupcancel/popupcancel",
+    "comment": "/components/comment/comment"
   },
   "navigationBarTitleText": "订单详情"
 }

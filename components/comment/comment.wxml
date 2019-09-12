@@ -4,26 +4,28 @@
     <view class="bgc-val">
         <text class="com-title">—— 评价服务 ——</text>
         <view class="com-xx">
-            <text class="iconfont iconicon_xingxing"></text>
-            <text class="iconfont iconicon_xingxing"></text>
-            <text class="iconfont iconicon_xingxing"></text>
-            <text class="iconfont iconicon_xingxing"></text>
-            <text class="iconfont iconicon_xingxing"></text>
+        <block wx:for="{{start}}" wx:key="">
+            <text data-index="{{index}}" class="iconfont iconicon_xingxing {{newStart[index]===0?'color_fbdaa2':''}}" bindtap="clickStart"></text>
+        </block>
         </view>
         <view class="com-fw">
-            <text class="click-fw">服务非常到位</text>
-            <text class="click-fw">态度很好</text>
-            <text class="">很友好</text>
-            <text class="">很有礼貌</text>
-            <text class="">非常专业</text>
-            <text class="">角落处理很仔细</text>
+            <block wx:for="{{vid}}" wx:key="">
+                <text data-id="{{index}}" class="{{vid[index].id==='on'?'click-fw':''}}" bindtap="clickBtn">{{item.name}}</text>
+            </block>
         </view>
-        <view class="com-val">
-            <textarea name="" id="" placeholder="写其他评价或意见" catchtouchmove='{{true}}'></textarea>
-            <button class="com-img">
-                <text class="iconfont iconicon_zengjiatupian"></text>
-            </button>
-        </view>
-    </view>
-    <view class="com-foot" catchtap="_hideComSucc">提交评论</view>
+        <form class="" report-submit="false" bindsubmit="getcontent" bindreset="">
+            <view class="com-val">
+                <textarea name="content" id="" placeholder="写其他评价或意见" catchtouchmove='{{true}}'></textarea>
+                    <view class="flex_row"> 
+                        <block wx:for="{{images}}" wx:key="">
+                            <image data-src="{{item}}" data-index="{{index}}" class="image" src="{{item}}" bindtap="previewImage"></image>
+                        </block>
+                        <button style="display:{{hiddenBtn===0?'none':'block'}}" class="com-img" bindtap="chooseImage">
+                            <text class="iconfont iconicon_zengjiatupian"></text>
+                        </button>
+                    </view>
+            </view>
+            <button class="com-foot" form-type="submit" catchtap="_hideComSucc" >提交评论</button>
+        </form>
+</view>
 </view>

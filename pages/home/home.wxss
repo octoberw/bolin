@@ -1,12 +1,447 @@
 /* pages/home/home.wxss */
-.flex {
+
+/* 图片 */
+.titleImage {
+    width: 100%;
+    height: 380rpx;
+}
+
+.image_w501 {
+    width: 50rpx;
+    height: 50rpx;
+    margin-bottom: 14rpx;
+}
+
+.image_w50 {
+    width: 50rpx;
+    height: 50rpx;
+    margin-bottom: 14rpx;
+    border-radius: 50%;
+}
+
+.image_w20 {
+    width: 20rpx;
+    height: 20rpx;
+}
+
+.image_w338 {
+    width: 338rpx;
+    height: 130rpx;
+}
+
+.image_538_300 {
+    width: 550rpx;
+    height: 300rpx;
+    border-radius: 4rpx;
+}
+
+.image_350_210 {
+    width: 350rpx;
+    height: 210rpx;
+}
+
+.image_230 {
+    width: 230rpx;
+    height: 230rpx;
+}
+
+.image_695_260 {
+    width: 695rpx;
+    height: 260rpx;
+}
+
+.image_100_100 {
+    width: 100%;
+    height: 100%;
+}
+
+.image_333 {
+    width: 333rpx !important;
+}
+
+
+/* 字体 */
+.font_26_333 {
+    font-size: 26rpx;
+    color: #333;
+}
+
+.font_26_fff {
+    font-size: 26rpx;
+    font-weight: 700;
+    color: #fff;
+}
+
+.font_28_333 {
+    font-size: 28rpx;
+    color: #333;
+}
+
+.font_22_fff {
+    font-size: 22rpx;
+    color: #fff;
+}
+
+.font_22_999 {
+    font-size: 22rpx;
+    color: #999;
+}
+
+.font_32_333 {
+    font-size: 32rpx;
+    font-weight: 700;
+    color: #333;
+}
+
+.font_24_333 {
+    font-size: 24rpx;
+    color: #333;
+}
+
+.font_20_999 {
+    font-size: 20rpx;
+    color: #999
+}
+
+.font_28_ed4343 {
+    font-size: 28rpx;
+    font-weight: 700;
+    color: #ed4343;
+}
+
+.font_size {
+    font-size: 30rpx;
+}
+
+.color_e2ab51 {
+    color: #e2ab51
+}
+
+.color_999 {
+    color: #999;
+}
+
+.color_333 {
+    color: #333;
+}
+
+.color_6b7278 {
+    color: #6b7278
+}
+
+.color_E2E2E2 {
+    color: #E2E2E2;
+}
+
+.line_height {
+    line-height: 10rpx;
+}
+
+/* 超出隐藏... */
+.overflow_ell {
+    overflow: hidden;
+    /*自动隐藏文字*/
+    text-overflow: ellipsis;
+    /*文字隐藏后添加省略号*/
+    white-space: nowrap;
+    /*强制不换行*/
+    width: 550rpx;
+    /*不允许出现半汉字截断*/
+    padding: 20rpx 0 30rpx 0;
+}
+
+/* 超出隐藏... */
+.overflow_ell_wz {
+    overflow: hidden;
+    /*自动隐藏文字*/
+    text-overflow: ellipsis;
+    /*文字隐藏后添加省略号*/
+    white-space: nowrap;
+    /*强制不换行*/
+    width: 300rpx;
+    /*不允许出现半汉字截断*/
+}
+
+/* 因为上面设置了  white-space:nowrap  所以 word-wrap:break-word; 和 word-wrap: break-word不生效 */
+.width_230 {
+    width: 230rpx;
+    /* word-wrap:break-word; */
+    /* word-wrap: break-word; */
+    white-space: pre-wrap;
+}
+
+/* 边框 */
+.border_f2f2f2 {
+    border-bottom: 1rpx solid #f2f2f2
+}
+
+
+/* 边距 */
+.padding_0_28 {
+    padding: 0 28rpx
+}
+
+.padding_tb_46_40 {
+    padding-top: 46rpx;
+    padding-bottom: 40rpx;
+}
+
+.padding_50_42 {
+    padding: 50rpx 42rpx
+}
+
+.padding_tb_50_20 {
+    padding-top: 50rpx;
+    padding-bottom: 20rpx;
+}
+
+.padding_18_12 {
+    padding: 18rpx 12rpx;
+    background-color: #f7f9fb;
+    border-radius: 6rpx;
+    margin-bottom: 40rpx;
+}
+
+.margin_0_28 {
+    margin: 0 28rpx;
+}
+
+.margin_r_10 {
+    margin-right: 10rpx;
+}
+
+.margin_r_22 {
+    margin-right: 22rpx;
+}
+
+.margin_b_20 {
+    margin-bottom: 20rpx;
+}
+
+.margin_t_20 {
+    margin-top: 20rpx
+}
+
+.margin_r_28 {
+    margin-right: 28rpx;
+    padding-bottom: 28rpx;
+    overflow: hidden;
+}
+
+
+/* 布局方式 */
+.flex_row {
     display: flex;
-    flex-flow: column nowrap;
+    flex-flow: row nowrap;
+    justify-content: space-between;
     align-items: center;
 }
-.baojie {
-    width: 200rpx;
-    height: 200rpx;
-    border-radius: 50%;
-    background-color: #aaa;
+
+.flex_column {
+    display: flex !important;
+    flex-flow: column nowrap;
+}
+
+.display_inline_block {
+    display: inline-block;
+    margin-right: 40rpx;
+}
+
+.column_count_2 {
+    column-count: 2;
+}
+
+.flex_1 {
+    flex: 1;
+}
+
+/* 定位 */
+.posr {
+    position: relative;
+}
+
+
+.posa {
+    position: absolute;
+    left: 32rpx;
+    top: 30rpx;
+}
+
+.posa_b_0 {
+    position: absolute;
+    display: block;
+    width: 100%;
+    bottom: 29rpx;
+    background-color: rgba(0, 0, 0, 0.3);
+    padding: 15rpx 22rpx;
+    border-bottom-right-radius: 6rpx;
+    border-bottom-left-radius: 6rpx;
+}
+
+.posa_b_02 {
+    position: absolute;
+    display: inline-block;
+    bottom: 30rpx;
+    right: 20rpx;
+    background-color: #555351;
+    border-radius: 20rpx;
+    height: 35rpx;
+    line-height: 35rpx;
+    width: 80rpx;
+    text-align: center;
+
+}
+
+/* 查看更多房源 */
+.more_house {
+    text-align: center;
+    margin: 25rpx 0 25rpx 0
+}
+
+/* 隐藏滚动条 */
+::-webkit-scrollbar {
+    width: 0;
+    height: 0;
+    color: transparent;
+}
+
+/* 星星 */
+.com_xx {
+    display: flex;
+    flex-flow: row nowrap;
+}
+
+.com_xx>text {
+    color: #fbdaa2;
+    line-height: 20rpx;
+    font-size: 20rpx;
+}
+
+/* 超出隐藏... */
+.overflow_ell_zf {
+    overflow: hidden;
+    /*自动隐藏文字*/
+    text-overflow: ellipsis;
+    /*文字隐藏后添加省略号*/
+    white-space: nowrap;
+    /*强制不换行*/
+    width: 354rpx;
+    /*不允许出现半汉字截断*/
+}
+
+.overflow_ell_dz {
+    overflow: hidden;
+    /*自动隐藏文字*/
+    text-overflow: ellipsis;
+    /*文字隐藏后添加省略号*/
+    white-space: nowrap;
+    /*强制不换行*/
+    width: 280rpx;
+    /*不允许出现半汉字截断*/
+}
+
+.flex_row_cz {
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+}
+
+.magin_b_10 {
+    margin-bottom: 10rpx
+}
+
+/* 轮播 */
+swiper .a-swiper-dot {
+	display: inline-block;
+	width: 16rpx;
+	height: 16rpx;
+	background: rgba(0, 0, 0, .3);
+	border-radius: 50%;
+	vertical-align: middle;
+}
+
+swiper[class*="-dot"] .wx-swiper-dots {
+	display: flex;
+	align-items: center;
+	width: 100%;
+	justify-content: center;
+}
+
+swiper.square-dot .wx-swiper-dot {
+	background-color: var(--white);
+	opacity: 0.4;
+	width: 10rpx;
+	height: 10rpx;
+	border-radius: 20rpx;
+	margin: 0 8rpx !important;
+}
+
+swiper.square-dot .wx-swiper-dot.wx-swiper-dot-active {
+	opacity: 1;
+	width: 30rpx;
+}
+
+swiper.round-dot .wx-swiper-dot {
+	width: 10rpx;
+	height: 10rpx;
+	position: relative;
+	margin: 4rpx 8rpx !important;
+}
+
+swiper.round-dot .wx-swiper-dot.wx-swiper-dot-active::after {
+	content: "";
+	position: absolute;
+	width: 10rpx;
+	height: 10rpx;
+	top: 0rpx;
+	left: 0rpx;
+	right: 0;
+	bottom: 0;
+	margin: auto;
+	background-color: var(--white);
+	border-radius: 20rpx;
+}
+
+swiper.round-dot .wx-swiper-dot.wx-swiper-dot-active {
+	width: 18rpx;
+	height: 18rpx;
+}
+
+.screen-swiper {
+	min-height: 380rpx;
+}
+
+.screen-swiper image,
+.screen-swiper video,
+.swiper-item image,
+.swiper-item video {
+	width: 100%;
+	display: block;
+	height: 100%;
+	margin: 0;
+	pointer-events: none;
+}
+
+.card-swiper {
+	height: 380rpx !important;
+}
+
+.card-swiper swiper-item {
+	width: 100%;
+	box-sizing: border-box;
+	overflow: initial;
+}
+
+.card-swiper swiper-item .swiper-item {
+	width: 100%;
+	display: block;
+	height: 100%;
+	transform: scale(1);
+	transition: all 0.2s ease-in 0s;
+	overflow: hidden;
+}
+
+.card-swiper swiper-item.cur .swiper-item {
+	transform: none;
+	transition: all 0.2s ease-in 0s;
 }

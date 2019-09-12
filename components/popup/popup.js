@@ -60,6 +60,6 @@ Component({
     },
     _success() {
       this.triggerEvent("success")
-    }
+    },
   }
 })

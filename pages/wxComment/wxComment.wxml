@@ -1,176 +1,37 @@
 <!-- pages/wxComment/wxComment.wxml -->
 <view class="tap_border"></view>
-<text class="title">热门评价</text>
-<view class="big_border_bottom">
-    <view class="border_bottom">
-        <view class="flex_row val_padding">
-            <image class="image_tx" src="" mode="aspectFit|aspectFill|widthFix" lazy-load="false"></image>
-            <view class="flex_column flex_one">
-                <view class="flex_row style_phone">
-                    <text class="phone_size">131****4950</text>
-                    <view class="xingxing_size">
-                        <text class="iconfont iconicon_xingxing"></text>
-                        <text class="iconfont iconicon_xingxing"></text>
-                        <text class="iconfont iconicon_xingxing"></text>
-                        <text class="iconfont iconicon_xingxing"></text>
-                        <text class="iconfont iconicon_xingxing"></text>
+<view class="all_fff" wx:if="{{res==='1'}}"></view>
+<view class="" wx:elif="{{res.length>0}}">
+    <text class="title">全部评价</text>
+    <view class="tip">共有{{total}}条评价</view>
+    <view class="big_border_bottom">
+        <block wx:for="{{res}}" wx:key="">
+            <view class="border_bottom">
+                <view class="flex_row val_padding">
+                    <image class="image_tx" src="{{item.avator}}"></image>
+                    <view class="flex_column flex_one">
+                        <view class="flex_row style_phone">
+                            <text class="phone_size">{{item.wxName}}</text>
+                            <view class="xingxing_size">
+                                <block wx:for="{{item.star}}" wx:key="">
+                                    <text class="iconfont iconicon_xingxing"></text>
+                                </block>
+                            </view>
+                        </view>
+                        <text class="time_size">{{item.createDate}}</text>
+                        <text class="val_size">{{item.content}}</text>
+                        <view class="val_image">
+                            <block wx:for="{{item.images}}" wx:key="">
+                                <image class="" src="{{item.url}}" style="border-radius: 4px" mode="aspectFit" lazy-load="false"></image>
+                            </block>
+                        </view>
                     </view>
                 </view>
-                <text class="time_size">2019-07-12</text>
-                <text class="val_size">师傅维修得很好，一看就觉得是很有经验的人，他还会提供很多保养信息，下次继续选择泊邻维修</text>
-                <view class="val_image">
-                    <image class="" src="" mode="aspectFit|aspectFill|widthFix" lazy-load="false"></image>
-                    <image class="" src="" mode="aspectFit|aspectFill|widthFix" lazy-load="false"></image>
-                    <image class="" src="" mode="aspectFit|aspectFill|widthFix" lazy-load="false"></image>
-                </view>
-                <view class="align_self_right">
-                    <text class="iconfont iconicon_dianzan_dianji"></text>
-                    <text class="">100</text>
-                </view>
             </view>
-        </view>
-    </view>
-    <view class="border_bottom">
-        <view class="flex_row val_padding">
-            <image class="image_tx" src="" mode="aspectFit|aspectFill|widthFix" lazy-load="false"></image>
-            <view class="flex_column flex_one">
-                <view class="flex_row style_phone">
-                    <text class="phone_size">131****4950</text>
-                    <view class="xingxing_size">
-                        <text class="iconfont iconicon_xingxing"></text>
-                        <text class="iconfont iconicon_xingxing"></text>
-                        <text class="iconfont iconicon_xingxing"></text>
-                        <text class="iconfont iconicon_xingxing"></text>
-                        <text class="iconfont iconicon_xingxing"></text>
-                    </view>
-                </view>
-                <text class="time_size">2019-07-12</text>
-                <text class="val_size">师傅维修得很好，一看就觉得是很有经验的人，他还会提供很多保养信息，下次继续选择泊邻维修</text>
-                <view class="val_image">
-                    <image class="" src="" mode="aspectFit|aspectFill|widthFix" lazy-load="false"></image>
-                    <image class="" src="" mode="aspectFit|aspectFill|widthFix" lazy-load="false"></image>
-                    <image class="" src="" mode="aspectFit|aspectFill|widthFix" lazy-load="false"></image>
-                </view>
-                <view class="align_self_right">
-                    <text class="iconfont iconicon_dianzan_dianji"></text>
-                    <text class="">100</text>
-                </view>
-            </view>
-        </view>
-    </view>
-    <view class="border_bottom">
-        <view class="flex_row val_padding">
-            <image class="image_tx" src="" mode="aspectFit|aspectFill|widthFix" lazy-load="false"></image>
-            <view class="flex_column flex_one">
-                <view class="flex_row style_phone">
-                    <text class="phone_size">131****4950</text>
-                    <view class="xingxing_size">
-                        <text class="iconfont iconicon_xingxing"></text>
-                        <text class="iconfont iconicon_xingxing"></text>
-                        <text class="iconfont iconicon_xingxing"></text>
-                        <text class="iconfont iconicon_xingxing"></text>
-                        <text class="iconfont iconicon_xingxing"></text>
-                    </view>
-                </view>
-                <text class="time_size">2019-07-12</text>
-                <text class="val_size">师傅维修得很好，一看就觉得是很有经验的人，他还会提供很多保养信息，下次继续选择泊邻维修</text>
-                <view class="val_image">
-                    <image class="" src="" mode="aspectFit|aspectFill|widthFix" lazy-load="false"></image>
-                    <image class="" src="" mode="aspectFit|aspectFill|widthFix" lazy-load="false"></image>
-                    <image class="" src="" mode="aspectFit|aspectFill|widthFix" lazy-load="false"></image>
-                </view>
-                <view class="align_self_right">
-                    <text class="iconfont iconicon_dianzan_dianji"></text>
-                    <text class="">100</text>
-                </view>
-            </view>
-        </view>
+        </block>
     </view>
 </view>
-<text class="title">热门评价</text>
-<view class="">
-    <view class="border_bottom">
-        <view class="flex_row val_padding">
-            <image class="image_tx" src="" mode="aspectFit|aspectFill|widthFix" lazy-load="false"></image>
-            <view class="flex_column flex_one">
-                <view class="flex_row style_phone">
-                    <text class="phone_size">131****4950</text>
-                    <view class="xingxing_size">
-                        <text class="iconfont iconicon_xingxing"></text>
-                        <text class="iconfont iconicon_xingxing"></text>
-                        <text class="iconfont iconicon_xingxing"></text>
-                        <text class="iconfont iconicon_xingxing"></text>
-                        <text class="iconfont iconicon_xingxing"></text>
-                    </view>
-                </view>
-                <text class="time_size">2019-07-12</text>
-                <text class="val_size">师傅维修得很好，一看就觉得是很有经验的人，他还会提供很多保养信息，下次继续选择泊邻维修</text>
-                <view class="val_image">
-                    <image class="" src="" mode="aspectFit|aspectFill|widthFix" lazy-load="false"></image>
-                    <image class="" src="" mode="aspectFit|aspectFill|widthFix" lazy-load="false"></image>
-                    <image class="" src="" mode="aspectFit|aspectFill|widthFix" lazy-load="false"></image>
-                </view>
-                <view class="align_self_right">
-                    <text class="iconfont iconicon_dianzan_dianji"></text>
-                    <text class="">100</text>
-                </view>
-            </view>
-        </view>
-    </view>
-    <view class="border_bottom">
-        <view class="flex_row val_padding">
-            <image class="image_tx" src="" mode="aspectFit|aspectFill|widthFix" lazy-load="false"></image>
-            <view class="flex_column flex_one">
-                <view class="flex_row style_phone">
-                    <text class="phone_size">131****4950</text>
-                    <view class="xingxing_size">
-                        <text class="iconfont iconicon_xingxing"></text>
-                        <text class="iconfont iconicon_xingxing"></text>
-                        <text class="iconfont iconicon_xingxing"></text>
-                        <text class="iconfont iconicon_xingxing"></text>
-                        <text class="iconfont iconicon_xingxing"></text>
-                    </view>
-                </view>
-                <text class="time_size">2019-07-12</text>
-                <text class="val_size">师傅维修得很好，一看就觉得是很有经验的人，他还会提供很多保养信息，下次继续选择泊邻维修</text>
-                <view class="val_image">
-                    <image class="" src="" mode="aspectFit|aspectFill|widthFix" lazy-load="false"></image>
-                    <image class="" src="" mode="aspectFit|aspectFill|widthFix" lazy-load="false"></image>
-                    <image class="" src="" mode="aspectFit|aspectFill|widthFix" lazy-load="false"></image>
-                </view>
-                <view class="align_self_right">
-                    <text class="iconfont iconicon_dianzan_dianji"></text>
-                    <text class="">100</text>
-                </view>
-            </view>
-        </view>
-    </view>
-    <view class="border_bottom">
-        <view class="flex_row val_padding">
-            <image class="image_tx" src="" mode="aspectFit|aspectFill|widthFix" lazy-load="false"></image>
-            <view class="flex_column flex_one">
-                <view class="flex_row style_phone">
-                    <text class="phone_size">131****4950</text>
-                    <view class="xingxing_size">
-                        <text class="iconfont iconicon_xingxing"></text>
-                        <text class="iconfont iconicon_xingxing"></text>
-                        <text class="iconfont iconicon_xingxing"></text>
-                        <text class="iconfont iconicon_xingxing"></text>
-                        <text class="iconfont iconicon_xingxing"></text>
-                    </view>
-                </view>
-                <text class="time_size">2019-07-12</text>
-                <text class="val_size">师傅维修得很好，一看就觉得是很有经验的人，他还会提供很多保养信息，下次继续选择泊邻维修</text>
-                <view class="val_image">
-                    <image class="" src="" mode="aspectFit|aspectFill|widthFix" lazy-load="false"></image>
-                    <image class="" src="" mode="aspectFit|aspectFill|widthFix" lazy-load="false"></image>
-                    <image class="" src="" mode="aspectFit|aspectFill|widthFix" lazy-load="false"></image>
-                </view>
-                <view class="align_self_right">
-                    <text class="iconfont iconicon_dianzan_dianji"></text>
-                    <text class="">100</text>
-                </view>
-            </view>
-        </view>
-    </view>
+<view class="" wx:elif="{{res.length<=0}}" style="width:100%">
+    <image class="img_288_209" src="../../image/icon_zwsc.png"></image>
+    <text class="" style="display:block;text-align:center;font-size:26rpx;color:#999">暂无评论</text>
 </view>

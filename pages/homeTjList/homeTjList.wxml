@@ -1,0 +1,36 @@
+<!-- pages/homeCzList/homeCzList.wxml -->
+<view class=" flex_row jus_between padding_20_55">
+    <block wx:for="{{resTitle}}" wx:key="">
+        <view class="flex_col" data-id="{{item.id}}" data-index="{{index}}" data-num="{{num}}" bindtap="tapTitle">
+            <text class=" size_28 {{index == num ? 'color_333' : 'color_999'}}">{{item.name}}</text>
+            <view wx:if="{{index == num}}" class="border_bottom"></view>
+        </view>
+    </block>
+</view>
+<view class="bgc_f2f2f2">
+    <view class="gird">
+        <block wx:for="{{res}}" wx:key="">
+            <view class="flex_column " data-id="{{item.id}}" bindtap="tapid">
+                <image class="image_538_300" mode="widthFix" src="{{item.listImage}}"></image>
+                <view class="padding_19 flex_column_1">
+                    <text class=" size_24 color_333 overflow_ell" style="margin-bottom:10px;font-weight:700">{{item.title}}</text>
+                    <view class="flex_row jus_between">
+                        <view class="flex_row">
+                            <image class="image_w50 margin_r_10" style="margin-bottom:0;border-radius:50%" src="{{item.avator}}"></image>
+                            <text class=" size_24 color_333">{{item.autor}}</text>
+                        </view>
+                        <view class="flex_row">
+                            <image class="image_w20 margin_r_10" src="../../image/home/icon_like.png"></image>
+                            <text class=" size_24 color_999">{{item.likes}}</text>
+                        </view>
+                    </view>
+                </view>
+            </view>
+        </block>
+    </view>
+</view>
+
+<view class="w_216_65">
+    <image class="w_216_65" src="../../image/cz/img_ljzx.png" mode="aspectFit|aspectFill|widthFix"></image>
+    <button class="default" open-type="contact" style="width: 100%; height: 100%;z-index: 1;opacity: 0;"></button>
+</view>

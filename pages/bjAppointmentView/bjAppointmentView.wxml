@@ -1,0 +1,78 @@
+<!-- pages/appointmentView/appointmentView.wxml -->
+<view class="myCleanListFlexHei">
+    <image class="myCleanImage" src="{{cleaner.avator}}" mode="cover"></image>
+    <view class="myCleanRight">
+        <view class="myCleanS">
+            <text class="myCleanName">{{cleaner.name}}</text>
+            <text class="myCleanJP" wx:if="{{cleaner.is_gold==='true'}}">金牌保洁人</text>
+        </view>
+        <view class="myCleanX">
+            <text class="iconfont iconicon_weizhi clean-dw"></text>
+            <text class="myCleanTimes">距离{{cleaner.distance}}km | 好评率:{{cleaner.evaluateRate}} | {{cleaner.subscribedNum}}人已预约</text>
+        </view>
+    </view>
+</view>
+<form bindsubmit="getcontent" bindreset="">
+    <view class="border-bottom">
+        <view class="val">
+            <view class="flex-dizhi" bindtap="gotoLocation">
+                <text class="title-fontSize height_52 margin_r_33" >服务地址</text>
+                <view class="flex_row" style="flex:1">    
+                    <text name="input" class="val-fontSize height_52 overflow_ell">{{location}}</text>
+                    <text class="iconfont iconicon_gengduo height_52"></text>
+                </view>
+            </view>
+            <view class="flex-menpai">
+                <view class="">
+                    <text class="title-fontSize">门牌号码</text>
+                    <input name="doorNum" class="val-fontSize" value="" type="text|number|idcard|digit|time|date" placeholder="填写门牌号码"></input>
+                </view>
+                <view class="">
+                    <text class="title-fontSize">门牌楼层</text>
+                    <input name="floorNum" class="val-fontSize" value="" type="text|number|idcard|digit|time|date" placeholder="填写楼层" placeholder-class="input-placeholder"></input>
+                </view>
+            </view>
+            <view class="flex-phone">
+                <text class="title-fontSize">联系电话</text>
+                <input name="phone" class="val-fontSize" maxlength="11" value="" type="number" placeholder="请输入你的联系电话"></input>
+            </view>
+        </view>
+    </view>
+    <view class="border-bottom">
+        <view class="flex-dizhi val-padding flex-fw">
+            <text class="title-fontSize">服务单价</text>
+            <view class="">
+                <text class="val-fontSize">￥</text>
+                <text class="yuan">{{cleaner.cost}}</text>
+                <text class="val-fontSize">/小时</text>
+            </view>
+        </view>
+    </view>
+    <view class="border-bottom" bindtap="showSelectTime">
+        <view class="flex-dizhi val-padding">
+            <text class="title-fontSize">服务时间</text>
+            <view class="val-fontSize">
+                <text class="">已选择{{newSelTime}}</text>
+                <text class="iconfont iconicon_gengduo"></text>
+            </view>
+        </view>
+    </view>
+    <view class="val">
+        <view class="appoint_body_w">
+            <view class="radio_wq" bindtap="showNq">
+                <view style="width:12rpx; height:12rpx; background-color:#999; border-radius:50%; display:{{showdisplay}}"></view>
+            </view>
+            <view class="appoint_body_ty" bindtap="showPopup">
+                <text class="">我已同意</text>
+                <text class="">《泊邻保洁服务协议》</text>
+            </view>
+        </view>
+    </view>
+    <button class="foot" style="background-color:{{isPay?'#333':'#999'}}" form-type="submit" bindtap="gotoConfirmOrder">支付￥{{amountPayable}}</button>
+</form>
+<popup id="popup" title="服务协议" success="我已经了解了" showError="{{showChildError}}" bind:error="_error" bind:success="_success">
+    <textarea class="fwxy" name="" id="">
+        为使用腾讯的服务，您应当阅读并遵守《腾讯服务协议》（以下简称“本协议”）和《QQ号码规则》。请您务必审慎阅读、充分理解各条款内容，特别是免除或者限制责任的条款，以及开通或使用某项服务的单独协议。限制、免责条款可能以黑体加粗形式提示您注意。除非您已阅读并接受本协议所有条款，否则您无权使用腾讯提供的服务。您使用腾讯的服务即视为您已阅读并同意上述协议的约束。如果您未满18周岁，请在法定监护人的陪同下阅读本协议，并特别注意未成年人使用条款。
+    </textarea>
+</popup>
+<selectTime id="selecttime" cleanerId="{{cleanerId}}" bind:success="_successSelect"></selectTime>

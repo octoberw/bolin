@@ -1,0 +1,7 @@
+{
+  "usingComponents": {
+    "popup": "/components/popup/popup",
+    "comment": "/components/comment/comment"
+  },
+  "navigationBarTitleText": "泊邻生活/订单详情"
+}

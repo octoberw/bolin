@@ -1,71 +1,252 @@
 /**index.wxss**/
 
 .userinfo {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 50rpx;
-    background-color: #f8f8f8;
-    border-bottom: 1rpx solid #f0f0f0;
-  }
-  
-  .userinfo-avatar {
-    width: 128rpx;
-    height: 128rpx;
-    margin: 20rpx;
-    border-radius: 50%;
-  }
-  
-  .userinfo-nickname {
-    color: #aaa;
-  }
-  
-  .usermotto {
-    padding: 20rpx 15rpx;
-  }
-  
-  .usermotto>text {
-    padding-right: 10rpx;
-  }
-  
-  .user-motto {
-    font-weight: 700;
-    font-size: 32rpx;
-  }
-  
-  .user-shu {
-    color: #999;
-    font-size: 32rpx;
-  }
-  
-  .usergn {
-    display: flex;
-  }
-  
-  .user-fwdj {
-    font-size: 24rpx;
-    color: #999;
-  }
-  
-  .usergn {
-    flex-direction: row;
-    margin-top: 40rpx;
-  }
-  
-  .usergn>view {
-    margin-right: 40rpx;
-  }
-  
-  .usergn-click {
-    width: 100rpx;
-    height: 100rpx;
-    border-radius: 50%;
-    background-color: #aaa;
-  }
-  
-  .usergn-text {
-    display: inline-block;
-    width: 100rpx;
-    font-size: 28rpx;
-    text-align: center;
-  }
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 52rpx 32rpx;
+  border-bottom: 1rpx solid #f0f0f0;
+  border-top: 1rpx solid #f0f0f0;
+}
+
+.userinfo-avatar {
+  width: 120rpx;
+  height: 120rpx;
+  margin-right: 20rpx;
+  border-radius: 50%;
+}
+
+.userinfo-nickname {
+  color: #aaa;
+}
+
+.usermotto {
+  padding: 50rpx 30rpx;
+  border-bottom: 1rpx solid #f0f0f0;
+}
+
+.user-motto {
+  font-weight: 700;
+  font-size: 32rpx;
+  margin-bottom: 30rpx;
+
+}
+
+.usergn>view {
+  margin-right: 40rpx;
+}
+
+.usergn-text {
+  display: inline-block;
+  width: 100rpx;
+  font-size: 28rpx;
+  text-align: center;
+}
+
+.shuoming {
+  width: 26rpx;
+  height: 26rpx;
+  display: block;
+}
+
+.jfmx {
+  width: 116rpx;
+  height: 30rpx;
+  line-height: 30rpx;
+  text-align: center;
+  border: 1rpx solid rgba(221, 221, 221, 1);
+  border-radius: 15rpx;
+}
+
+.img {
+  display: block;
+  height: 30rpx;
+}
+
+.line_height {
+  height: 30rpx;
+  line-height: 30rpx;
+}
+
+.img_50 {
+  width: 50rpx;
+  height: 50rpx;
+  margin-bottom: 15rpx;
+}
+
+.margin_r_60 {
+  margin-right: 60rpx;
+}
+
+.pos_r {
+  position: relative;
+}
+
+.pos_a {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+}
+
+/* 意见反馈 */
+/* components/popup/popup.wxss */
+.popup-bgc {
+  position: absolute;
+  width: 100vw;
+  /* height: 100vh; */
+  height: 140vh;
+  z-index: 100;
+  background-color: rgba(0, 0, 0, .2);
+  top: 0;
+  left: 0;
+}
+
+.popup-val {
+  position: fixed;
+  width: 440rpx;
+  z-index: 999;
+  top: 50%;
+  left: 50%;
+  padding: 50rpx 25rpx;
+  transform: translate(-50%, -50%);
+  background-color: #fff;
+  border-radius: 6rpx;
+}
+
+.popup-title {
+  display: block;
+  font-size: 32rpx;
+  font-weight: 700;
+  color: #333;
+  text-align: center;
+  margin-bottom: 28rpx;
+}
+
+.popup-foot {
+  display: flex;
+  justify-content: space-around;
+}
+
+.popup-foot>button {
+  width: 100%;
+  padding: 18rpx 0;
+  margin: 0;
+  margin-top: 50rpx;
+  border: 0;
+  border-radius: 6rpx;
+  text-align: center;
+  font-size: 22rpx;
+  line-height: 22rpx;
+}
+
+.popup-foot>button:first-child {
+  background-color: #ddd;
+  color: #999;
+}
+
+.popup-foot>button:last-child {
+  background-color: #333;
+  color: #fbdaa2;
+}
+
+textarea {
+  width: 390rpx;
+  height: 176rpx;
+  border: 1rpx solid rgba(221, 221, 221, 1);
+  border-radius: 4rpx;
+  background-color: rgba(242, 242, 242, 1);
+  padding: 20rpx;
+}
+
+/* 积分说明 */
+.padding_40_25{
+  padding: 40rpx 25rpx;
+  position: fixed;
+  width: 480rpx;
+  z-index: 999;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #fff;
+  border-radius: 6rpx;
+}
+
+.margin_22_10 {
+  padding: 22rpx 12rpx 50rpx 12rpx;
+  border-bottom: 1rpx solid rgba(221,221,221,1);
+  border-top: 1rpx solid rgba(221,221,221,1);
+  line-height: 36rpx;
+}
+
+/* 通用 */
+.jus_between {
+  justify-content: space-between
+}
+
+.text_align {
+  text-align: center;
+}
+
+.border_f2f2f2 {
+  border-bottom: 1rpx solid #f2f2f2
+}
+
+.flex_row {
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+}
+
+.jus_around {
+  justify-content: space-around
+}
+
+.flex_column {
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+}
+
+.size_18 {
+  font-size: 18rpx;
+}
+
+.size_20 {
+  font-size: 20rpx;
+}
+
+.size_22 {
+  font-size: 22rpx;
+}
+
+.size_24 {
+  font-size: 24rpx;
+}
+
+.size_26 {
+  font-size: 26rpx;
+}
+
+.size_28 {
+  font-size: 28rpx;
+}
+
+.size_30 {
+  font-size: 30rpx
+}
+
+.color_fff {
+  color: #fff;
+}
+
+.color_999 {
+  color: #999;
+}
+
+.color_333 {
+  color: #333
+}
+
+.color_e2ab51 {
+  color: #e2ab51
+}

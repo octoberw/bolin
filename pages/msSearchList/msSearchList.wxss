@@ -1,0 +1,409 @@
+/* pages/czHome/czHome.wxss */
+.w100_h450 {
+    width: 100%;
+    height: 450rpx;
+}
+
+
+/* 搜索框 */
+.w690 {
+    width: 690rpx;
+    height: 65rpx;
+    line-height: 65rpx;
+    padding: 16rpx 20rpx;
+    background-color: #fff;
+    border-radius: 27px;
+    border: 1rpx solid #f2f2f2;
+    margin: 0 auto;
+}
+
+.transform_90 {
+    transform: rotate(90deg);
+    margin-left: 10rpx;
+    margin-right: 15rpx;
+}
+
+/* 头部导航 */
+.padding_28 {
+    padding: 28rpx;
+    justify-content: space-between;
+}
+
+.w162_image {
+    width: 162rpx;
+    height: 198rpx;
+}
+
+.posr {
+    position: relative;
+    z-index: -1
+}
+
+.posa {
+    position: absolute;
+    top: 20rpx;
+    left: 14rpx;
+}
+
+/* 标签 */
+.biaoqianView {
+    padding: 20rpx 28rpx 50rpx 20rpx;
+    justify-content: space-between
+}
+
+.biaoqian {
+    padding: 0 30rpx;
+    height: 52rpx;
+    line-height: 52rpx;
+    background-color: rgba(241, 244, 248, 1);
+    border-radius: 4rpx;
+    margin-right: 10rpx;
+}
+
+.jieguo {
+    padding: 0 28rpx;
+}
+
+/* 选项 */
+.border {
+    padding: 30rpx 48rpx;
+    border-bottom: 1rpx solid #f2f2f2;
+    justify-content: space-between;
+}
+
+/* 背景幕 */
+.bgc_000 {
+    width: 100%;
+    height: 100vh;
+    position: absolute;
+    background-color: rgba(0, 0, 0, .3);
+    overflow: hidden;
+}
+
+.bgc_fff {
+    background-color: #fff;
+}
+
+/* 房源 */
+.image_692_415 {
+    width: 100%;
+    height: 415rpx;
+    margin-bottom: 40rpx;
+    border-radius: 8rpx;
+}
+
+.w32_h30 {
+    width: 32rpx;
+    height: 30rpx;
+}
+
+.margin_r_8 {
+    margin-right: 8rpx;
+}
+
+.padding_0_28 {
+    padding: 40rpx 28rpx;
+    justify-content: flex-start;
+}
+
+.between {
+    justify-content: space-between
+}
+
+.image_80_80 {
+    position: absolute;
+    width: 80rpx;
+    height: 80rpx;
+    border-radius: 50%;
+    border: 8rpx solid #fff;
+    /* box-shadow: 0 0 0 10rpx rgba(255, 255, 255, .8); */
+    right: 47rpx;
+    bottom: 0
+}
+
+.flex_1 {
+    flex: 1;
+}
+
+.margin_b_15 {
+    margin-bottom: 15rpx;
+}
+
+.margin_b_10 {
+    margin-bottom: 10rpx;
+}
+
+.margin_b_20 {
+    margin-bottom: 20rpx;
+}
+
+/* 租金 */
+.padding_32 {
+    padding: 32rpx 48rpx;
+    border-bottom: 1rpx solid #f2f2f2;
+}
+
+.padding_40 {
+    padding: 40rpx 48rpx;
+}
+
+.input_280 {
+    width: 280rpx;
+    height: 80rpx;
+    border: 1rpx solid #e1e1e1;
+    border-radius: 4rpx;
+    padding: 30rpx;
+}
+
+.foot {
+    border-top: 1rpx solid #f2f2f2;
+}
+
+.foot>view {
+    width: 377rpx;
+    line-height: 88rpx;
+    text-align: center;
+}
+
+/* 区域 */
+.height_632 {
+    height: 632rpx;
+}
+
+.align_item {
+    align-items: stretch !important;
+    height: 632rpx;
+}
+
+.bgc_f2f2f2_qy {
+    background-color: #f2f2f2;
+    border-right: 1rpx solid #f2f2f2;
+}
+
+
+.bgc_fff_qy {
+    line-height: 90rpx;
+    background-color: #fff;
+}
+
+.border_qy_333 {
+    border-left: 6px solid #333;
+    padding: 0 50rpx;
+    font-weight: 700;
+}
+
+.border_qy_fff {
+    border-left: 6px solid rgba(0, 0, 0, 0);
+    padding: 0 50rpx;
+}
+
+.padding_20_50 {
+    padding: 20rpx 50rpx;
+}
+
+.color_333_weight {
+    color: #333;
+    font-weight: 700;
+}
+
+.color_999_weight {
+    color: #999;
+    font-weight: 700;
+}
+
+/* 筛选 */
+.margin_bottom_30 {
+    margin-bottom: 20rpx;
+}
+
+.shaixuan {
+    height: 93vh;
+}
+
+.padding_20_48 {
+    padding: 20rpx 48rpx;
+    margin-right: 14rpx;
+    margin-bottom: 14rpx;
+    border: 1rpx solid #f2f2f2;
+    border-radius: 6rpx;
+}
+
+.padding_28_sx {
+    padding: 22rpx 0 0 28rpx;
+}
+
+.border_sx_cz {
+    width: 100%;
+    height: 88rpx;
+    line-height: 88rpx;
+    text-align: center;
+    border-top: 1rpx solid #f2f2f2;
+    border-right: 1rpx solid #f2f2f2;
+}
+
+.border_sx_qd {
+    width: 100%;
+    height: 88rpx;
+    line-height: 88rpx;
+    text-align: center;
+    border-top: 1rpx solid #f2f2f2;
+}
+
+.click {
+    color: #fff !important;
+    background-color: #333;
+    border: 1rpx solid #333;
+}
+
+.w45_h45 {
+    width: 45rpx;
+    height: 45rpx;
+    text-align: center;
+    line-height: 45rpx;
+    border: 1px solid rgba(221,221,221,1)
+}
+
+.w65_h45 {
+    width: 65rpx;
+    height: 45rpx;
+    text-align: center;
+    line-height: 45rpx;
+    border-top: 1px solid rgba(221,221,221,1);
+    border-bottom: 1px solid rgba(221,221,221,1)
+}
+
+
+.bgc_333 {
+    background-color:#333 !important;
+}
+
+.margin_t_35 {
+    margin-top: 35rpx;
+    margin-bottom: 50rpx;
+}
+
+/* 通用 */
+.border_f2f2f2 {
+    border-bottom: 1rpx solid #f2f2f2
+}
+
+.flex_row {
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+}
+
+.flex_column {
+    display: flex;
+    flex-flow: column nowrap;
+}
+
+.size_18 {
+    font-size: 18rpx;
+}
+
+.size_20 {
+    font-size: 20rpx;
+}
+
+.size_22 {
+    font-size: 22rpx;
+}
+
+.size_24 {
+    font-size: 24rpx;
+}
+
+.size_26 {
+    font-size: 26rpx;
+}
+
+.size_28 {
+    font-size: 28rpx;
+}
+
+.size_30 {
+    font-size: 30rpx
+}
+
+.color_fff {
+    color: #fff;
+}
+
+.color_999 {
+    color: #999;
+}
+
+.color_333 {
+    color: #333
+}
+
+.color_e2ab51 {
+    color: #e2ab51
+}
+
+.color_js {
+    color: rgba(251, 221, 171, 1)
+}
+
+/* 超出隐藏... */
+.overflow_ell {
+    overflow: hidden;
+    /*自动隐藏文字*/
+    text-overflow: ellipsis;
+    /*文字隐藏后添加省略号*/
+    white-space: nowrap;
+    /*强制不换行*/
+    /*不允许出现半汉字截断*/
+    /* padding: 20rpx 0 30rpx 0; */
+}
+
+.between {
+    justify-content: space-between
+}
+
+
+/* 日期选择 */
+.date-day{
+    display: flex;
+    padding:5px;
+    text-align:center;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.date-day.bgitem{
+  background-color: #d8ecf9;
+}
+.date-day.active{
+    background: #099FDE;
+    color:#FFF;
+    
+}
+.date-day.unavailable{
+    color:#aaa;
+}
+
+.date-week{
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    margin:5px;
+}
+.week{
+    color:#099FDE;
+}
+.row{
+  display: flex;
+  flex-direction: row;
+}
+ .item-days{
+  display: flex;
+  flex-direction:column;
+  justify-content: center;
+  align-items: center;
+  font-size: 35rpx;
+} 
+.bgwhite{
+  background-color: #fff;
+}

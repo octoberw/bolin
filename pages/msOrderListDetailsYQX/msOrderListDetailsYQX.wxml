@@ -1,0 +1,150 @@
+<view class="small_border"></view>
+<view class="flex_row padding_0_28 padding_tb_46_40" style="justify-content:flex-start;">
+    <image class="image_350_210 margin_r_22" src="../../image/home/img_2.png "></image>
+    <view class="flex_column flex_1" style="flex:1;">
+        <text class="size_24 color_333 margin_b_12" style="font-weight:700;">整租|琶洲新村1室一厅</text>
+        <text class=" size_18 color_999">78.6m2 | 地铁上盖</text>
+        <view class="size_24 color_333 flex_column">
+            <view class="" style="margin-top:18rpx">
+                <text class="size_20 color_999 padding_8_20">交通方便</text>
+                <text class="size_20 color_999 padding_8_20">房东超好</text>
+            </view>
+        </view>
+    </view>
+    <view class=" flex_column flex_end">
+        <text class=" size_22 color_333">已取消</text>
+        <view class="">
+            <text class=" size_22 color_333">￥</text>
+            <text class=" size_32 color_333" style="font-weight: 700">3020</text>
+        </view>
+    </view>
+</view>
+<view class="big_border"></view>
+<!-- pages/wxBlOrder/wxBlOrder.wxml -->
+<view class="title-border"></view>
+<view class="border-bottom ">
+    <view class="val">
+        <text class=" size_26 color_333" style="margin-right:12rpx;font-weight:700">入住日期</text>
+        <view class="flex_row jus_bet margin_t_20" bindtap="gotoSelectTime">
+            <view class="">
+                <text class="size_26 color_999 margin_b_15">入住时间</text>
+                <view class="flex_row align_item_end">
+                    <text class="size_32 color_333 margin_r_15 bgc_time" style="font-weight:700">{{checkInDate}}</text>
+                </view>
+            </view>
+            <view class="">
+                <text class="size_26 color_999 margin_b_15">离店时间</text>
+                <view class="flex_row align_item_end">
+                    <text class="size_32 color_333 margin_r_15 bgc_time" style="font-weight:700">{{checkOutDate}}</text>
+                </view>
+            </view>
+            <view class=" flex_column jus_bet">
+                <text class="size_26 color_fff margin_b_15">1</text>
+                <view class="flex_row align_item_center">
+                    <text class="size_20 color_999">共住2晚</text>
+                    <text class="iconfont iconicon_gengduo color_999"></text>
+                </view>
+            </view>
+        </view>
+    </view>         
+</view>
+
+<view class="val" style="padding:0 28rpx; margin:0">
+    <view class="flex-phone flex_start " style="margin-top:0;margin-top:0rpx;padding-bottom:0;padding:10px 0">
+        <text class=" size_26 color_333" style="font-weight:700">民宿住址</text>
+        <text class=" size_26 color_999" style="flex:1;line-height:50rpx;margin-right:0">广州市海珠区月江路琶洲塔公园旁保利天元花园A栋113-11楼</text>
+    </view>
+    <view class="flex-phone" style="margin-top:0rpx;padding-bottom:0">
+        <text class=" size_26 color_333" style="line-height:80rpx;font-weight:700">房东信息</text>
+        <view class="flex_row align_center">
+            <text class=" size_26 color_999" style="margin-right:10px">菜笑笑</text>
+            <text class=" size_26 color_999">1311111111</text>   
+        </view>
+    </view>
+    <view class="flex-phone" style="margin-top:0rpx;padding-bottom:0">
+        <text class=" size_26 color_333" style="line-height:80rpx;font-weight:700">房源信息</text>
+        <view class="flex_row align_center">
+            <text class=" size_26 color_999" style="margin-right:10px">整租</text>
+            <text class=" size_26 color_999">房东：好意住公寓</text> 
+        </view>
+    </view>
+</view>
+
+<view class="border_bottom_view"></view>
+
+<view class="border-bottom val">
+    <view class="flex-phone" style="margin-top:0rpx;padding-bottom:0;margin-bottom:15px">
+        <text class=" size_26 color_333" style="line-height:80rpx;font-weight:700">预约信息</text>
+        <view class="flex_row align_center">
+            <text class=" size_26 color_999" style="margin-right:10px">冯程程</text>
+            <text class=" size_26 color_999">13222222222</text>   
+        </view>
+    </view>
+    <text class="size_26 color_333" style="font-weight:700;margin-bottom:10px"> 入住名单</text>
+    <view class=" flex_row between margin_b_30 bgc_people">
+        <view class="flex_row ">
+            <image class="w27" src="../../image/ms/icon_people.png"></image>
+            <text class=" size_26 color_333 h27" style="font-weight:700">冯程程</text>
+        </view>
+        <view class=" flex_row">
+            <text class=" size_26 color_333 margin_r_10">440***********6210</text>
+            <image class="w27" src="../../image/ms/icon_bianji.png"></image>
+        </view>
+    </view>    
+    <view class=" flex_row between margin_b_30 bgc_people">
+        <view class="flex_row ">
+            <image class="w27" src="../../image/ms/icon_people.png"></image>
+            <text class=" size_26 color_333 h27" style="font-weight:700">冯程程</text>
+        </view>
+        <view class=" flex_row">
+            <text class=" size_26 color_333 margin_r_10">440***********6210</text>
+            <image class="w27" src="../../image/ms/icon_bianji.png"></image>
+        </view>
+    </view>
+</view>
+
+<view class="border-bottom val">
+    <view class="flex-phone" style="margin-top:0rpx;padding-bottom:0;margin-bottom:15px">
+        <text class=" size_26 color_333" style="line-height:80rpx;font-weight:700">备注信息</text>       
+    </view>
+    <text class=" size_22 color_999">希望可以把床单被褥重新洗亿次亿次亿次亿次亿次亿次亿次亿次亿次亿次亿次亿次亿次亿次亿次亿次亿次亿次亿次亿次亿次亿次亿次亿次亿次亿次亿次亿次</text>
+</view>
+
+<view class="val" style="padding:0 28rpx; margin:0; ">
+    <view class="flex-phone jus_bet" style="margin-top:0rpx;padding-bottom:0">
+        <text class=" size_26 color_333" style="line-height:80rpx;font-weight:700">预约单号</text>
+        <view class="flex_row align_center">
+            <text class=" size_26 color_999" style="margin-right:10px"></text>
+            <text class=" size_26 color_999">1311111111111111111</text>   
+        </view>
+    </view>
+    <view class="flex-phone jus_bet" style="margin-top:0rpx;padding-bottom:0">
+        <text class=" size_26 color_333" style="line-height:80rpx;font-weight:700">下单时间</text>
+        <view class="flex_row align_center">
+            <text class=" size_26 color_999" style="margin-right:10px"></text>
+            <text class=" size_26 color_999">2019/08/09</text> 
+        </view>
+    </view>
+</view>
+
+<view class="border_bottom_view"></view>
+
+
+<view class="border-bottom val">
+    <view class="flex-phone" style="margin-top:0rpx;padding-bottom:0">
+        <text class=" size_22 color_33" style="line-height:80rpx;font-weight:700">取消信息</text>       
+    </view>
+    <view class="flex_row" style="margin-top:0rpx;padding-bottom:0;margin-top:10px">
+        <text class=" size_22 color_333" style="line-height:40rpx;font-weight:700;margin-right:10px">取消时间</text>
+        <view class="flex_row align_center">
+            <text class=" size_22 color_999" style="margin-right:10px">2019年4月9日</text>
+            <text class=" size_22 color_999">10：00：00</text>   
+        </view>
+    </view>
+    <view class=" flex_row" style="margin-top:0rpx;padding-bottom:0">
+        <text class=" size_22 color_333" style="line-height:40rpx;font-weight:700;margin-right:10px">取消原因</text>
+        <view class="flex_row align_center">
+            <text class=" size_22 color_999">支付超时(30分钟超时支付，系统自动关闭)</text> 
+        </view>
+    </view>
+</view>

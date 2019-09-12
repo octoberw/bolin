@@ -1,0 +1,8 @@
+{
+  "usingComponents": {
+    "popup":"/components/popup/popup",
+    "selectTime":"/components/selecttime/selecttime",
+    "integral":"/components/integral/integral"
+  },
+  "navigationBarTitleText": "立即下单"
+}

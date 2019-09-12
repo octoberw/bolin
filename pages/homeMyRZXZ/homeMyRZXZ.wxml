@@ -1,0 +1,1 @@
+<rich-text class="font" nodes="{{res.content}}"></rich-text>

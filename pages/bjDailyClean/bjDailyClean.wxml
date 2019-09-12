@@ -1,0 +1,187 @@
+<!-- pages/dailyClean/dailyClean.wxml -->
+<view class="title-border">
+    <!-- <view class="input" scroll-top="0">
+        <text class="iconfont iconicon_sousuo"></text>
+        <input class="" value="" type="input" placeholder="请输入地址" min-height="14rpx"></input>
+    </view> -->
+    <view class="map_center">
+        <map id="mapCtx" data-id="1" class="map" longitude="{{longitudeID}}" latitude="{{latitudeID}}" scale="{{scale}}" markers="{{markers}}" circles="{{circles}}" show-location="true" bindregionchange="regionchange" ></map>
+        <cover-image class="map_center_icon" bindtap="my_location" src="../../resources/img/1.png" />
+    </view>
+    <view class="" style="display:{{showHead}}">
+        <scroll-view class="scroll-view" scroll-x scroll-top>
+            <!-- <view class="scroll-view"> -->
+            <view class="scroll-view-vv">
+                <view class="scroll-view-hn" wx:for="{{cleaner}}" wx:key="">
+                    <view class="clean-zb">
+                        <image class="clean-image" src="{{item.avator}}" mode="aspectFit|aspectFill|widthFix"></image>
+                        <view class="clean-right">
+                            <view class="clean">
+                                <text class="clean-name">{{item.name}}</text>
+                                <text class="clean-style" wx:if="{{item.is_gold==='true'}}">金牌保洁人</text>
+                            </view>
+                            <view class="flex_column">
+                                <view class="clean">
+                                    <text class="iconfont iconicon_weizhi clean-dw"></text>
+                                    <text class="clean-hp">距离{{item.distance}}km | 好评率:{{item.evaluateRate}}</text>
+                                </view>
+                                <view class=" flex_row">
+                                    <view class="clean-yy1">
+                                        <text class="clean-rmb1 ">￥</text>
+                                        <text class="clean-y11">{{item.cost}}</text>
+                                        <text class="clean-y111">/小时</text>
+                                        <text class="clean-yysl">{{item.subscribedNum}}人已约</text>
+                                    </view>
+                                    <text  data-cleanerId="{{item.cleanerId}}" class="clean-yy-btn" bindtap="gotoAppointmentView">预约</text>
+                                </view>
+                            </view>
+                        </view>
+                    </view>
+                </view>
+                <view class="scroll-view-hn-ve" catchtap="gotoMore">
+                    <view class="clean-zb clean-zb-padding">
+                        <view class="clean-zb-tj">
+                            <text class="">查看更多周边服务者</text>
+                            <text class="">为您推荐身边最好的服务</text>
+                        </view>
+                        <text class="iconfont iconicon_gengduo"></text>
+                    </view>
+                </view>
+            </view>
+        </scroll-view>
+        <view class="val">
+            <view class="title border-bottom">
+                <text class="title-top">服务介绍</text>
+                <text class="title-center">提供更专业的保洁服务</text>
+                <view class="title-bottom" hover-class="none" hover-stop-propagation="false">
+                    <text class="iconfont iconicon_yinhao"></text>
+                    <text class="">提供家庭内表面清洁、物品归纳整理和高温消毒服务</text>
+                    <view class="iconfont iconicon_yinhao"></view>
+                </view>
+            </view>
+            <view class="border-bottom">
+                <view class="body">
+                    <text class="iconfont iconicon_zhuanyejishi"></text>
+                    <view class="">
+                        <text class="">专业技师</text>
+                        <text class="">千名服务人员全方位覆盖，100%认证，安全贴心</text>
+                    </view>
+                </view>
+            </view>
+            <view class="border-bottom">
+                <view class="body">
+                    <text class="iconfont iconicon_quanxinmaojin"></text>
+                    <view class="">
+                        <text class="">全新毛巾</text>
+                        <text class="">每家每户清洁使用全新毛巾，分区使用，避免交叉感染</text>
+                    </view>
+                </view>
+            </view>
+            <view class="border-bottom">
+                <view class="body">
+                    <text class="iconfont iconicon_zhuanyeshebei"></text>
+                    <view class="">
+                        <text class="">专业设备</text>
+                        <text class="">进口高端清洁设备，高温消毒，能迅速清理污渍、细菌和异味</text>
+                    </view>
+                </view>
+            </view>
+            <view class="title margin-top">
+                <text class="title-top">参考耗时</text>
+                <text class="title-center">让您的预约更加精准</text>
+                <image class="" src="https://bl.hboxs.com/i/banner/img_cankaohaoshi.png" mode="aspectFit|aspectFill|widthFix"></image>
+            </view>
+            <view class="title fw-margin-top">
+                <text class="title-top">专业工具</text>
+                <text class="title-center">工欲善其事，必先利其器</text>
+                <view class="body-gj">
+                    <view class="">
+                        <text class="iconfont iconicon_qingjiebeibao"></text>
+                        <text class="">清洁背包</text>
+                    </view>
+                    <view class="">
+                        <text class="iconfont iconicon_qingjiemaojin"></text>
+                        <text class="">清洁毛巾</text>
+                    </view>
+                    <view class="">
+                        <text class="iconfont iconicon_gaowenzhengqiji"></text>
+                        <text class="">高温蒸汽机</text>
+                    </view>
+                </view>
+                <view class="body-gj">
+                    <view class="">
+                        <text class="iconfont iconicon_qingjieji"></text>
+                        <text class="">清洁剂</text>
+                    </view>
+                    <view class="">
+                        <text class="iconfont iconicon_shensuoqingjiegan"></text>
+                        <text class="">伸缩清洁杆</text>
+                    </view>
+                    <view class="">
+                        <text class="iconfont iconicon_qingjiemaotou"></text>
+                        <text class="">清洁毛头</text>
+                    </view>
+                </view>
+            </view>
+            <view class="title fw-margin-top" bindtap="gotoComment">
+                <text class="title-top">服务评价</text>
+                <text class="title-center">您的评价是我们前进的动力</text>
+                <view class="image-tx">
+                    <image class="" src="../../image/image_1.png" mode="aspectFit|aspectFill|widthFix"></image>
+                    <image class="" src="../../image/image_2.png" mode="aspectFit|aspectFill|widthFix"></image>
+                    <image class="image-tx-big" src="../../image/image_3.png" mode="aspectFit|aspectFill|widthFix"></image>
+                    <image class="" src="../../image/image_4.png" mode="aspectFit|aspectFill|widthFix"></image>
+                    <image class="" src="../../image/image_5.png" mode="aspectFit|aspectFill|widthFix"></image>
+                </view>
+                <view class="eva_pf">
+                    <view class="eva_pf_title">
+                        <text class="">Liart_9354  评分 :</text>
+                        <view class="">
+                            <text class="iconfont iconicon_xingxing"></text>
+                            <text class="iconfont iconicon_xingxing"></text>
+                            <text class="iconfont iconicon_xingxing"></text>
+                            <text class="iconfont iconicon_xingxing"></text>
+                            <text class="iconfont iconicon_xingxing"></text>
+                        </view>
+                    </view>
+                    <text class="">
+                        平时工作太忙，没时间打扫卫生，预约保洁阿姨后很快就上门开始清洁工作了，边角缝隙处理都很仔细打扫，地板非常干净！太赞了！
+                    </text>
+                </view>
+            </view>
+            <view class="logo">
+                <image class="logo" src="../../image/img_logo.png" mode=""></image>
+            </view>
+        </view>
+    </view>
+</view>
+
+<view class="title-border" style="display:{{showMore}}">
+    <view class="scroll-view-hn" wx:for="{{moreCleaner}}" wx:key="">
+        <view class="clean-zb1">
+            <image class="clean-image" src="{{item.avator}}" mode="aspectFit|aspectFill|widthFix"></image>
+            <view class="clean-right">
+                <view class="clean">
+                    <text class="clean-name">{{item.name}}</text>
+                    <text class="clean-style" wx:if="{{item.is_gold==='true'}}">金牌保洁人</text>
+                </view>
+                <view class="clean">
+                    <text class="iconfont iconicon_weizhi clean-dw"></text>
+                    <text class="clean-hp">距离{{item.distance}}km | 好评率:{{item.evaluateRate}}</text>
+                </view>
+            </view>
+            <view class="clean-yy">
+                <view class="">
+                    <text class="clean-rmb">￥</text>
+                    <text class="clean-y">{{item.cost}}</text>
+                    <text class="">/小时</text>
+                </view>
+                <text data-cleanerId="{{item.cleanerId}}" class="clean-yy-btn1" bindtap="gotoAppointmentView">预约</text>
+                <text class="clean-yysl">{{item.subscribedNum}}人已预约</text>
+            </view>
+        </view>
+    </view>
+    <view class="dibuImage">
+        <image class="" src="../../image/img_logo.png" ></image>
+    </view>
+</view>

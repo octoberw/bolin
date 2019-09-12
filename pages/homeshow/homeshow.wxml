@@ -1,0 +1,116 @@
+<!-- pages/homeshow/homeshow.wxml -->
+<view class="w_750 size_24">
+    <rich-text class="" nodes="{{res.content}}"></rich-text>
+</view>
+
+<!-- 维修 -->
+<view wx:if="{{res.module=='维修'}}" class="table gird" bindtap="gotoMTWX">
+    <block wx:for="{{res.serves}}" wx:key="">
+        <view data-thirdId="{{item.id}}" class="flex_row_wx three_style" style="height:70px;">
+            <view class="flex_column">
+                <text data-thirdId="{{item.id}}" class="three_font">{{item.name}}</text>
+                <text data-thirdId="{{item.id}}" class="small_three_font">{{item.info}}</text>
+            </view>
+            <image data-thirdId="{{item.id}}" class="" src="{{item.avator}}" style="width:49rpx; height:57rpx; margin-right:8rpx"></image>
+        </view>
+    </block>
+</view>
+
+<!-- 长租 -->
+<block wx:if="{{res.module=='长租'}}" wx:for="{{res.longRents}}" wx:key=""> 
+    <view data-homenum="{{item.num}}" class="" bindtap="gotoZfListHome">
+        <view class="flex_row padding_0_28">
+            <image class="image_350_210" style="border-radius:6rpx" src="{{item.avator}}"></image>
+            <view class="flex_column flex_1">
+                <text class="size_28 color_333 margin_b_10 overflow_ell" style="font-weight:700">{{item.type=='all'?'整租':'合租'}}|{{item.title}}</text>
+                <view class="" style="display:flex">
+                    <text class="size_24 color_999 margin_b_20" >{{item.area}}</text><view class=" pingfang_posr"><text class="color_999 pingfang_24">m</text><text class="color_999 pingfang_12">2</text></view>
+                </view>
+                <view class="margin_b_15">
+                <block wx:for="{{item.id}}" wx:key="">
+                    <text class="size_20 color_999" style="padding:8rpx 20rpx;border:1rpx solid #ddd; margin-right:10rpx">{{item.name}}</text>
+                </block>
+                </view>
+                <view class="">
+                    <text class="size_20 color_e2ab51">￥</text>
+                    <text class="size_30 color_e2ab51">{{item.monthlyRent}}</text>
+                    <text class="size_20 color_999">/月</text>
+                </view>
+            </view>
+        </view>
+        <view class="border_f2f2f2" style="margin:0 28rpx"></view>
+    </view>
+</block>
+
+<!-- 民宿 -->
+<block wx:if="{{res.module=='民宿'}}" wx:for="{{res.homeStay}}" wx:key=""> 
+    <view class="">
+        {{item.newId}}
+    </view>
+        <view class="" bindtap="toHouse" data-outline="{{item.outLink}}" data-num="{{item.num}}" data-types="{{item.types}}">
+            <view class="flex_column padding_0_28">
+                <view class="posr">                
+                    <image class=" image_692_415" src="{{item.avator}}"></image>
+                    <image class=" image_80_80" src="{{headAndStar[item.id[0].parentId].headImage}}"></image>
+                </view>
+                <view class="flex_column flex_1">
+                    <text class="size_20 color_999" >{{item.houseType}} | 可住{{item.peopleCounting}} | {{item.bed}}</text>
+                    <text class="size_28 color_333 overflow_ell_1" style="font-weight:700">{{item.types=='self'?'自营':'非自营'}} | {{item.title}}</text>
+                    <view class="">
+                        <text class="size_20 color_e2ab51">￥</text>
+                        <text class="size_30 color_e2ab51">{{item.roomRate}}</text>
+                        <text class="size_20 color_999">/天</text>
+                </view>
+                <view class="margin_b_15">
+                    <block wx:for="{{item.id}}" wx:key="">
+                        <text class="size_20 color_999" style="padding:8rpx 20rpx;border:1rpx solid #ddd; margin-right:10rpx">{{item.name}}</text>
+                    </block>
+                </view>
+            </view>
+            <view class=" flex_row between">
+                <view class="">   
+                    <block wx:for="{{headAndStar[item.id[0].parentId].star}}" wx:key="">
+                        <text class="iconfont iconicon_xingxing color_js w32_h30 margin_r_8"></text>
+                    </block>     
+                </view>
+                <text class="size_22 color_333">{{item.orderPeople}}人已定</text>            
+            </view>
+        </view>  
+        <view class="border_f2f2f2" style="margin:0 28rpx"></view>
+    </view>
+</block>
+
+
+<!-- 设计师 -->
+<view class="" wx:if="{{res.module=='装修'}}">
+    <block wx:for="{{res.designers}}" wx:key="">
+        <view class="magin_50_29" data-id="{{item.id}}" bindtap="bindSJS">
+            <view class=" flex_row">
+                <image class="image_80 margin_26" src="{{item.avator}}"></image>
+                <view class=" flex_row jus_between" style="flex:1">
+                    <view class=" flex_column">
+                        <view class="flex_row" style="margin-bottom:5px;">
+                            <text class=" size_28 color_333" style="font-weight:700">{{item.name}}</text>
+                            <view wx:if="{{item.confirm==='true'}}" class=" size_20 color_7A98BC renzheng">已认证</view>
+                        </view>
+                        <view class="flex_row">
+                            <text class=" size_22 color_333" style="margin-right: 5px">{{item.fullName}}</text>
+                            <view class=" size_20 color_999 biaoqian" style="margin-right: 5px">{{item.style}}</view>
+                            <view class=" size_20 color_999 biaoqian">{{item.status==='local'?'本地设计':'在线设计'}}</view>
+                        </view>
+                    </view>
+                    <view class="" style="display: flex;align-items: flex-end;" >
+                        <text class=" size_22 color_333" style="font-weight:700">￥</text>
+                        <text class=" size_32 color_333" style="font-weight:700">{{item.cost}}/</text><view class=" pingfang_posr"><text class="color_999 pingfang_24">m</text><text class="color_999 pingfang_12">2</text></view>
+                        <text class=" size_20 color_333" style="margin-left:5px">起</text>
+                    </view>
+                </view>
+            </view>
+            <view class="flex_row margin_t_28">
+                <block wx:for="{{item.workPhoto}}" wx:key="">
+                    <image class="image_125" src="{{item}}"></image>
+                </block>
+            </view>
+        </view>
+    </block>
+</view>

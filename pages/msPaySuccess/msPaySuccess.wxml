@@ -1,0 +1,17 @@
+<!--pages/confirmOrder/confirmOrder.wxml-->
+  <view>
+    <view class="ps_bg">
+      <view class="ps_head">
+        <text class="iconfont iconicon_dui"></text>
+      </view>
+      <view class="ps_fw">
+        <text>您的房源已预约</text>
+        <text>您的预约号为:{{hs}}</text>
+        <text>我们将会以短信及推送通知是否成功</text>
+      </view>
+      <view class="ps_foot">
+        <text bindtap="gotoMyCleanComment" data-id="{{id}}">查看预约详情</text>
+        <text bindtap="gotoHome">返回首页</text>
+      </view>
+    </view>
+  </view>

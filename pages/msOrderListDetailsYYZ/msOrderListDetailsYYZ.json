@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+    "comment": "/components/comment/comment"
+  },
+  "navigationBarTitleText": "订单详情"
+}

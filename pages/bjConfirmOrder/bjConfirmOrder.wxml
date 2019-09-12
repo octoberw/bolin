@@ -1,0 +1,17 @@
+<!--pages/confirmOrder/confirmOrder.wxml-->
+  <view>
+    <view class="ps_bg">
+      <view class="ps_head">
+        <text class="iconfont iconicon_dui"></text>
+      </view>
+      <view class="ps_fw">
+        <text>您的服务预约成功</text>
+        <text>您的预约号为:{{sn}}，服务员上门前会</text>
+        <text>提前通知您，请保持联系通畅</text>
+      </view>
+      <view class="ps_foot">
+        <text bindtap="gotoMyCleanComment">查看预约详情</text>
+        <text bindtap="gotoHome">返回首页</text>
+      </view>
+    </view>
+  </view>

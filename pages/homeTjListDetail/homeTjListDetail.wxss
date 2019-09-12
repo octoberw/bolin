@@ -1,0 +1,291 @@
+/* pages/zxJingyanDetails/zxJingyanDetails.wxss */
+.titleImage {
+    width: 100%;
+    height: 750rpx;
+    display: block;
+}
+
+.pos_r_head {
+    height: 750rpx;
+}
+
+.index {
+    position: absolute;
+    right: 30rpx;
+    bottom: 50rpx;
+    border-radius: 28rpx;
+    color: #fff;
+    background-color: rgba(0, 0, 0, .3);
+    padding: 6rpx 24rpx;
+    font-size: 24rpx;
+}
+
+.h_139 {
+    height: 260rpx;
+}
+
+.margin_0_28 {
+    margin: 0 28rpx;
+}
+
+.margin_20_28 {
+    margin: 20rpx 28rpx;
+}
+
+.label {
+    width: 140rpx;
+    height: 52rpx;
+    line-height: 52rpx;
+    text-align: center;
+    border: 1rpx solid rgba(221, 221, 221, 1);
+    margin-right: 10rpx;
+}
+
+.label_border {
+    padding-bottom: 1rpx;
+    background-color: rgba(221, 221, 221, 1);
+    margin: 40rpx 28rpx;
+}
+
+.label_border2 {
+    padding-top: 2rpx;
+    background-color: rgba(221, 221, 221, 1);
+    margin: 40rpx 28rpx;
+}
+
+.margin_r_10 {
+    margin-right: 10rpx;
+}
+
+.image_w20 {
+    width: 20rpx;
+    height: 20rpx;
+    border-radius: 50%;
+}
+
+.image_w50 {
+    width: 50rpx;
+    height: 50rpx;
+    margin-bottom: 14rpx;
+    border-radius: 50%;
+
+}
+
+.margin_r_22 {
+    margin-right: 22rpx;
+}
+
+.image_538 {
+    width: 338rpx;
+    height: 520rpx;
+}
+
+.image_538_300 {
+    width: 338rpx;
+    height: 338rpx;
+    border-radius: 4rpx;
+}
+
+.image_w20 {
+    width: 20rpx;
+    height: 20rpx;
+}
+
+.image_w50 {
+    width: 50rpx;
+    height: 50rpx;
+    margin-bottom: 14rpx;
+}
+
+.margin_r_22 {
+    margin-right: 22rpx;
+}
+
+.border_padding {
+    padding-bottom: 20rpx;
+    background-color: rgba(242, 242, 242, 1);
+    margin: 64rpx 0;
+}
+
+.text_indent {
+    text-indent: 2em
+}
+
+.bgc_f2f2f2 {
+    background-color: #f2f2f2;
+    border: 1rpx solid #f2f2f2;
+    height: 100%;
+    padding-bottom: 100rpx;
+}
+
+.gird {
+    column-count: 2;
+    margin: 30rpx 28rpx;
+    column-gap: 20rpx;
+}
+
+.image_538_300 {
+    width: 100%;
+    border-radius: 4rpx;
+}
+
+.padding_19 {
+    padding: 19rpx;
+}
+
+.margin_t_48 {
+    margin-top: 48rpx
+}
+
+.border_r_4{
+    border-radius: 4rpx;
+}
+
+.show {
+    color: #747d9f;
+}
+
+.conts {
+    display: -webkit-box;
+    /*规定子元素的排列方向 */
+    -webkit-box-orient: vertical;
+    /*限制文本显示的行数  */
+    -webkit-line-clamp: 5;
+    /*实现多余的文字隐藏并用省略号来代表被隐藏的文字  */
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.foot {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    line-height: 50px;
+    font-size: 32rpx;
+    text-align: center;
+    background: #333;
+    color: #fbdaa2;
+    border-radius: 0;
+}
+
+.shoucangImg {
+    position: absolute;
+    right: 30rpx;
+    top: 50rpx;
+    width: 75rpx;
+    height: 75rpx;
+}
+
+.dianzanImg {
+    width: 30rpx;
+    height: 26rpx;
+}
+
+.w_216_65 {
+    position: fixed;
+    top: 36%;
+    right: 0;
+    width: 216rpx;
+    height: 65rpx;
+    z-index: 1;
+}
+
+/* 通用 */
+.jus_between {
+    justify-content: space-between
+}
+
+.text_align {
+    text-align: center;
+}
+
+.border_f2f2f2 {
+    border-bottom: 1rpx solid #f2f2f2
+}
+
+.flex_row {
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+}
+
+.image_w50 {
+    width: 50rpx;
+    height: 50rpx;
+    margin-bottom: 14rpx;
+}
+
+.margin_r_10 {
+    margin-right: 10rpx;
+}
+
+/* .flex_column {
+    display: flex;
+    flex-flow: column nowrap;
+} */
+
+.flex_column {
+    display: flex;
+    flex-flow: column nowrap;
+    break-inside: avoid;
+    background-color: #fff;
+    margin-bottom: 40rpx;
+}
+
+.flex_column_1 {
+    display: flex;
+    flex-flow: column nowrap;
+    /* justify-content: space-between */
+}
+
+.size_18 {
+    font-size: 18rpx;
+}
+
+.size_20 {
+    font-size: 20rpx;
+}
+
+.size_22 {
+    font-size: 22rpx;
+}
+
+.size_24 {
+    font-size: 24rpx;
+}
+
+.size_26 {
+    font-size: 26rpx;
+}
+
+.size_28 {
+    font-size: 28rpx;
+}
+
+.size_30 {
+    font-size: 30rpx
+}
+
+.size_32 {
+    font-size: 32rpx
+}
+
+.color_fff {
+    color: #fff;
+}
+
+.color_999 {
+    color: #999;
+}
+
+.color_333 {
+    color: #333
+}
+
+.color_666 {
+    color: #666
+}
+
+.color_e2ab51 {
+    color: #e2ab51
+}

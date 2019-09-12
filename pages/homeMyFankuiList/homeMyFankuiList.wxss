@@ -1,0 +1,65 @@
+/* pages/homeMyFankuiList/homeMyFankuiList.wxss */
+.val {
+    width: 600rpx;
+    font-size: 24rpx;
+    font-family: PingFang SC;
+    font-weight: 500;
+    color: rgba(51, 51, 51, 1);
+    word-wrap:break-word
+}
+
+.time {
+    font-size: 20rpx;
+    font-family: PingFang SC;
+    font-weight: 500;
+    color: rgba(153, 153, 153, 1);
+}
+
+.name {
+    font-size: 28rpx;
+    font-family: PingFang SC;
+    font-weight: bold;
+    color: rgba(51, 51, 51, 1);
+}
+
+.touxiang {
+    width: 86rpx;
+    height: 86rpx;
+    border-radius: 50%;
+    background-color: #f2f2f2;
+    margin-right: 20rpx;
+}
+
+.flex_row {
+    display: flex;
+    justify-content: space-between;
+    padding: 50rpx 30rpx;
+}
+
+.jus_between {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10rpx
+}
+
+.val_2 {
+    width: 600rpx;
+    background: rgba(238, 241, 245, 1);
+    border-radius: 14rpx;
+    font-size: 24rpx;
+    font-family: PingFang SC;
+    font-weight: 500;
+    color: rgba(51, 51, 51, 1);
+    padding: 12rpx;
+    word-wrap:break-word
+}
+
+.border-bottom {
+    width: 750rpx;
+    height: 18rpx;
+    background: rgba(242, 242, 242, 1);
+}
+
+/* .w_600 {
+    width: 600rpx;
+} */

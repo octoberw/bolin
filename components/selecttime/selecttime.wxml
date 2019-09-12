@@ -1,51 +1,82 @@
-<!--components/selectTime/selectTime.wxml-->
+<!-- components/selectTime/selectTime.wxml -->
 <view class="time_bgc" style="display:{{hideview}}" catchtouchmove='{{true}}'>
-    <view class="time_sel_bgc">
-        <view class="time_sel_sjd">
+    <view class="time_sel_bgc">   
+        <view class="time_sel_sjd" style="align-items: flex-start">
             <text class="">请选择时间段</text>
-            <text class="">已选择 13:00~14:00</text>
+            <view class="size_24 color_999" style="text-align:right; flex:1;">
+                <text class="margin_r_15 color_999" >已选择 : {{newSendTimes}} </text>
+                <text class="">{{newSelTime}}</text>
+            </view>
         </view>
         <view class="time_flex">
             <view class="time_sel_day">
-                <text>4月10日 今天</text>
-                <text>4月10日 周二</text>
-                <text>4月10日 周三</text>
-                <text>4月10日 周四</text>
-                <text>4月10日 周五</text>
-                <text>4月10日 周六</text>
-                <text>4月10日 周日</text>
+                <block wx:for="{{times}}" wx:key="{{}}">
+                    <text data-id="{{index}}" class="{{classIndex[index]==0?'bgc_fff':''}}" bindtap="clickTime">{{item}}</text>
+                </block>
             </view>
-            <!-- <scroll-view class="" scroll-y> -->
-                <view class="time_sel_right" ref="timeWrap">
-                    <view class="time_sel_right_val">
+            <view class="time_sel_right" ref="timeWrap">
+                <view class="time_sel_right_val">
+                    <view>
+                        <text class="">上午</text>
                         <view>
-                            <text class="">上午</text>
-                            <view>
-                                <text class="huise">8:00~9:00</text>
-                                <text>9:00~10:00(已约满)</text>
-                                <text class="">10:00~11:00(已约满)</text>
-                                <text class="">11:00~12:00(已约满)</text>
-                            </view>
+                            <!-- 8:00-9:00 -->
+                            <text wx:if="{{timePeriod[0].is_subscribed==='true'}}" class="{{timePeriod[0]?'':'huise'}}">8:00~9:00(已约满)</text>
+                            <text data-selid="1" data-selTime="one" data-strSelTime="8:00~9:00" wx:elif="{{timePeriod[0].is_subscribed==='false'}}" class="{{selid[0]?'bg':''}}" bindtap="selectTime">8:00~9:00</text>
+                            <text wx:else class="{{timePeriod[0]?'':'huise'}}">8:00~9:00</text>
+                            <!-- 9:00-10:00 -->
+                            <text wx:if="{{timePeriod[1].is_subscribed==='true'}}" class="{{timePeriod[1]?'':'huise'}}">9:00~10:00(已约满)</text>
+                            <text data-selid="2" data-selTime="two" data-strSelTime="9:00~10:00" wx:elif="{{timePeriod[1].is_subscribed==='false'}}" class="{{selid[1]?'bg':''}}" bindtap="selectTime">9:00~10:00</text>
+                            <text wx:else class="{{timePeriod[1]?'':'huise'}}">9:00~10:00</text>
+                            <!-- 10:00-11:00 -->
+                            <text wx:if="{{timePeriod[2].is_subscribed==='true'}}" class="{{timePeriod[2]?'':'huise'}}">10:00~11:00(已约满)</text>
+                            <text data-selid="3" data-selTime="three" data-strSelTime="10:00~11:00" wx:elif="{{timePeriod[2].is_subscribed==='false'}}" class="{{selid[2]?'bg':''}}" bindtap="selectTime">10:00~11:00</text>
+                            <text wx:else class="{{timePeriod[2]?'':'huise'}}">10:00~11:00</text>
+                            <!-- 11:00-12:00 -->
+                            <text wx:if="{{timePeriod[3].is_subscribed==='true'}}" class="{{timePeriod[3]?'':'huise'}}">11:00~12:00(已约满)</text>
+                            <text data-selid="4" data-selTime="four" data-strSelTime="11:00~12:00" wx:elif="{{timePeriod[3].is_subscribed==='false'}}" class="{{selid[3]?'bg':''}}" bindtap="selectTime">11:00~12:00</text>
+                            <text wx:else class="{{timePeriod[3]?'':'huise'}}">11:00~12:00</text>
                         </view>
+                    </view>
+                    <view>
+                        <text class="">下午</text>
                         <view>
-                            <text class="">下午</text>
-                            <view>
-                                <text class="bg">13:00~14:00</text>
-                                <text class="">14:00~15:00</text>
-                                <text class="">15:00~16:00</text>
-                                <text class="">16:00~17:00</text>
-                            </view>
+                            <!-- 13:00-15:00 -->
+                            <text wx:if="{{timePeriod[4].is_subscribed==='true'}}" class="{{timePeriod[4]?'':'huise'}}">13:00~14:00(已约满)</text>
+                            <text data-selid="5" data-selTime="five" data-strSelTime="13:00~14:00" wx:elif="{{timePeriod[4].is_subscribed==='false'}}" class="{{selid[4]?'bg':''}}" bindtap="selectTime">13:00~14:00</text>
+                            <text wx:else class="{{timePeriod[4]?'':'huise'}}">13:00~14:00</text>
+                            <!-- 14:00-15:00 -->
+                            <text wx:if="{{timePeriod[5].is_subscribed==='true'}}" class="{{timePeriod[5]?'':'huise'}}">14:00~15:00(已约满)</text>
+                            <text data-selid="6" data-selTime="six" data-strSelTime="14:00~15:00" wx:elif="{{timePeriod[5].is_subscribed==='false'}}" class="{{selid[5]?'bg':''}}" bindtap="selectTime">14:00~15:00</text>
+                            <text wx:else class="{{timePeriod[5]?'':'huise'}}">14:00~15:00</text>
+                            <!-- 15:00-16:00 -->
+                            <text wx:if="{{timePeriod[6].is_subscribed==='true'}}" class="{{timePeriod[6]?'':'huise'}}">15:00~16:00(已约满)</text>
+                            <text data-selid="7" data-selTime="seven" data-strSelTime="15:00~16:00" wx:elif="{{timePeriod[6].is_subscribed==='false'}}" class="{{selid[6]?'bg':''}}" bindtap="selectTime">15:00~16:00</text>
+                            <text wx:else class="{{timePeriod[6]?'':'huise'}}">15:00~16:00</text>
+                            <!-- 16:00-17:00 -->
+                            <text wx:if="{{timePeriod[7].is_subscribed==='true'}}" class="{{timePeriod[7]?'':'huise'}}">16:00~17:00(已约满)</text>
+                            <text data-selid="8" data-selTime="eight" data-strSelTime="16:00~17:00" wx:elif="{{timePeriod[7].is_subscribed==='false'}}" class="{{selid[7]?'bg':''}}" bindtap="selectTime">16:00~17:00</text>
+                            <text wx:else class="{{timePeriod[7]?'':'huise'}}">16:00~17:00</text>
                         </view>
-                        <view class="padding-bottom">
-                            <text class="">晚上</text>
-                            <view>
-                                <text class="">19:00~20:00</text>
-                                <text class="">20:00~21:00</text>
-                                <text class="">21:00~22:00</text>
-                            </view>
+                    </view>
+                    <view class="padding-bottom">
+                        <text class="">晚上</text>
+                        <view>
+                            <!-- 19:00-20:00 -->
+                            <text wx:if="{{timePeriod[8].is_subscribed==='true'}}" class="{{timePeriod[8]?'':'huise'}}">19:00~20:00(已约满)</text>
+                            <text data-selid="9" data-selTime="nine" data-strSelTime="19:00~20:00" wx:elif="{{timePeriod[8].is_subscribed==='false'}}" class="{{selid[8]?'bg':''}}" bindtap="selectTime">19:00~20:00</text>
+                            <text wx:else class="{{timePeriod[8]?'':'huise'}}">19:00~20:00</text>
+                            <!-- 20:00-21:00 -->
+                            <text wx:if="{{timePeriod[9].is_subscribed==='true'}}" class="{{timePeriod[9]?'':'huise'}}">20:00~21:00(已约满)</text>
+                            <text data-selid="10" data-selTime="ten" data-strSelTime="20:00~21:00" wx:elif="{{timePeriod[9].is_subscribed==='false'}}" class="{{selid[9]?'bg':''}}" bindtap="selectTime">20:00~21:00</text>
+                            <text wx:else class="{{timePeriod[9]?'':'huise'}}">20:00~21:00</text>
+                            <!-- 21:00-22:00 -->
+                            <text wx:if="{{timePeriod[10].is_subscribed==='true'}}" class="{{timePeriod[10]?'':'huise'}}">21:00~22:00(已约满)</text>
+                            <text data-selid="11" data-selTime="eleven" data-strSelTime="21:00~22:00" wx:elif="{{timePeriod[10].is_subscribed==='false'}}" class="{{selid[10]?'bg':''}}" bindtap="selectTime">21:00~22:00</text>
+                            <text wx:else class="{{timePeriod[10]?'':'huise'}}">21:00~22:00</text>
                         </view>
                     </view>
                 </view>
+            </view>
             <!-- </scroll-view> -->
         </view>
         <view>

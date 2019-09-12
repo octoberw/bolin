@@ -1,20 +1,25 @@
 <!-- pages/wxNoBlDescribe/wxNoBlDescribe.wxml -->
 <view class="title-border"></view>
 <view class="bgc-val">
-    <text class="com-title">常见状况</text>
-    <view class="com-fw">
-        <text class="click-fw">天花板脱离</text>
-        <text class="click-fw">天花板漏水</text>
-        <text class="">地板修复</text>
-        <text class="">瓷砖脱落</text>
-        <text class="">地板修复</text>
-        <text class="">地漏堵塞</text>
-    </view>
-    <view class="com-val">
-        <textarea name="" id="" placeholder="你可以详细描述现场状况(选填)" catchtouchmove='{{true}}'></textarea>
-        <button class="com-img">
-            <text class="iconfont iconicon_zengjiatupian"></text>
-        </button>
-    </view>
+    <form class="" report-submit="false" bindsubmit="getcontent" bindreset="">
+        <view class="com-val">
+            <textarea name="content" id="" placeholder="你可以详细描述现场状况(选填)" catchtouchmove='{{true}}'></textarea>
+            <view class="flex_row">
+                <block wx:for="{{images}}" wx:key="">
+                    <image data-src="{{item}}" data-index="{{index}}" class="image" src="{{item}}" bindtap="previewImage"></image>
+                </block>
+                <button style="display:{{hiddenBtn===0?'none':'block'}}" class="com-img" bindtap="chooseImage">
+                    <text class="iconfont iconicon_zengjiatupian"></text>
+                </button>
+            </view>
+        </view>
+        <text class="com-title">常见状况</text>
+        <view class="com-fw">
+            <block wx:for="{{tags}}" wx:key="">
+                <text data-index="{{index+1}}" class="{{clickId[index]==''?'':'click-fw'}}" bindtap="clickTaps">{{item}}</text>
+            </block>
+        </view>
+        <button class="com-foot" form-type="submit" catchtap="gotoNoBlOrder">提交</button>
+    </form>
 </view>
-<view class="com-foot" catchtap="gotoNoBlOrder">提交</view>
+<!-- <view class="com-foot" catchtap="gotoNoBlOrder">提交</view> -->

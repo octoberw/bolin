@@ -42,6 +42,12 @@
     color: #999;
 }
 
+.logo {
+    width: 448rpx;
+    height: 233rpx;
+    margin: 36rpx auto;
+}
+
 .size_22_333 {
     font-size: 22rpx;
     color: #333;
@@ -233,6 +239,20 @@
     background-color: #333;
 }
 
+.footerHei_t {
+    position: fixed;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-around;
+    bottom: 0;
+    width: 100%;
+    font-size: 32rpx;
+    color: #fbdaa2;
+    text-align: center;
+    padding: 34rpx 0;
+    background-color: #999;
+}
+
 .text_right {
     text-align: right;
 }
@@ -275,4 +295,39 @@
     font-size: 22rpx;
     border-radius: 4rpx;
     border: 1rpx solid #f2f2f2;
+}
+
+.myCleanJP {
+    font-size: 22rpx;
+    color: #fbdaa2;
+}
+
+.inBotton {
+    padding-bottom: 30rpx;
+    border-bottom: 1rpx solid #f2f2f2;
+}
+
+.xingxing_padding_35{
+    padding: 35rpx 0 ;
+}
+
+.xingxing_size {
+    font-size: 24rpx;
+    color: #fbdaa2;
+}
+
+.bgc-val {
+    display: flex;
+    flex-flow: column nowrap;
+    background-color: #fff;
+}
+
+.footerHui {
+    width: 100%;
+    font-size: 32rpx;
+    color: #999;
+    text-align: center;
+    padding: 34rpx 0;
+    background-color: #666;
+    pointer-events: none;
 }

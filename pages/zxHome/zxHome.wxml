@@ -1,0 +1,117 @@
+<!-- pages/czHome/czHome.wxml -->
+<view class="height_820" id="topID">
+    <image class="w100_h450" src="http://qiniu.berlinlife.cn/zx_banner@2x.png" mode="aspectFit|aspectFill|widthFix"></image>
+</view>
+<view class="flex_row padding_28 h_139" id="topIDt">
+    <!-- <block wx:for="{{res.tags}}" wx:key=""> -->
+    <view class="posr" data-id="{{item.id}}" bindtap="gotoZxJingyan">
+        <image class="w162_image" src="../../image/zx/icon_jjjy.png" mode="aspectFit|aspectFill|widthFix"></image>
+        <view class="flex_column color_fff posa">
+            <text class="size_26 ">居家经验</text>
+            <text class="size_20">大人分享</text>
+        </view>
+    </view>
+    <view class="posr" data-id="{{item.id}}" bindtap="gotoZxAnliList">
+        <image class="w162_image" src="../../image/zx/icon_zwal.png" mode="aspectFit|aspectFill|widthFix"></image>
+        <view class="flex_column color_fff posa">
+            <text class="size_26 ">整屋案例</text>
+            <text class="size_20">精装参考</text>
+        </view>
+    </view>
+    <view class="posr" data-id="{{item.id}}" bindtap="gotoSJSList">
+        <image class="w162_image" src="../../image/zx/icon_zsjs.png" mode="aspectFit|aspectFill|widthFix"></image>
+        <view class="flex_column color_fff posa">
+            <text class="size_26 ">找设计师</text>
+            <text class="size_20">泊邻推荐</text>
+        </view>
+    </view>
+    <!-- </block> -->
+</view>
+<view class="" bindtap="gotoZxTJXQ">
+    <view class="padding_28 padding_tb_50_20 flex_row" style="line-height:48rpx;">
+        <view class="" >
+            <text class=" size_30 color_333" style="margin-right:12rpx">泊邻设计</text>
+            <text class=" size_22 color_999">| 泊邻、住得更好</text>
+        </view>
+        <text class="iconfont iconicon_gengduo color_999 size_22"></text>
+    </view>
+    <view class="flex_row jus_between padding_50_42">
+        <view class="flex_column" bindtap="gotozf">
+            <image class="image_w110" src="../../image/zx/icon_ghbj.png" mode="aspectFit"></image>
+            <text class=" size_26 color_999 text_align">无骚扰</text>
+        </view>
+        <view class="flex_column" bindtap="gotoms">
+            <image class="image_w110" src="../../image/zx/icon_ksct.png" mode="aspectFit"></image>
+            <text class="size_26 color_999 text_align">免费量房</text>
+        </view>
+        <view class="flex_column" bindtap="gotoRimClean">
+            <image class="image_w110" src="../../image/zx/icon_mflf.png" mode="aspectFit"></image>
+            <text class="size_26 color_999 text_align">快速出图</text>
+        </view>
+        <view class="flex_column" bindtap="gotoWxHome">
+            <image class="image_w110" src="../../image/zx/icon_sdr.png" mode="aspectFit"></image>
+            <text class="size_26 color_999 text_align">规划报价</text>
+        </view>
+    </view>
+</view>
+<view class="padding_28 padding_tb_50_20 flex_row" style="line-height:48rpx;" bindtap="gotoZxAnliList">
+    <view class="">
+        <text class=" size_30 color_333" style="margin-right:12rpx">整屋案例</text>
+        <text class=" size_22 color_999">| 好的生活需要设计</text>
+    </view>
+    <text class="iconfont iconicon_gengduo color_999 size_22"></text>
+</view>
+<block wx:for="{{decorates}}" wx:key="">
+    <view class="display_inline_block" style="margin:30rpx" data-id="{{item.id}}" bindtap="gotoZxAnliListDetails">
+        <view class="flex_column">
+            <image class="image_538_415" style="margin-bottom:5px" src="{{item.avator}}"></image>
+            <text class=" size_28 color_333 overflow_ell" style="margin-bottom:5px">{{item.title}}</text>
+            <view class=" flex_row size_22 color_999 " style="margin-bottom:15px">{{item.type =='allHouse'?'整屋':'部分'}} | {{item.areas}}<view class=" pingfang_posr" style="display:inline-block"><text class="color_999 pingfang_24">m</text><text class="color_999 pingfang_12">2</text></view> {{item.location}}</view>
+            <view class="flex_row jus_between">
+                <view class="flex_row">
+                    <image class="image_w50 margin_r_10" style="margin-bottom:0" src="{{item.designer.avator}}"></image>
+                    <text class=" size_24 color_333">{{item.designer.name}}</text>
+                    <view class="flex_row gongsi" wx:if="{{item.designer.confirm == 'true'}}">
+                        <text class="size_20">已认证</text>
+                    </view>
+                </view>
+                <view class="flex_row">
+                    <image class="image_w20 margin_r_10" src="../../image/home/icon_view.png"></image>
+                    <text class=" size_24 color_999 margin_r_22">{{item.pv}}</text>
+                    <image class="image_w20 margin_r_10" src="../../image/home/icon_like.png"></image>
+                    <text class=" size_24 color_999">{{item.likes}}</text>
+                </view>
+            </view>
+        </view>
+    </view>
+
+    <view class="border_bottom"></view>
+</block>
+
+<view class="padding_28 padding_tb_50_20 flex_row" style="line-height:48rpx;" bindtap="gotoZxJingyan">
+    <view class="">
+        <text class=" size_30 color_333" style="margin-right:12rpx">家居经验</text>
+        <text class=" size_22 color_999">| 打开门，就是家</text>
+    </view>
+    <text class="iconfont iconicon_gengduo color_999 size_22"></text>
+</view>
+
+<view class="gird">
+    <block wx:for="{{experiences}}" wx:key="">
+        <view class="flex_column image_538" data-id="{{item.id}}" bindtap="gotoZxJingyanDetails">
+            <image class="image_538_300" style="margin-bottom:5px" src="{{item.avator}}"></image>
+            <text class=" size_28 color_333 overflow_ell" style="margin-bottom:10px">{{item.title}}</text>
+            <view class="flex_row jus_between">
+                <view class="flex_row">
+                    <image class="image_w50 margin_r_10" style="margin-bottom:0" src="{{item.designer.avator}}"></image>
+                    <text class=" size_24 color_333">{{item.designer.name}}</text>
+                </view>
+                <view class="flex_row">
+                    <image class="image_w20 margin_r_10" src="../../image/home/icon_like.png"></image>
+                    <text class=" size_24 color_999">{{item.likes}}</text>
+                </view>
+            </view>
+        </view>
+    </block>
+</view>
+

@@ -1,0 +1,61 @@
+<!-- pages/wxOrderList/wxOrderList.wxml -->
+<view class="myCleanflex title-border">
+    <view data-num="{{index}}" data-key="{{item.key}}" class="{{num==index?'fontColor':''}}" wx:for="{{arr}}" wx:key="index" bindtap="bindViewTap">
+        {{item.name}}
+    </view>
+</view>
+<view class="" wx:if="{{res}}">
+    <view class="myCleanBody">
+        <view class="myCleanList" data-id="{{item.orderId}}" wx:for="{{res}}" wx:key="" catchtap="gotoDetails">
+            <view class="myCleanListFlex">
+                <view class="myCleanRight">
+                    <view class="myCleanS">
+                        <text class="font_28_333 overflowEllipsis">{{item.title}}</text>
+                        <text wx:if="{{item.status=='booking'}}" class="myCleanState">预约中</text>
+                        <text wx:if="{{item.status=='cancel'}}" class="myCleanState">已取消</text>
+                        <text wx:if="{{item.status=='nopay'}}" class="myCleanState">待支付</text>
+                        <text wx:if="{{item.status=='servicing'}}" class="myCleanState">待入住</text>
+                        <text wx:if="{{item.status=='commenting'}}" class="myCleanState">待评价</text>
+                        <text wx:if="{{item.status=='commented'}}" class="myCleanState">已评价</text>
+                    </view>
+                    <view class="flex_row">
+                        <view class="">
+                            <view class="myCleanX">
+                                <view class="myCleanDate">入离日期</view>
+                                <view class="myCleanTimes">{{item.startDate}}~{{item.endDate}}</view>
+                                <!-- <block wx:for="{{item.times}}" wx:key="index">
+                                <text class="myCleanTimes">{{item}}</text>
+                            </block> -->
+                            </view>
+                            <view class="myCleanX" style="margin-top:12rpx;">
+                                <view class="myCleanDate">入住人数</view>
+                                <view class="myCleanTimes">2人</view>
+                            </view>
+                            <view class="myCleanX">
+                                <view class="myCleanDate">下单时间</view>
+                                <view class="myCleanTimes">{{item.createDate}}</view>
+                                <!-- <block wx:for="{{item.times}}" wx:key="index">
+                                <text class="myCleanTimes">{{item}}</text>
+                            </block> -->
+                            </view>
+                        </view>
+                        <view class="" style="align-self:flex-end">
+                            <text class="">￥</text>
+                            <text class="">{{item.amountPayable}}</text>
+                        </view>
+                    </view>
+                </view>
+            </view>
+            <view class="myCleanBtn">
+                <button wx:if="{{item.status=='commenting'}}" catchtap="gotoDetails">立即评论</button>
+                <button wx:else catchtap="gotoDetails">查看详情</button>
+            </view>
+        </view>
+    </view>
+</view>
+<view  wx:else class="zwdd title-border">
+    <view class="zwdd_col">
+        <image class="img_288" src="../../image/icon_zwdd.png"></image>
+        <text class="zwdd_font">暂无相关订单，快去逛逛吧！</text>
+    </view>
+</view>

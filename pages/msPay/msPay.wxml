@@ -1,0 +1,152 @@
+<view class="small_border"></view>
+<view class="flex_row padding_0_28 padding_tb_46_40" style="justify-content:flex-start;">
+    <image class="image_350_210 margin_r_22" src="{{res.img_url}}"></image>
+    <view class="flex_column flex_1" style="flex:1;">
+        <text class="size_24 color_333 margin_b_12 overflowEllipsis" style="font-weight:700;">{{res.houseType}}|{{res.title}}</text>
+        <view class="size_24 color_333 flex_column">
+            <view class="">
+                <text class="size_20 color_fff color_e2ab51">￥</text>
+                <text class="size_28 color_e2ab51 ">{{res.roomRate}}</text>
+                <text class="size_20 color_999">/晚</text>
+            </view>
+            <view class="" style="margin-top:18rpx">
+            <block wx:for="{{res.tag}}" wx:key="">
+                <text class="size_20 color_999 padding_8_20">{{item.name}}</text>
+            </block>
+            </view>
+            <view class="flex_row between">
+                <view class="xingxing_size">
+                <block wx:for="{{res.stars}}" wx:key="">
+                    <text class="iconfont iconicon_xingxing xingxing_width"></text>
+                </block>
+                </view>
+                <text class="phone_size size_22 color_333">{{res.peopleCounting}}人已预订</text>
+            </view>
+        </view>
+    </view>
+</view>
+<view class="big_border"></view>
+<!-- pages/wxBlOrder/wxBlOrder.wxml -->
+<view class="title-border"></view>
+<view class="border-bottom ">
+    <view class="val">
+        <text class=" size_26 color_333" style="margin-right:12rpx">入住日期</text>
+        <view class="flex_row jus_bet margin_t_20" >
+            <view class="">
+                <text class="size_26 color_999 margin_b_15">入住时间</text>
+                <view class="flex_row align_item_end">
+                    <text class="size_32 color_333 margin_r_15 bgc_time" style="font-weight:700">{{checkInDate}}</text>
+                </view>
+            </view>
+            <view class="">
+                <text class="size_26 color_999 margin_b_15">离店时间</text>
+                <view class="flex_row align_item_end">
+                    <text class="size_32 color_333 margin_r_15 bgc_time" style="font-weight:700">{{checkOutDate}}</text>
+                </view>
+            </view>
+            <view class=" flex_column jus_bet">
+                <text class="size_26 color_fff margin_b_15">1</text>
+                <view class="flex_row align_item_center">
+                    <text class="size_20 color_999">共住{{days}}晚</text>
+                </view>
+            </view>
+        </view>
+    </view>         
+</view>
+
+<view class="val" style="padding:0 28rpx; margin:0">
+    <view class="flex-phone jus_bet height_40" style="margin-top:0;margin-top:0rpx;padding-bottom:0">
+        <text class=" size_24 color_333" style="line-height:80rpx;">单价</text>
+        <view class="flex_row align_center">
+            <text class=" size_20 color_333">￥</text>
+            <text class=" size_24 color_333">{{res.roomRate}}</text>   
+            <text class=" size_22 color_999">x{{days}}晚</text>
+        </view>
+    </view>
+    <view class="flex-phone jus_bet height_40" style="margin-top:0rpx;padding-bottom:0">
+        <text class=" size_24 color_333" style="line-height:80rpx;">服务费</text>
+        <view class="flex_row align_center">
+            <text class=" size_20 color_333">￥</text>
+            <text class=" size_24 color_333">{{res.tip}}</text>   
+        </view>
+    </view>
+    <view class="flex-phone jus_bet height_40" style="margin-top:0rpx;padding-bottom:0">
+        <text class=" size_26 color_333" style="line-height:80rpx;font-weight:700">总额费用</text>
+        <view class="flex_row align_center">
+            <text class=" size_20 color_333">￥</text>
+            <text class=" size_32 color_333" style="font-weight:700">{{roomRate}}</text>   
+            <text class=" size_22 color_999"></text>
+        </view>
+    </view>
+</view>
+
+<view class="border_bottom_view"></view>
+
+<!-- <view class="border-bottom" bindtap="successIntegral">
+    <view class="flex-dizhi val-padding">
+        <text class="title-fontSize">积分</text>
+        <view class="val-fontSize flex_row">
+            <view class="flex_column margin_R">
+                <text class="size_26">当前积分 3000</text>
+                <text class="size_20">可使用 {{res.point}}</text>
+            </view>
+            <text class="iconfont iconicon_gengduo"></text>
+        </view>
+    </view>
+</view> -->
+
+<form class="" report-submit="false" bindsubmit="mspay" bindreset="">
+    <view class="border-bottom val">
+        <view class=" flex_row between margin_b_30">
+            <view class=" flex_column">
+                <text class=" size_26 color_333 margin_b_13" style="font-weight:700">房客信息</text>
+                <text class=" size_20 color_999">该房源最多可居住2人</text>
+            </view>
+            <view class=" size_20 color_333 allPeople" bindtap="addPeopel">添加入住人</view>
+        </view>
+        <block wx:for="{{people}}" wx:key="">
+            <view class=" flex_row between margin_b_30 bgc_people" >
+                <view class="flex_row ">
+                    <image class="w27" src="../../image/ms/icon_people.png"></image>
+                    <text class=" size_26 color_333 h27" style="font-weight:700">{{item.k}}</text>
+                </view>
+                <view class=" flex_row">
+                    <text class=" size_26 color_333 margin_r_10">{{item.v}}</text>
+                    <text class="iconfont iconicon_guanbi size_22 line_height_90" data-key="{{index}}" bindtap="closePeople"></text>
+                </view>
+            </view>
+        </block>
+        <view class="flex-phone" style="margin-top:0">
+            <text class="title-fontSize">预约人姓名</text>
+            <input name="name" class="val-fontSize" value="" type="text|number|idcard|digit|time|date" placeholder="请输入您的真实姓名"></input>
+        </view>
+        <view class="flex-phone">
+            <text class="title-fontSize">预约人电话</text>
+            <input name="phone" class="val-fontSize" value="" maxlength="11" type="number" placeholder="请输入您的联系方式"></input>
+        </view>
+    </view>
+
+    <view class="val-padding">
+        <view class="title-fontSize">给管家留言</view>
+        <textarea name="value" class="size_24 color_999 w100" value="" placeholder="留下您的需求，我们将为你提供更优质的服务...(选填)" placeholder-style=""></textarea>
+    </view>
+
+    <view class="val_yd">
+        <view class="appoint_body_w">
+            <view class="radio_wq" bindtap="showNq">
+                <view style="width:12rpx; height:12rpx; background-color:#999; border-radius:50%; display:{{showdisplay}}"></view>
+            </view>
+            <view class="appoint_body_ty" bindtap="showPopup">
+                <text class="">我已同意</text>
+                <text class="">《泊邻民宿服务协议》</text>
+            </view>
+        </view>
+    </view>
+
+    <!-- <text class="qianding size_20 color_999">注： 超出签订时间7天后，如合同仍未签，订房源将重新上架，订金不设退还</text> -->
+    <!-- <view class="foot" bindtap="gotoConfirmOrder">立即支付 ￥{{roomRate}}</view> -->
+    <!-- <button class="foot" bindtap="gotoConfirmOrder">立即支付 ￥{{roomRate}}</view> -->
+    <cover-view class="foot">
+        <button class="foot" form-type="submit" style="background-color:{{isTrue?'#333':'#999'}}" >提交预约</button>
+    </cover-view>
+</form>

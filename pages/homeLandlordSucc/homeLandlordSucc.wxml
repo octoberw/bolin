@@ -1,0 +1,17 @@
+<!--pages/confirmOrder/confirmOrder.wxml-->
+  <view>
+    <view class="ps_bg">
+      <view class="ps_head">
+        <text class="iconfont iconicon_dui"></text>
+      </view>
+      <view class="ps_fw">
+        <text>您的申请信息已提交成功</text>
+        <text>平台正在录入安排，我们将会在24小时内致电于您</text>
+        <text>如有疑问可联系400-098-2356</text>
+      </view>
+      <view class="ps_foot">
+        <text bindtap="gotoZxHome">继续逛逛</text>
+        <text bindtap="gotoHome">返回首页</text>
+      </view>
+    </view>
+  </view>

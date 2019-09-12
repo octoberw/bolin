@@ -1,0 +1,221 @@
+.banner {
+    width: 100%;
+    height: 480rpx;
+}
+
+.sousuo_view {
+    position: absolute;
+    width: 690rpx;
+    height: 65rpx;
+    padding: 20rpx;
+    border-radius: 33rpx;
+    background-color: rgba(255, 2551, 255, 1);
+    box-shadow: 0 10 40rpx 0 rgba(0, 0, 0, 0.15);
+    top: 48rpx;
+    left: 50%;
+    transform: translateX(-50%)
+}
+
+.sousuo {
+    width: 32rpx;
+    height: 32rpx;
+    margin-right: 17rpx;
+}
+
+.select {
+    position: absolute;
+    width: 694rpx;
+    height: 638rpx;
+    padding: 50rpx;
+    border-radius: 18rpx;
+    background-color: #fff;
+    box-shadow: 0 0 40rpx 0 rgba(0, 0, 0, 0.14);
+    top: 380rpx;
+    left: 50%;
+    transform: translateX(-50%)
+}
+
+.margin_b_60 {
+    margin-bottom: 60rpx;
+}
+
+.margin_b_15 {
+    margin-bottom: 15rpx;
+}
+
+.margin_r_15 {
+    margin-right: 15rpx;
+}
+
+.margin_r_40 {
+    margin-right: 40rpx;
+}
+
+.sousuo_btn {
+    width: 100%;
+    height: 100rpx;
+    line-height: 100rpx;
+    text-align: center;
+    background-color: rgba(51, 51, 51, 1) !important;
+    border-radius: 6rpx;
+    color: #fbdaa2 !important;
+    overflow: visible;
+    border: 0;
+}
+
+.logo {
+    position: absolute;
+    bottom: 58rpx;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 273rpx;
+    height: 57rpx;
+}
+
+/* 选择人数 */
+.padding_32 {
+    padding: 32rpx 48rpx;
+    border-bottom: 1rpx solid #f2f2f2;
+}
+
+.padding_40 {
+    padding: 40rpx 48rpx;
+}
+
+.input_280 {
+    width: 280rpx;
+    height: 80rpx;
+    border: 1rpx solid #e1e1e1;
+    border-radius: 4rpx;
+    padding: 30rpx;
+}
+
+.click {
+    color: #fff !important;
+    background-color: #333;
+    border: 1rpx solid #333;
+}
+
+.w45_h45 {
+    width: 45rpx;
+    height: 45rpx;
+    text-align: center;
+    line-height: 45rpx;
+    border: 1px solid rgba(221,221,221,1)
+}
+
+.w65_h45 {
+    width: 65rpx;
+    height: 45rpx;
+    text-align: center;
+    line-height: 45rpx;
+    border-top: 1px solid rgba(221,221,221,1);
+    border-bottom: 1px solid rgba(221,221,221,1)
+}
+
+.margin_b_35 {
+    margin-bottom: 35rpx;
+}
+
+.margin_b_40 {
+    margin-bottom: 40rpx
+}
+
+.border_1 {
+    border-bottom: 1rpx solid #f2f2f2;
+}
+
+.padding_r_20{
+    padding-right: 20rpx;
+}
+
+.bgc_333 {
+    background-color:#333 !important;
+}
+
+.padding_39_29 {
+    padding: 30rpx 29rpx;
+}
+
+.between {
+    justify-content: space-between
+}
+
+
+.foot {
+    border-top: 1rpx solid #f2f2f2;
+}
+
+.foot>view {
+    width: 377rpx;
+    line-height: 88rpx;
+    text-align: center;
+}
+
+.bgc_000 {
+    width: 100%;
+    height: 100vh;
+    position: absolute;
+    background-color: rgba(0, 0, 0, .3);
+    overflow: hidden;
+}
+
+.bgc_fff {
+    background-color: #fff;
+}
+
+/* 通用 */
+
+.flex_row {
+    display: flex;
+    flex-flow: row nowrap;
+}
+
+.flex_column {
+    display: flex;
+    flex-flow: column nowrap;
+}
+
+.jus_bet {
+    justify-content: space-between
+}
+
+.align_item_center {
+    align-items: center;
+}
+
+.align_item_end {
+    align-items: flex-end
+}
+
+.size_20 {
+    font-size: 20rpx;
+}
+
+.size_26 {
+    font-size: 26rpx;
+}
+
+.size_33 {
+    font-size: 33rpx;
+}
+
+.size_36 {
+    font-size: 36rpx;
+}
+
+.color_999 {
+    color: #999;
+}
+
+.color_fff {
+    color: #fff;
+}
+
+.color_333 {
+    color: #333;
+}
+
+.color_fbdaa2 {
+    color: #fbdaa2
+}

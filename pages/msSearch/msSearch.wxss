@@ -1,0 +1,137 @@
+/* pages/zfSearch/zfSearch.wxss */
+.padding_48_30 {
+    padding: 48rpx 30rpx;
+}
+
+.w690 {
+    width: 690rpx;
+    height: 65rpx;
+    line-height: 65rpx;
+    padding: 16rpx 20rpx;
+    background-color: #fff;
+    border-radius: 27px;
+    border: 1rpx solid #f2f2f2;
+    margin: 0 auto;
+}
+
+.transform_90 {
+    /* transform: rotate(90deg); */
+    margin-left: 10rpx;
+    margin-right: 15rpx;
+}
+
+.w100{
+    width: 100%;
+}
+
+/* 搜索历史 */
+.margin_t_48{
+    margin-top: 48rpx;
+}
+
+.padding_12 {
+    padding: 0 12rpx
+}
+
+.padding_45 {
+    height: 50rpx;
+    line-height: 50rpx;
+    padding: 0 40rpx;
+    background-color: #f2f2f2;
+    border-radius: 27rpx;
+    color: #666;
+    margin-right: 10rpx;
+    margin-bottom: 20rpx;
+}
+
+.padding_45_2 {
+    height: 50rpx;
+    line-height: 45rpx;
+    padding: 0 40rpx;
+    background-color: #fff;
+    border-radius: 27rpx;
+    color: #666;
+    border: 1rpx solid #f2f2f2;
+    margin-right: 10rpx;
+    margin-bottom: 20rpx;
+}
+
+.margin_t_33 {
+    margin-top: 33rpx;
+}
+
+/* 通用 */
+.flex_row_wrap {
+    flex-flow: row wrap!important;
+}
+
+.flex_1 {
+    flex: 1;
+}
+
+.space_between {
+    justify-content: space-between
+}
+
+.border_f2f2f2 {
+    border-bottom: 1rpx solid #f2f2f2
+}
+
+.flex_row {
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+}
+
+.flex_column {
+    display: flex;
+    flex-flow: column nowrap;
+}
+
+.font_700 {
+    font-weight: 700;
+}
+
+.size_18 {
+    font-size: 18rpx;
+}
+
+.size_20 {
+    font-size: 20rpx;
+}
+
+.size_22 {
+    font-size: 22rpx;
+}
+
+.size_24 {
+    font-size: 24rpx;
+}
+
+.size_26 {
+    font-size: 26rpx;
+}
+
+.size_28 {
+    font-size: 28rpx;
+}
+
+.size_30 {
+    font-size: 30rpx
+}
+
+.color_fff {
+    color: #fff;
+}
+
+.color_999 {
+    color: #999;
+}
+
+.color_333 {
+    color: #333
+}
+
+.color_e2ab51 {
+    color: #e2ab51
+}

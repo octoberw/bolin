@@ -1,0 +1,22 @@
+<!-- components/integral/integral.wxml -->
+<view class="" style="display:{{showIntegral}}">
+    <view class="bgc_00003" catchtap="hideIntegral"></view>
+    <view class="posa" catchtouchmove='{{true}}'>
+        <view class="bgc_fff ">
+            <view class="flex_row border_bottom_f2f2f2 padding_bottom">
+                <text class="size_32 color_333 weight_700">使用积分</text>
+                <text class="size_24 color_999">以抵用{{integral}}元</text>
+            </view>
+            <view class="flex_row padding_40_0 border_bottom_f2f2f2">
+                <text class=" size_28 color_333">当前积分</text>
+                <text class=" size_28 color_333">{{dangqianPoint}} 分</text>
+            </view>
+            <view class="flex_row padding_40_0 border_bottom_f2f2f2">
+                <text class=" size_28 color_333">可使用积分</text>
+                <input class="bottom_border size_24 color_333" value="" type="number" max="{{point}}" placeholder="{{point}}" bindinput="getNumber"></input>
+            </view>
+            <text class=" size_22 color_999">注：{{jifenduihuan}}积分可抵购1元</text>
+        </view>
+        <view class="foot" bindtap="_tapSucc">确定</view>
+    </view>
+</view>

@@ -1,2 +1,7 @@
 <!--pages/homeCommunity/homeCommunity.wxml-->
-<text>pages/homeCommunity/homeCommunity.wxml</text>
+<view class="zwdd title-border">
+    <view class="zwdd_col">
+        <image class="img_288" src="../../image/icon_zwsqkf.png"></image>
+        <text class="zwdd_font">暂未留言功能，敬请期待~</text>
+    </view>
+</view>

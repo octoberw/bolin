@@ -5,7 +5,11 @@
 }
 
 .body_padding {
-    padding: 70rpx 28rpx;
+    padding: 0 28rpx;
+}
+
+.title_margin {
+    margin-top: 70rpx;
 }
 
 .flex_row {
@@ -39,7 +43,14 @@
 .two {
     margin-top: 40rpx;
     margin-bottom: 50rpx;
+    /* justify-content: space-between; */
+}
+
+.gird_2 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
     justify-content: space-between;
+    grid-gap: 15rpx;
 }
 
 .two_style {
@@ -177,8 +188,8 @@
 }
 
 .logo {
-    width: 273rpx;
-    height: 57rpx;
+    width: 448rpx;
+    height: 233rpx;
     margin: 36rpx auto;
 }
 

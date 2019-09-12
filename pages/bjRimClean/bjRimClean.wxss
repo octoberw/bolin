@@ -1,0 +1,156 @@
+/* pages/rimClean/rimClean.wxss */
+/* .map {
+    width: 100%;
+    height: 800rpx;
+} */
+
+.input {
+    display: flex;
+    width: 100%;
+    background-color: #fff;
+    flex-flow: row nowrap;
+    box-sizing: border-box;
+    align-items: center;
+    padding: 16rpx;
+    margin-bottom: 5rpx;
+}
+
+.input>text {
+    font-size: 32rpx;
+    color: #999;
+    margin: 0 16rpx;
+}
+
+.input>input {
+    flex: 1;
+    font-size: 26rpx;
+    color: #999;
+}
+
+.clean-zb {
+    display: flex;
+    width: 100%;
+    flex-flow: row nowrap;
+    align-items: center;
+    padding: 20rpx;
+    color: #333;
+    background-color: #fff;
+    border-bottom: 1rpx solid #f2f2f2;
+}
+
+.scroll-view-hn-ve {
+    vertical-align: top;
+}
+
+.clean-zb-padding {
+    padding: 0 48rpx;
+}
+
+.clean-zb-padding>text {
+    align-self: center;
+}
+
+.clean-zb-tj {
+    display: flex;
+    flex-flow: column nowrap;
+}
+
+.clean-zb-padding>view {
+    align-self: center;
+}
+
+.clean-zb-tj>text:first-child {
+    font-size: 28rpx;
+    color: #fbdaa2;
+    margin-bottom: 14rpx;
+}
+
+.clean-zb-tj>text:last-child {
+    font-size: 20rpx;
+    color: #fff;
+}
+
+.clean-image {
+    width: 110rpx;
+    height: 110rpx;
+    border-radius: 50%;
+    background-color: #aaa;
+}
+
+.clean-right {
+    flex: 1;
+    margin: 0 0 0 14rpx;
+}
+
+.clean {
+    display: flex;
+    align-items: stretch;
+}
+
+.clean-name {
+    font-size: 28rpx;
+    font-weight: 700;
+}
+
+.clean-style {
+    display: inline-block;
+    font-size: 22rpx;
+    color: #fbdaa2;
+    padding: 5rpx 16rpx 7rpx 16rpx;
+    border-radius: 30rpx;
+    background-color: #1a1a1a;
+    margin-left: 16rpx;
+}
+
+.clean-dw {
+    font-size: 28rpx;
+    color: #999;
+    padding-top: 9rpx;
+}
+
+.clean-hp {
+    font-size: 20rpx;
+    color: #ddd;
+    padding-left: 8rpx;
+    padding-top: 9rpx;
+}
+
+.clean-yy {
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: flex-end;
+    font-size: 20rpx;
+    color: #999;
+}
+
+.clean-rmb {
+    font-size: 22rpx;
+    color: #333;
+}
+
+.clean-y1 {
+    font-size: 30rpx;
+    color: #333;
+    font-weight: 700;
+    margin-right: 10rpx;
+}
+
+.clean-yy-btn {
+    font-size: 22rpx;
+    padding: 13rpx 33rpx;
+    color: #333;
+    border-radius: 6rpx;
+    background-color: #FBDAA2;
+    margin: 14rpx 0 14rpx 0;
+}
+
+.dibuImage {
+    background-color: #f2f2f2;
+    padding: 68rpx 164rpx;
+}
+
+.dibuImage>image {
+    width: 422rpx;
+    height: 57rpx;
+    display: inline-block;
+}

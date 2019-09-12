@@ -1,0 +1,66 @@
+<view class="" style="position: relative;">
+    <swiper class="pos_r_head" current="{{current}}" bindtap="previewImage" bindchange="changeCurrent" bindanimationfinish="">
+        <block wx:for="{{imgArr}}" wx:key="">
+            <swiper-item class="" item-id="">
+                <image class="titleImage" src="{{item}}" mode="aspectFit|aspectFill|widthFix"></image>
+            </swiper-item>
+        </block>
+    </swiper>
+    <image wx:if="{{shoucang}}" class="shoucangImg" src="../../image/icon_shoucang_on.png" bindtap="cancelShoucang"></image>
+    <image wx:else class="shoucangImg" src="../../image/icon_shoucang_off.png" bindtap="addShoucang"></image>
+    <view class="index">{{current+1}} / {{imgArr.length}}</view>
+</view>
+
+<view class=" color_333 size_32 margin_20_28" style="font-weight: 700;">{{res.title}}</view>
+
+<view class="label_border"></view>
+
+<view class="flex_row jus_between margin_20_28">
+    <view class="flex_row">
+        <image class="image_w50 margin_r_10" style="margin-bottom:0" src="{{res.avator}}"></image>
+        <text class=" size_24 color_333">{{res.autor}}</text>
+    </view>
+    <view class="flex_row">
+        <text class=" size_24 color_999">点赞数：{{res.likes}}</text>
+    </view>
+</view>
+
+<view class="label_border2"></view>
+
+<view class="conts margin_0_28 " style="display:{{show?'-webkit-box':'block'}}">
+    <rich-text class="size size_28 color_666 text_indent" nodes="{{content}}"></rich-text>
+</view>
+<text class="margin_0_28 show size_24" bindtap="clickShow">{{show?'[展示全部]':'[收起]'}}</text>
+
+<view class="border_padding"></view>
+
+<view class="bgc_f2f2f2">
+    <view class=" color_333 size_32 margin_0_28 margin_t_48" style="font-weight: 700">相关推荐</view>
+    <view class="gird">
+        <block wx:for="{{res.more}}" wx:key="">
+            <view class="flex_column border_r_4" data-id="{{item.id}}" bindtap="gotoTjListDetail">
+                <image class="image_538_300" mode="widthFix" src="{{item.picture}}"></image>
+                <view class="padding_19 flex_column_1">
+                    <text class=" size_24 color_333 overflow_ell" style="margin-bottom:10px;font-weight:700">{{item.title}}</text>
+                    <view class="flex_row jus_between">
+                        <view class="flex_row">
+                            <image class="image_w50 margin_r_10" style="margin-bottom:0" src="{{item.avator}}"></image>
+                            <text class=" size_24 color_333">{{item.autor}}</text>
+                        </view>
+                        <view class="flex_row">
+                            <image class="image_w20 margin_r_10" src="../../image/home/icon_like.png"></image>
+                            <text class=" size_24 color_999">{{item.likes}}</text>
+                        </view>
+                    </view>
+                </view>
+            </view>
+        </block>
+    </view>
+</view>
+
+<view class="foot" data-num="{{res.num}}" data-types="{{res.type}}" data-outline="{{res.outLine}}" bindtap="gotoDetail">立刻预约</view>
+
+<view class="w_216_65">
+    <image class="w_216_65" src="../../image/cz/img_ljzx.png" mode="aspectFit|aspectFill|widthFix"></image>
+    <button class="default" open-type="contact" style="width: 100%; height: 100%;z-index: 999;opacity: 0;"></button>
+</view>

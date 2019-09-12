@@ -1,0 +1,9 @@
+<!-- pages/msDestination/msDestination.wxml -->
+<block wx:for="{{res}}" wx:for-index="key" wx:for-item="val" wx:key="">
+    <view class="flex_column w_100">
+        <text class="head">{{key}}</text>
+        <block wx:for="{{val}}" wx:key="">
+            <text class="city" data-city="{{item}}" bindtap="sendCity">{{item}}</text>
+        </block>
+    </view>
+</block>

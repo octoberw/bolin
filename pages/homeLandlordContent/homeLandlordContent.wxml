@@ -1,0 +1,3 @@
+<!--pages/homeLandlordContent/homeLandlordContent.wxml-->
+<rich-text class="size_28 color_666 text_indent" nodes="{{content}}"></rich-text>
+

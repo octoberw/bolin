@@ -1,0 +1,111 @@
+/* pages/msAddPeopel/msAddPeopel.wxss */
+.head{
+    background:rgba(247,250,253,1)
+}
+
+.line_height {
+    line-height: 80rpx;
+}
+
+.line_height_60{
+    line-height: 60rpx;
+}
+
+.margin_r_34 {
+    margin-right: 34rpx;
+    font-weight: 700
+}
+
+.margin_r_15 {
+    margin-right: 15rpx;
+}
+
+.padding_35 {
+    padding: 35rpx;
+}
+
+.foot {
+    position: absolute;
+    bottom: 0;
+    border-radius: 0;
+    background-color: #333;
+    width: 100%;
+    text-align: center;
+    height: 98rpx;
+    line-height: 98rpx;
+}
+
+.flex_row {
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+}
+
+.flex_column {
+    display: flex !important;
+    flex-flow: column nowrap;
+}
+
+.between {
+    justify-content: space-between
+}
+
+.flex_end {
+    align-items: flex-end
+}
+
+.flex_start{
+    align-items: flex-start;
+}
+
+.size_18 {
+    font-size: 18rpx;
+}
+
+.size_20 {
+    font-size: 20rpx;
+}
+
+.size_22 {
+    font-size: 22rpx;
+}
+
+.size_24 {
+    font-size: 24rpx;
+}
+
+.size_26 {
+    font-size: 26rpx;
+}
+
+.size_28 {
+    font-size: 28rpx;
+}
+
+.size_32 {
+    font-size: 32rpx;
+}
+
+.color_333 {
+    color: #333;
+}
+
+.color_999 {
+    color: #999;
+}
+
+.color_fff {
+    color: #fff;
+}
+
+.color_e2ab51 {
+    color: #FBDAA2
+}
+
+.color_99A9BD{
+    color: #99A9BD
+}
+
+.color_F52D2D {
+    color: #F52D2D
+}

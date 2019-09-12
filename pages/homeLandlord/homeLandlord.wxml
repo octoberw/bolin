@@ -1,2 +1,219 @@
-<!--pages/homeLandlord/homeLandlord.wxml-->
-<text>pages/homeLandlord/homeLandlord.wxml</text>
+<!-- pages/fdHome/fdHome.wxml -->
+<view class=" flex_row jus_between padding_38_58">
+    <block wx:for="{{headData}}" wx:key="">
+        <view class=" flex_column" style="align-items: center;" data-index="{{index}}" bindtap="bindHead">
+            <text class=" size_28 {{num===index?'color_333':'color_999'}}">{{item}}</text>
+            <view wx:if="{{num===index}}" class="padding_border"></view>
+        </view>
+    </block>
+</view>
+
+<!-- 业主委托 -->
+<view class="" style="display:{{yzwt}}">
+    <view class="head_img">
+        <image class="head_img" src="http://qiniu.berlinlife.cn/img_zshzban1.png"></image>
+    </view>
+    <view class=" flex_row jus_between sec_height_170 align_items">
+        <view class=" flex_column">
+            <text class=" color_333 size_32" style="font-weight:700">合作优势</text>
+            <text class=" size_22 color_666">全面提供专业管理</text>
+        </view>
+    </view>
+    <view class="img_1029">
+        <image class="img_1029" src="http://qiniu.berlinlife.cn/img_hzys.png"></image>
+    </view>
+    <view class="img_455">
+        <image class="img_455" src="http://qiniu.berlinlife.cn/img_fwgljrwm.png"></image>
+    </view>
+    <view class=" flex_row jus_between sec_height_170 align_items">
+        <view class=" flex_column">
+            <text class=" color_333 size_32" style="font-weight:700">业主样板间</text>
+            <text class=" size_22 color_666">真实房源托管案例</text>
+        </view>
+        <image class="kefu_img_off"></image>
+        <image class="kefu_img_on"></image>
+    </view>
+    <view class="margin_0_30 ">
+        <view class="flex_column">
+            <image class="img_415" src="http://qiniu.berlinlife.cn/img_yb1.png"></image>
+            <text class=" size_28 color_333" style="font-weight:700">广州 | 整套装修 | 整套出租 | 海珠区晓港公园附近房支持1~2居或以上的房源</text>
+            <view class="border_padding"></view>
+        </view>
+        <view class="flex_column">
+            <image class="img_415" src="http://qiniu.berlinlife.cn/img_yb2.png"></image>
+            <text class=" size_28 color_333" style="font-weight:700">深圳 | 整套装修 | 整套出租 | 适合毛胚房或简装房等房源支持1居的房源</text>
+            <view class="border_padding"></view>
+        </view>
+    </view>
+</view>
+
+<!-- 民俗合作 -->
+<view class="" style="display:{{mshz}}" hover-class="none" hover-stop-propagation="false">
+    <view class=" flex_column">
+        <image class="head_img" src="http://qiniu.berlinlife.cn/img_zshzban2.png"></image>
+        <image class="img_455" src="http://qiniu.berlinlife.cn/img_mshzjrwm.png"></image>
+        <image class="img_1029" src="http://qiniu.berlinlife.cn/img_yzsfwshkj.png"></image>
+    </view>
+    <view class=" flex_row jus_between sec_height_170 align_items">
+        <view class=" flex_column">
+            <text class=" color_333 size_32" style="font-weight:700">部分民宿图片展示</text>
+            <text class=" size_22 color_666">真实民宿案例</text>
+        </view>
+        <image class="kefu_img_off"></image>
+        <image class="kefu_img_on"></image>
+    </view>
+        <scroll-view class="" style="white-space:nowrap; padding-bottom:50rpx; height:220px" scroll-x>
+            <view class="display_inline_block" style="margin-left:28rpx">
+                <image class="image_530_372" src="http://qiniu.berlinlife.cn/img_bmzs1.png"></image>
+            </view>
+            <view class="display_inline_block" style="margin-left:28rpx">
+                <image class="image_530_372" src="http://qiniu.berlinlife.cn/img_bmzs2.jpg"></image>
+            </view>
+            <view class="display_inline_block" style="margin-left:28rpx">
+                <image class="image_530_372" src="http://qiniu.berlinlife.cn/img_bmzs3.jpg"></image>
+            </view>
+            <view class="display_inline_block" style="margin-left:28rpx">
+                <image class="image_530_372" src="http://qiniu.berlinlife.cn/img_bmzs4.jpg"></image>
+            </view>
+            <view class="display_inline_block" style="margin-left:28rpx">
+                <image class="image_530_372" src="http://qiniu.berlinlife.cn/img_bmzs7.png"></image>
+            </view>
+        </scroll-view>
+</view>
+
+<!-- 房屋管家 -->
+<view class="" style="display:{{fwgj}}" hover-class="none" hover-stop-propagation="false">
+    <view class=" flex_column">
+        <image class="head_img" src="http://qiniu.berlinlife.cn/img_zshzban3.png"></image>
+    </view>
+    <view class=" flex_row jus_between sec_height_170 align_items">
+        <view class=" flex_column">
+            <text class=" color_333 size_32" style="font-weight:700">管家优势</text>
+            <text class=" size_22 color_666">为您提供优质服务</text>
+        </view>
+        <image class="kefu_img_off"></image>
+        <image class="kefu_img_on"></image>
+    </view>
+    <view class=" flex_column">
+        <image class="img_773" src="http://qiniu.berlinlife.cn/img_gjys.png"></image>
+        <image class="img_455" src="http://qiniu.berlinlife.cn/img_mshzjrwm.png"></image>
+    </view>
+</view>
+
+<!-- 投资合作 -->
+<view class="" style="display:{{tzhz}}">
+    <view class="head_img">
+        <image class="head_img" src="http://qiniu.berlinlife.cn/img_zshzban4.png"></image>
+    </view>
+    <view class=" flex_row jus_between sec_height_170 align_items">
+        <view class=" flex_column">
+            <text class=" color_333 size_32" style="font-weight:700">合作方式</text>
+            <text class=" size_22 color_666">针对不同类型房源的合作方案</text>
+        </view>
+        <image class="kefu_img_off" style="display:{{on}}" src="../../image/fd/bt_lxwm_off.png" bindtap="openOn"></image>
+        <image class="kefu_img_on" style="display:{{off}}" mode="scaleToFill" src="../../image/fd/bt_lxwm_on.png" bindtap="openOn"></image>
+    </view>
+
+    <view class=" flex_row jus_around">
+        <view class=" flex_column jus_between height_302" bindtap="gotoppgy">
+            <image class="img_96_84" src="../../image/fd/icon_ppgy.png"></image>
+            <text class=" size_30 color_D2B886" >品牌公寓</text>
+            <text class=" size_26 color_999" style="text-align:center" >成熟运营，稳健收益每月入账分红</text>
+            <view class="">
+                <text class=" size_22 color_999" >查看更多></text>
+            </view>
+        </view>
+        <view class=" flex_column jus_between height_302" bindtap="gotojpjd">
+            <image class="img_96_84" src="../../image/fd/icon_msjd.png"></image>
+            <text class=" size_30 color_D2B886" >民宿酒店</text>
+            <text class=" size_26 color_999" style="text-align:center" >连锁化经营，强运营高品质，高收益</text>
+            <view class="">
+                <text class=" size_22 color_999" >查看更多></text>
+            </view>
+        </view>
+    </view>
+
+    <view class=" flex_row jus_between sec_height_170 align_items">
+        <view class=" flex_column">
+            <text class=" color_333 size_32" style="font-weight:700">项目优势</text>
+            <text class=" size_22 color_666">成熟运营团队为您提供</text>
+        </view>
+        <image class="kefu_img_off"></image>
+        <image class="kefu_img_on"></image>
+    </view>
+    <scroll-view class="" style="white-space:nowrap; padding-bottom:50rpx; height:220px" scroll-x>
+        <view class="display_inline_block" style="margin-left:28rpx">
+            <image class="image_408_384" src="http://qiniu.berlinlife.cn/img_sxssxsy.png"></image>
+        </view>
+        <view class="display_inline_block" style="margin-left:28rpx">
+            <image class="image_408_384" src="http://qiniu.berlinlife.cn/img_tzaqtm.png"></image>
+        </view>
+        <view class="display_inline_block" style="margin-left:28rpx">
+            <image class="image_408_384" src="http://qiniu.berlinlife.cn/img_kkhbl.png"></image>
+        </view>
+    </scroll-view>
+    <view class=" flex_row jus_between sec_height_170 align_items">
+        <view class=" flex_column">
+            <text class=" color_333 size_32" style="font-weight:700">享有特权</text>
+            <text class=" size_22 color_666">平台合作专属特权</text>
+        </view>
+        <image class="kefu_img_off"></image>
+        <image class="kefu_img_on"></image>
+    </view>
+    <view class=" flex_column">
+        <image class="img_594" src="http://qiniu.berlinlife.cn/img_xytq.png"></image>
+        <image class="img_455" src="http://qiniu.berlinlife.cn/img_fwgljrwm.png"></image>
+    </view>
+    <view class=" flex_row jus_between sec_height_170 align_items">
+        <view class=" flex_column">
+            <text class=" color_333 size_32" style="font-weight:700">入驻平台渠道</text>
+            <text class=" size_22 color_666">全方位提供最佳的合作平台</text>
+        </view>
+        <image class="kefu_img_off"></image>
+        <image class="kefu_img_on"></image>
+    </view>
+    <view class="">
+        <text class=" size_24 color_999 padding_28">品牌公寓方面目前已加入各大线上平台渠道流量，同时与线下各大中介行有着紧密合作。
+
+不仅如此，泊邻自身也打造着O2O平台生态圈，有完整的平台体系，以及成熟的运营管理团队。在推广方面，我们积极推进在小红书、微博、抖音等自媒体上推广；我们一直坚持空间自由，泊邻除了搭建品质化的居住场景，还建立了完善的服务体系。
+        </text>
+    </view>
+    <view class=" flex_column padding_28">
+        <image class="img_400" src="http://qiniu.berlinlife.cn/img_logo.png"></image>
+    </view>
+    <view class=" flex_row jus_between sec_height_170 align_items">
+        <view class=" flex_column">
+            <text class=" color_333 size_32" style="font-weight:700">品牌采购</text>
+            <text class=" size_22 color_666">严格管控供应链品质</text>
+        </view>
+        <image class="kefu_img_off"></image>
+        <image class="kefu_img_on"></image>
+    </view>
+    <view class=" flex_column padding_28">
+        <image class="img_232" src="http://qiniu.berlinlife.cn/img_ppcgwz.png"></image>
+    </view>
+</view>
+
+
+<image class="img_140" style="padding:0" src="../../image/fd/icon_back.png" bindtap="comeback"></image>
+
+<view class="img_77" style="margin-bottom:100px">
+    <image class="img_77" style="padding:0" src="../../image/fd/img_dibulianxi.png"></image>
+</view>
+<view class=" flex_row jus_around bgc_333">
+    <view class="flex_row  w_100" bindtap="tapCall">
+        <image class="img_28" src="../../image/fd/icon_srlj.png"></image>
+        <text class=" size_32 color_FBDAA2 margin_l_18">深入了解</text>
+    </view>
+    <view class="flex_row w_100" bindtap="gotoTZHZ">
+        <image class="img_28" src="../../image/fd/icon_yxjm.png"></image>
+        <text class=" size_32 color_FBDAA2 margin_l_18">意向加盟</text>
+    </view>
+</view>
+
+<image class="kefu_img_off" style="display:{{on}}" src="../../image/fd/bt_lxwm_off.png" catchtap="openOn"></image>
+<view class="kefu_img_on" style="display:{{off}}">
+    <image class="kefu_img_on"  mode="scaleToFill" src="../../image/fd/bt_lxwm_on.png" ></image>
+    <button class="default" open-type="contact" bindcontact="bindcnt" style="width: 100%; height: 100%;z-index: 1000;opacity: 0;"></button>
+</view>
+

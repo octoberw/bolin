@@ -1,0 +1,90 @@
+<!-- pages/zfAppointment/zfAppointment.wxml -->
+<view class="small_border"></view>
+<view class="flex_row padding_0_28 padding_tb_46_40" style="justify-content:flex-start;">
+    <image class="image_350_210 margin_r_22" src="{{res.img_url}}" style="border-radius:3px;"></image>
+    <view class="flex_column flex_1">
+        <text class="size_24 color_333 margin_b_12" style="font-weight:700;">{{res.type}}|{{res.title}}</text>
+        <view class="size_24 color_333 flex_column">
+             <view class="" style="display:flex">
+                <text class="size_24 color_999 margin_b_20" >{{res.area}}</text><view class=" pingfang_posr"><text class="color_999 pingfang_24">m</text><text class="color_999 pingfang_12">2</text></view>
+            </view>
+            <view class="" style="margin-top:18rpx">
+                <block wx:for="{{res.tag}}" wx:key="">
+                    <text class="size_20 color_999 padding_8_20">{{item.name}}</text>
+                </block>
+            </view>
+            <view class="" style="margin-top:18rpx">
+                <text class="size_20 color_fff color_e2ab51">￥</text>
+                <text class="size_28 color_e2ab51 ">{{res.monthlyRent}}</text>
+                <text class="size_20 color_999">/月</text>
+            </view>
+        </view>
+    </view>
+</view>
+<view class="big_border"></view>
+<!-- pages/wxBlOrder/wxBlOrder.wxml -->
+<view class="title-border"></view>
+<form class="" report-submit="false" bindsubmit="getVal" bindreset="">
+    <view class="border-bottom">
+        <view class="val">
+            <view class="flex-phone" style="margin-top:0">
+                <text class="title-fontSize">联系姓名</text>
+                <input name="name" class="val-fontSize" value="" type="text|number|idcard|digit|time|date" placeholder="请输入您的真实姓名"></input>
+            </view>
+            <view class="flex-phone">
+                <text class="title-fontSize">联系电话</text>
+                <input name="phone" class="val-fontSize" value="" type="number" maxlength="11" placeholder="请输入您的联系方式"></input>
+            </view>
+        </view>
+    </view>
+    <!-- <view class="border-bottom">
+        <view class="flex-dizhi val-padding flex-fw">
+            <view class="">
+                <text class="title-fontSize">定金费用</text>
+            </view>
+            <view class="">
+                <text class="val-fontSize color_333">￥</text>
+                <text class="yuan">200</text>
+                <text class="val-fontSize">/小时</text>
+            </view>
+        </view>
+    </view> -->
+    <view class="border-bottom" bindtap="showSelectTime">
+        <view class="flex-dizhi val-padding">
+            <text class="title-fontSize">期望看房时间</text>
+            <view class="val-fontSize">
+                <text class="margin_R">{{titleYear}}-{{titleMouth+1}}-{{titleDays+1}}</text>
+                <text class="iconfont iconicon_gengduo"></text>
+            </view>
+        </view>
+    </view>
+    <view data-tm="mask" class="bgc_333_tm" style="display:{{showPickerView}}" bindtap="hideTM" catchtouchmove="{{true}}">
+        <view class="bgc_fff">
+            <view class="flex_row_between">
+                <text class="size_26 color_333">请选择签订时间</text>
+                <text class="size_24 color_999">已选{{titleMouth+1}}月{{titleDays+1}}日</text>
+            </view>
+            <view class="small_border"></view>
+            <view class="">
+                <picker-view indicator-style="height: 50px;" style="width: 100%;height:150px" value="{{value}}" bindchange="bindChange">
+                    <picker-view-column>
+                        <view class="size_24 color_333" style="line-height: 50px;text-align:center" wx:for="{{mouths}}" wx:key="index">
+                            {{item}}月
+                        </view>
+                    </picker-view-column>
+                    <picker-view-column>
+                        <view class="size_24 color_333" style="line-height: 50px;text-align:center" wx:for="{{newDays}}" wx:key="index">
+                            {{item}}日
+                        </view>
+                    </picker-view-column>
+                </picker-view>
+            </view>
+            <view class="foot_time" bindtap="sureTime">确定</view>
+        </view>
+    </view>
+    <view class="val-padding" style="display:{{showTextarea}}">
+        <view class="title-fontSize">给管家留言</view>
+        <textarea name="content" class="size_24 color_999" value="" placeholder="留下您的需求，我们将为你提供更优质的服务...(选填)" placeholder-style=""></textarea>
+    </view>
+    <button class="foot" style="background-color:{{isTrue?'#333':'#999'}}" form-type="submit">提交约看</button>
+</form>

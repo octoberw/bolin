@@ -1,0 +1,65 @@
+<!-- pages/zxTJXQ/zxTJXQ.wxml -->
+<view class="head size_26 color_99A9BD">*填写自己的信息可以有效提高与我们的合作效率</view>
+<form class="" report-submit="false" bindsubmit="bindTJXQ" bindreset="">
+    <view class="body">
+        <view class="size_34 color_333" style="font-weight:700">· 房屋信息</view>
+        <view class="val">
+                <view class=" flex_row jus_between border_bottom">
+                    <text class=" size_28 color_333" style="font-weight:700">房屋所在城市</text>
+                    <view class=" flex_row">
+                        <input name="city" class=" size_28 color_999" value=""  placeholder="未填写"></input>
+                    </view>
+                </view>
+                <view class=" flex_row jus_between border_bottom">
+                    <text class=" size_28 color_333" style="font-weight:700">面积</text>
+                    <view class=" flex_row">
+                        <input name="area" class=" size_28 color_999" value="" type="number" placeholder="未填写"></input>
+                        <text class=" size_28 color_333">m2</text>
+                    </view>
+                </view>
+                <view class=" flex_row jus_between border_bottom">
+                    <text class=" size_28 color_333" style="font-weight:700">小区名</text>
+                    <view class=" flex_row">
+                        <input name="house" class=" size_28 color_999" value=""  placeholder="未填写"></input>
+                    </view>
+                </view>
+                <view class=" flex_row jus_between border_bottom">
+                    <text class=" size_28 color_333" style="font-weight:700">详细地址</text>
+                    <view class=" flex_row">
+                        <input name="fwzk" class=" size_28 color_999" value=""  placeholder="未填写"></input>
+                    </view>
+                </view>
+        </view>
+    </view>
+    <view class="body">
+        <view class="size_34 color_333" style="font-weight:700">· 业主信息</view>
+        <view class="val">
+            <view class=" flex_row jus_between border_bottom">
+                <text class=" size_28 color_333" style="font-weight:700">联系名称</text>
+                <view class=" flex_row">
+                    <input name="name" class=" size_28 color_999" value=""  placeholder="请输入联系人姓名"></input>
+                </view>
+            </view>
+            <view class=" flex_row jus_between border_bottom">
+                <text class=" size_28 color_333" style="font-weight:700">联系电话</text>
+                <view class=" flex_row">
+                    <input name="phone" class=" size_28 color_999" maxlength="11" value="" type="number" placeholder="请输入联系方式"></input>
+                </view>
+            </view>
+            <view class=" flex_row jus_between border_bottom">
+                <text class=" size_28 color_333" style="font-weight:700">微信号码</text>
+                <view class=" flex_row">
+                    <input name="wxid" class=" size_28 color_999" maxlength="11" value="" type="text" placeholder="未填写"></input>
+                </view>
+            </view>
+        </view>
+    </view>
+    <view class="body">
+        <view class="size_34 color_333" style="font-weight:700">· 其他信息</view>
+        <view class="val">
+            <textarea name="val" class=" textarar_347 size_24" value="" placeholder="欢迎给我们留言" ></textarea>
+        </view>
+    </view>
+    
+<button class="foot color_FBDAA2" form-type="submit">提交</button>
+</form>

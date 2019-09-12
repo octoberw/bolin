@@ -28,6 +28,11 @@
     padding: 18rpx 0;
 }
 
+.size {
+    font-size: 20rpx;
+    color: #53535c;
+}
+
 .border_ddd {
     border: 1rpx solid #ddd;
     border-radius: 6rpx;
@@ -82,7 +87,7 @@
 }
 
 .color_fff {
-    color: #fff;
+    color: #fff !important;
 }
 
 .color_999 {
@@ -107,13 +112,13 @@
     line-height: 98rpx;
 }
 
-.height_98{
+.height_98 {
     height: 98rpx;
     line-height: 98rpx;
-    flex:1;
+    flex: 1;
 }
 
-.size_24{
+.size_24 {
     font-size: 24rpx;
     font-weight: 400;
 }
@@ -132,4 +137,12 @@
 .border_top_ddd {
     align-items: flex-end;
     text-align: center;
+}
+
+.w_216_65 {
+    position: fixed;
+    top: 36%;
+    right: 0;
+    width: 216rpx;
+    height: 65rpx;
 }

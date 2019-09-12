@@ -1,4 +1,3 @@
-//app.js
 App({
   onLaunch: function () {
     // 展示本地存储能力
@@ -34,6 +33,10 @@ App({
     })
   },
   globalData: {
-    userInfo: null
+    userInfo: null,
+    // host: 'http://256o61o881.qicp.vip' 
+    host: 'http://192.168.50.169:8081',
+    
+  //  host: 'https://bl.hboxs.com'
   }
 })

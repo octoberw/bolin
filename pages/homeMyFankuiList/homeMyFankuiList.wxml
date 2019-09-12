@@ -1,0 +1,25 @@
+<view class="title-border"></view>
+<view class="" wx:for="{{res}}" wx:key="">
+    <view class="flex_row">
+        <image class="touxiang" src="{{item.avator}}"></image>
+        <view class="w_600" >
+            <view class="jus_between">
+                <text class="name">{{item.name}}</text>
+                <text class="time">{{item.createDate}}</text>
+            </view>
+            <text class="val">{{item.content}}</text>
+        </view>
+    </view>
+    <view class="title-border"></view>
+    <view class="flex_row" wx:if="{{item.reply=='true'}}">
+        <image class="touxiang" src="/image/home/img_bolintouxiang.png"></image>
+        <view class="w_600" >
+            <view class="jus_between">
+                <text class="name">泊邻管理员</text>
+                <text class="time">{{item.modifyDate}}</text>
+            </view>
+            <view class="val_2">{{item.answer}}</view>
+        </view>
+    </view>
+    <view class="border-bottom"></view>
+</view>

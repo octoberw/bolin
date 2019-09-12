@@ -1,0 +1,79 @@
+<!-- pages/myCleanCommentDone/myCleanCommentDone.wxml -->
+<scroll-view class="scrollView" scroll-x="false" scroll-y="false" upper-threshold="50" lower-threshold="50" scroll-top="0" scroll-left="0" scroll-into-view="" scroll-with-animation="false" enable-back-to-top="false" bindscrolltoupper="" bindscrolltolower="" bindscroll="">
+    <view class="myCleanListFlexHei">
+        <image class="myCleanImage" src="{{res.cleaner.avator}}" mode="cover"></image>
+        <view class="myCleanRight">
+            <view class="myCleanS">
+                <text class="myCleanName">{{res.cleaner.nickName}}</text>
+                <text class="myCleanJP" wx:if="{{res.cleaner.is_gold==='true'}}">金牌保洁人</text>
+                <text class="myCleanState" wx:if="{{res.cleanOrder.status==='finish'}}">已评论</text>
+            </view>
+            <view class="myCleanX">
+                <text class="myCleanTimes">好评率:{{res.cleaner.evaluateRate}} | {{res.cleaner.subscribedNum}}人已预约</text>
+                <view class="myCleanXRight">
+                    <text c lass="">￥</text>
+                    <text class="">{{res.cleanOrder.amountPayable}}</text>
+                </view>
+            </view>
+        </view>
+    </view>
+    <view class="details_dz">
+        <text class="">服务地址</text>
+        <text class="">{{res.cleanOrder.address}}</text>
+    </view>
+    <view class="details_dz margin_maxTop">
+        <text class="">联系电话</text>
+        <text class="text_right">{{res.cleanOrder.phone}}</text>
+    </view>
+    <view class="details_dz margin_smallTop details_fw">
+        <text class="">服务单价</text>
+        <view class="details_fw_right">
+            <text class="rmb">￥</text>
+            <text class="rmb_y">{{res.cleanOrder.cost}}</text>
+            <text class="rmb_t">/小时</text>
+        </view>
+    </view>
+    <view class="details_dz margin_smallTop" style="justify-content:space-between;align-items: flex-start;">
+        <text class="hei" style="margin-left: 0">服务时间</text>
+        <view class="details_fw_right jus_row" style="flex:1;display:flex;align-items:center;justify-content:flex-end;">
+            <text class="fw_date hei">{{res.serviceDate}}</text>
+            <block wx:for="{{arrTimes}}" wx:key="">
+                <text class="fw_time hei">{{item}}</text>
+            </block>
+        </view>
+    </view>
+    <view class="details_dz margin_maxTop">
+        <text class="">服务单号</text>
+        <text class="text_right">{{res.cleanOrder.sn}}</text>
+    </view>
+    <view class="details_dz margin_smallTop">
+        <text class="">下单时间</text>
+        <text class="text_right">{{res.createDate}}</text>
+    </view>
+    <view class="details_dz margin_smallTop border_bottom">
+        <text class="">完成时间</text>
+        <text class="text_right">{{res.modifyDate}}</text>
+    </view>
+    <view class="details_dz">
+        <text class="">我的评价:</text>
+        <view class="pj_flex">
+            <view class="pj_xx" >
+                <block wx:for="{{evaluateStar}}" wx:key="">
+                    <text class="iconfont iconicon_xingxing"></text>
+                </block>
+            </view>
+            <view class="details_dz1 margin_smallTop" style="">
+                <block wx:for="{{evaluateLabels}}" wx:key="">
+                    <text class="fw_time fw_time_left">{{item}}</text>
+                </block>      
+            </view>
+            <text class="pj_val">{{evaluateContent}}</text>
+            <view class="image_flex_row">
+                <block wx:for="{{res.img}}" wx:key="">
+                    <image class="image" src="{{item.url}}"></image>
+                </block>
+            </view>
+        </view>
+    </view>
+</scroll-view>
+<view class="footerHui">已完成</view>

@@ -1,0 +1,179 @@
+<view class="small_border"></view>
+<view class="flex_row padding_0_28 padding_tb_46_40" style="justify-content:flex-start;">
+    <image class="image_350_210 margin_r_22" src="{{res.avator}}"></image>
+    <view class="flex_column flex_1" style="flex:1;">
+        <text class="size_24 color_333 margin_b_12 overflowEllipsis" style="font-weight:700;">{{res.houseType}}|{{res.title}}</text>
+        <!-- <text class=" size_18 color_999">78.6m2 | 地铁上盖</text> -->
+        <view class="size_24 color_333 flex_column">
+            <view class="" style="margin-top:2rpx">
+                <block wx:for="{{res.tag}}" wx:key="">
+                    <text class="size_20 color_999 padding_8_20">{{item.name}}</text>
+                </block>
+            </view>
+        </view>
+    </view>
+    <view class=" flex_column flex_end">
+        <text class=" size_22 color_333">{{res.status}}</text>
+        <view class="">
+            <text class=" size_22 color_333">￥</text>
+            <text class=" size_32 color_333" style="font-weight: 700">{{res.roomRate}}</text>
+        </view>
+    </view>
+</view>
+<view class="big_border"></view>
+<!-- pages/wxBlOrder/wxBlOrder.wxml -->
+<view class="title-border"></view>
+<view class="border-bottom ">
+    <view class="val">
+        <text class=" size_26 color_333" style="margin-right:12rpx;font-weight:700;padding-top:28rpx">入住日期</text>
+        <view class="flex_row jus_bet margin_t_20">
+            <view class="">
+                <text class="size_26 color_999 margin_b_15">入住时间</text>
+                <view class="flex_row align_item_end">
+                    <text class="size_32 color_333 margin_r_15 bgc_time" style="font-weight:700">{{res.starDate}}</text>
+                </view>
+            </view>
+            <view class="">
+                <text class="size_26 color_999 margin_b_15">离店时间</text>
+                <view class="flex_row align_item_end">
+                    <text class="size_32 color_333 margin_r_15 bgc_time" style="font-weight:700">{{res.endDate}}</text>
+                </view>
+            </view>
+            <view class=" flex_column jus_bet">
+                <text class="size_26 color_fff margin_b_15">1</text>
+                <view class="flex_row align_item_center">
+                    <text class="size_20 color_999">共住{{res.days}}晚</text>
+                </view>
+            </view>
+        </view>
+    </view>         
+</view>
+
+<view class="val" style="padding:0 28rpx; margin:0">
+    <view class="flex-phone flex_start " style="margin-top:0;margin-top:0rpx;padding-bottom:0;padding:10px 0">
+        <text class=" size_26 color_333" style="font-weight:700">民宿住址</text>
+        <text class=" size_26 color_999" style="flex:1;line-height:50rpx;margin-right:0">{{res.address}}</text>
+    </view>
+    <view class="flex-phone" style="margin-top:0rpx;padding-bottom:0">
+        <text class=" size_26 color_333" style="line-height:80rpx;font-weight:700">房东信息</text>
+        <view class="flex_row align_center">
+            <text class=" size_26 color_999" style="margin-right:10px">{{res.landlord}}</text>
+            <text class=" size_26 color_999">{{res.call}}</text>   
+        </view>
+    </view>
+    <view class="flex-phone" style="margin-top:0rpx;padding-bottom:0">
+        <text class=" size_26 color_333" style="line-height:80rpx;font-weight:700">房源信息</text>
+        <view class="flex_row align_center">
+            <text class=" size_26 color_999" style="margin-right:10px">{{res.houseType}}</text>
+            <text class=" size_26 color_999">房东：{{res.landlord}}</text> 
+        </view>
+    </view>
+</view>
+
+<view class="border_bottom_view"></view>
+
+<view class="border-bottom val">
+    <view class="flex-phone" style="margin-top:0rpx;padding-bottom:0;margin-bottom:15px">
+        <text class=" size_26 color_333" style="line-height:80rpx;font-weight:700">预约信息</text>
+        <view class="flex_row align_center">
+            <text class=" size_26 color_999" style="margin-right:10px">{{res.person}}</text>
+            <text class=" size_26 color_999">{{res.phone}}</text>   
+        </view>
+    </view>
+    <text class="size_26 color_333" style="font-weight:700;margin-bottom:10px"> 入住名单</text>
+    <block wx:for="{{res.roomer}}" wx:key="">
+        <view class=" flex_row between margin_b_30 bgc_people">
+            <view class="flex_row ">
+                <image class="w27" src="../../image/ms/icon_people.png"></image>
+                <text class=" size_26 color_333 h27" style="font-weight:700">{{item.name}}</text>
+            </view>
+            <view class=" flex_row">
+                <text class=" size_26 color_333 margin_r_10">{{item.card}}</text>
+                <image class="w27" src="../../image/ms/icon_bianji.png"></image>
+            </view>
+        </view>    
+    </block>
+</view>
+
+<view class="border-bottom val">
+    <view class="flex-phone" style="margin-top:0rpx;padding-bottom:0;margin-bottom:15px">
+        <text class=" size_26 color_333" style="line-height:80rpx;font-weight:700">备注信息</text>
+        
+    </view>
+    <text class=" size_22 color_999">{{res.remark}}</text>
+</view>
+
+<view class="border-bottom val" style="padding:0 28rpx; margin:0;">
+    <view class="flex-phone jus_bet" style="margin-top:0rpx;padding-bottom:0">
+        <text class=" size_26 color_333" style="line-height:80rpx;font-weight:700">预约单号</text>
+        <view class="flex_row align_center">
+            <text class=" size_26 color_999" style="margin-right:10px"></text>
+            <text class=" size_26 color_999">{{res.hs}}</text>   
+        </view>
+    </view>
+    <view class="flex-phone jus_bet" style="margin-top:0rpx;padding-bottom:0">
+        <text class=" size_26 color_333" style="line-height:80rpx;font-weight:700">下单时间</text>
+        <view class="flex_row align_center">
+            <text class=" size_26 color_999" style="margin-right:10px"></text>
+            <text class=" size_26 color_999">{{res.createDate}}</text> 
+        </view>
+    </view>
+</view>
+
+<view wx:if="{{res.status=='已评价'}}" class="details_dz" style=" padding-bottom:150px">
+    <view class="" style="border-bottom:1rpx solid #f2f2f2;">
+        <text class=" size_26 color_333" style="line-height:80rpx;font-weight:700">预约单号</text>
+        <text class=" size_24 color_999 pj_cont" style="line-height:80rpx;">您的评价是我们的动力</text>
+    </view>
+    <view class=" flex_row" style="align-items:center;margin-top:35rpx">
+        <text class="">我的评价:</text>
+        <view class="pj_xx" >
+            <block wx:for="{{res.evaluate.star}}" wx:key="">
+                <text class="iconfont iconicon_xingxing"></text>
+            </block>
+        </view>
+    </view>
+    <view class="">
+        <view class="pj_flex">
+            <view class="details_dz1 margin_smallTop" style="">
+                <block wx:for="{{res.evaluate.labels}}" wx:key="">
+                    <text class="fw_time fw_time_left">{{item}}</text>
+                </block>      
+            </view>
+            <view class=" flex_row" style="align-items:center;margin:20rpx 0 15rpx 0">
+                <text class="">评价详情:</text>
+                <view class="pj_cont" >
+                    <text class="pj_val">{{res.evaluate.content}}</text>
+                </view>
+            </view>
+            <view class="image_flex_row">
+                <block wx:for="{{res.img}}" wx:key="">
+                    <image class="image" src="{{item.url}}"></image>
+                </block>
+            </view>
+        </view>
+    </view>
+</view>
+
+<view wx:if="{{res.status=='预约中'}}" class="foot" bindtap="showYuyue">取消预约</view>
+<view wx:if="{{res.status=='待入住'}}" class="foot" bindtap="showYuyue">取消入住</view>
+<view wx:if="{{res.status=='待支付'}}" class="flex_row foot_fixed">
+    <text class="foot" bindtap="showYuyue">取消预约</text>
+    <text class="foot" bindtap="gotoPay" style="background-color:{{isPay?'#333':'#999'}}">立即支付</text>
+</view>
+<view wx:if="{{res.status=='待评价'}}" class="foot" bindtap="showComment">立即评论</view>
+
+
+<!-- 预约说明 -->
+<view class="popup-bgc" style="display:{{hideview}}" catchtouchmove='{{true}}'>
+    <view class="popup-val">    
+        <text class="popup-title" selectable="false" space="false" decode="false">取消预约</text>
+        <textarea class="size_22 color_999 padding_20" placeholder="请填写取消服务的原因[选填]..." ></textarea>
+        <view class="popup-foot">
+            <view style="margin-right:20rpx;" bindtap="colseYuyue">我再想想</view>
+            <view bindtap="cancelYuyue">立即取消</view>
+        </view>
+    </view>
+</view>
+
+<comment id="comment" toCommentSn="{{res.hs}}" toCommentCleanerId="{{}}" orderNum="{{'hs'}}" apiUrl="{{apiUrl}}" catchsuccess="_hideComSucc" catcherror="_hideComErr"></comment>

@@ -36,7 +36,7 @@
     justify-content: space-around;
 }
 
-.popup-foot>view {
+.popup-foot>button {
     width: 100%;
     padding: 18rpx 0;
     margin: 0;
@@ -46,14 +46,14 @@
     text-align: center;
     font-size: 22rpx;
     line-height: 22rpx;
-}
-
-.popup-foot>view:first-child {
+  }
+  
+  .popup-foot>button:first-child {
     background-color: #ddd;
     color: #999;
-}
-
-.popup-foot>view:last-child {
+  }
+  
+  .popup-foot>button:last-child {
     background-color: #333;
     color: #fbdaa2;
-}
+  }

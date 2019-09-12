@@ -1,16 +1,18 @@
 <!-- pages/wxMTST/wxMTST.wxml -->
-<image class="title_image" src="../../image/wx/img_xqybanner.png" mode="aspectFit|aspectFill|widthFix" lazy-load="false" binderror="" bindload=""></image>
+<image class="title_image" src="{{thirdIdList.backImage}}" mode="aspectFit|aspectFill|widthFix" lazy-load="false" binderror="" bindload=""></image>
 <view class="padding_bottom">
     <view class="flex_row border_ddd">
         <text class="text_width border_ddd_right border_ddd_bottom bgc_f2f2f2">项目名称</text>
         <text class="text_width border_ddd_right border_ddd_bottom bgc_f2f2f2">非泊邻价格</text>
         <text class="text_width border_ddd_bottom bgc_f2f2f2">泊邻价格</text>
-        <text class="text_width border_ddd_right color_333">马桶检测</text>
-        <text class="text_width border_ddd_right color_333">￥20</text>
-        <view class="text_width color_333">
-            <text class="" style="margin-right:6rpx;">￥0</text>
-            <text class="" style="font-size:16rpx; text-decoration:line-through;">￥20</text>
-        </view>
+        <block wx:for="{{item}}" wx:key="">
+                <text class="text_width border_ddd_right color_333">{{item.k}}</text>
+                <text class="text_width border_ddd_right color_333">￥{{item.v}}</text>
+                <view class="text_width color_333">
+                    <text class="" style="margin-right:6rpx;">￥0</text>
+                    <text class="" style="font-size:16rpx; text-decoration:line-through;">￥{{item.v}}</text>
+                </view>
+        </block>
     </view>
     <view class="flex_column" style="padding-top:28rpx">
         <text class="title_font">温馨提示</text>
@@ -23,40 +25,9 @@
         <text class="title">服务说明</text>
         <text class="little_title">多种类别，多种选择</text>
     </view>
-    <view class="flex_row border_ddd" style="border-radius=0;">
-        <text class="text_width border_ddd_right border_ddd_bottom color_fff bgc_333">项目名称</text>
-        <text class="text_width border_ddd_right border_ddd_bottom color_fff bgc_333">价格</text>
-        <text class="text_width border_ddd_bottom color_fff bgc_333">上门起步</text>
-        <text class="text_width border_ddd_right border_ddd_bottom">水龙头维修(普修)</text>
-        <text class="text_width border_ddd_right border_ddd_bottom">￥50/个起</text>
-        <text class="text_width border_ddd_bottom "></text>
-        <text class="text_width border_ddd_right border_ddd_bottom">水龙头维修(混水)</text>
-        <text class="text_width border_ddd_right border_ddd_bottom">￥70/个起</text>
-        <text class="text_width border_ddd_bottom "></text>
-        <text class="text_width border_ddd_right border_ddd_bottom">龙头断丝处理</text>
-        <text class="text_width border_ddd_right border_ddd_bottom">￥150起</text>
-        <text class="text_width border_ddd_bottom "></text>
-        <text class="text_width border_ddd_right border_ddd_bottom">感应龙头安装</text>
-        <text class="text_width border_ddd_right border_ddd_bottom">￥80/个起</text>
-        <text class="text_width border_ddd_bottom "></text>
-        <text class="text_width border_ddd_right border_ddd_bottom">花洒/沐浴头安装</text>
-        <text class="text_width border_ddd_right border_ddd_bottom">￥80/套起</text>
-        <text class="text_width border_ddd_bottom "></text>
-        <text class="text_width border_ddd_right border_ddd_bottom">面盆水龙头</text>
-        <text class="text_width border_ddd_right border_ddd_bottom">￥60/个</text>
-        <text class="text_width border_ddd_bottom ">￥80起</text>
-        <text class="text_width border_ddd_right border_ddd_bottom">洗衣机龙头</text>
-        <text class="text_width border_ddd_right border_ddd_bottom">￥25/个</text>
-        <text class="text_width border_ddd_bottom ">￥80起</text>
-        <text class="text_width border_ddd_right border_ddd_bottom">三角阀</text>
-        <text class="text_width border_ddd_right border_ddd_bottom">￥25/个</text>
-        <text class="text_width border_ddd_bottom ">￥80起</text>
-        <text class="text_width border_ddd_right ">龙头单件拆除</text>
-        <text class="text_width border_ddd_right ">￥12/个</text>
-        <text class="text_width">￥80起</text>
-    </view>
+    <rich-text class="size" nodes="{{content}}"></rich-text>
 </view>
-<image class="" src="../../image/wx/img_xiangqingye.png" style="width:100%;height:805rpx;border-bottom: 20rpx solid #f2f2f2;"></image>
+<!-- <image class="" src="../../image/wx/img_xiangqingye.png" style="width:100%;height:805rpx;border-bottom: 20rpx solid #f2f2f2;"></image> -->
 <view class="padding_bottom">
     <view class="flex_column flex_column_center" style="margin-bottom:40rpx;">
         <text class="title">服务流程 · 下单须知</text>
@@ -96,18 +67,23 @@
         </view>
     </view>
 </view>
-<view class="padding_bottom flex_row" style="justify-content: space-between;padding:32rpx 28rpx;">
+<view class="padding_bottom flex_row" bindtap="callPhone" style="justify-content: space-between;padding:32rpx 28rpx; margin-bottom:150px">
     <text class="color_333 size_26">咨询热线</text>
     <view class="size_26">
         <text class="iconfont iconicon_dianhua color_333"></text>
-        <text class="color_333" style="margin-left:20rpx">400-8888-8888</text>
+        <text class="color_333" style="margin-left:20rpx">020-8944 9859</text>
     </view>
 </view>
-<view class="flex_row border_top_ddd">
-    <view class="width_318 font_size_48">
-        <text class="">￥20</text>
+<view class="flex_row border_top_ddd" style="bottom:0;position:fixed;width:100%;">
+    <view class="width_318 font_size_48" style="background-color:#fff;border-top:1px solid #f2f2f2">
+        <text class="">￥{{item[0].v}}</text>
         <text class="size_24">起</text>
     </view>
-    <view class="font_size height_98" style="border-right:1rpx solid #ddd;">泊邻用户下单</view>
-    <view class="font_size height_98 color_fff">立即下单</view>
+    <view class="font_size height_98 color_fff" style="border-right:1rpx solid #ddd;" bindtap="gotoNoBlOrder">立即下单</view>
+    <view class="font_size height_98" bindtap="gotoBlOrder">泊邻用户下单</view>
+</view>
+
+<view class="w_216_65">
+    <image class="w_216_65" src="../../image/cz/img_ljzx.png" mode="aspectFit|aspectFill|widthFix"></image>
+    <button class="default" open-type="contact" style="width: 100%; height: 100%;z-index: 1;opacity: 0;"></button>
 </view>

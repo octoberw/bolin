@@ -1,0 +1,584 @@
+/* pages/zfSearchListHome/zfSearchListHome.wxss */
+
+/* 图片 */
+/* 头部图片 */
+.titleImage {
+    width: 100%;
+    height: 380rpx;
+    display: block;
+}
+
+/* .pos_r_head {
+    position: relative;
+} */
+
+.index {
+    position: absolute;
+    right: 30rpx;
+    bottom: 50rpx;
+    border-radius: 28rpx;
+    color: #fff;
+    background-color: rgba(0, 0, 0, .3);
+    padding: 6rpx 24rpx;
+    font-size: 24rpx;
+}
+
+/* 房型面积朝向楼层 */
+.margin_20_28 {
+    margin: 20rpx 28rpx 20rpx 28rpx;
+}
+
+.margin_b_20 {
+    margin-bottom: 20rpx;
+}
+
+.padding_1 {
+    height: 110rpx;
+    padding: 0.5px;
+    background-color: #f2f2f2;
+}
+
+/* 标签 */
+.padding_20_0 {
+    padding: 34rpx 0 0 0;
+}
+
+.biaoqian {
+    padding: 0 30rpx;
+    margin-right: 10rpx;
+    margin-bottom: 10rpx;
+    height: 52rpx;
+    line-height: 52rpx;
+    border-radius: 6rpx;
+    background-color: #F1F4F8;
+}
+
+/* 房子介绍 */
+.margin_40 {
+    margin: 40rpx 40rpx 14rpx 40rpx;
+}
+
+.margin_bottom {
+    margin-bottom: 26rpx;
+}
+
+.w_100 {
+    width: 100%
+}
+
+.w_216_65 {
+    position: fixed;
+    top: 45%;
+    right: 0;
+    width: 216rpx;
+    height: 65rpx;
+    z-index: 999
+}
+
+/* 地图位置 */
+.padding_t_b {
+    padding: 40rpx 0 40rpx 0;
+    margin: 0 28rpx;
+    border-top: 0.5px solid #f2f2f2;
+}
+
+.map {
+    width: 100%;
+    height: 350rpx;
+    margin-top: 30rpx;
+}
+
+/* 房子详情 */
+.conts {
+    display: -webkit-box;
+    /*规定子元素的排列方向 */
+    -webkit-box-orient: vertical;
+    /*限制文本显示的行数  */
+    -webkit-line-clamp: 3;
+    /*实现多余的文字隐藏并用省略号来代表被隐藏的文字  */
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.show {
+    color: #747d9f;
+}
+
+/* 配套设施 */
+.image_66 {
+    width: 66rpx;
+    height: 66rpx;
+}
+
+.margin_45_35 {
+    margin: 45rpx 35rpx 0 35rpx;    
+}
+
+/* 泊邻管家 */
+.padding_30 {
+    padding: 30rpx;
+    border-radius: 6rpx;
+    box-shadow: 0 0 20rpx #f2f2f2;
+    margin-top: 30rpx;
+    margin-bottom: 80rpx;
+}
+
+/* 猜我喜欢 */
+.padding_8_20 {
+    display: inline-block;
+    padding: 6rpx 20rpx;
+    margin-right: 10rpx;
+    border: 1rpx solid #f2f2f2;
+}
+
+.image_80rpx {
+    width: 80rpx;
+    height: 80rpx;
+    margin-right: 25rpx;
+}
+
+.image_16 {
+    width: 16rpx;
+    height: 16rpx;
+}
+
+.margin_r_112 {
+    margin-right: 112rpx;
+}
+
+.line_h_30 {
+    line-height: 33rpx;
+}
+
+.lxgj {
+    margin-left: 10rpx;
+    height: 30rpx;
+    line-height: 30rpx;
+    padding: 0 12rpx;
+    border-radius: 13rpx;
+    background-color: #333;
+    color: #EDCE9A
+}
+
+
+/* 脚部确定 */
+.posa_0 {
+    position: fixed;
+    width: 100%;
+    height: 98rpx;
+    line-height: 98rpx;
+    text-align: center;
+    bottom: 0;
+}
+
+cover-view {
+    display: inline-block;
+}
+
+.line_h_98 {
+    height: 98rpx;
+    line-height: 98rpx;
+}
+
+.line_h_102 {
+    height: 98rpx;
+    line-height: 102rpx;
+}
+
+.bgc_fff {
+    width: 100%;
+    background-color: #fff;
+    border-top: 1rpx solid #f2f2f2;
+    height: 98rpx;
+    line-height: 98rpx;
+}
+
+.bgc_333 {
+    width: 100%;
+    height: 98rpx;
+    line-height: 98rpx;
+    background-color: #333;
+    border-top: 1rpx solid #333;
+}
+
+.color_fff {
+    color: #fff;
+}
+
+.height_98 {
+    height: 140rpx;
+    width: 100%;
+}
+
+.image_w50 {
+    width: 50rpx;
+    height: 50rpx;
+    margin-bottom: 14rpx;
+}
+
+.image_w20 {
+    width: 20rpx;
+    height: 20rpx;
+}
+
+.image_w338 {
+    width: 338rpx;
+    height: 130rpx;
+}
+
+.image_538_300 {
+    width: 550rpx;
+    height: 300rpx;
+}
+
+.image_350_210 {
+    width: 280rpx;
+    height: 168rpx;
+}
+
+.image_230 {
+    width: 230rpx;
+    height: 230rpx;
+}
+
+.image_695_260 {
+    width: 695rpx;
+    height: 260rpx;
+}
+
+.image_100_100 {
+    width: 100%;
+    height: 100%;
+}
+
+.image_333 {
+    width: 333rpx !important;
+}
+
+
+/* 字体 */
+.text_center {
+    text-align: center
+}
+
+.font_26_333 {
+    font-size: 26rpx;
+    color: #333;
+}
+
+.font_26_fff {
+    font-size: 26rpx;
+    font-weight: 700;
+    color: #fff;
+}
+
+.font_28_333 {
+    font-size: 28rpx;
+    color: #333;
+}
+
+.font_22_fff {
+    font-size: 22rpx;
+    color: #fff;
+}
+
+.font_22_999 {
+    font-size: 22rpx;
+    color: #999;
+}
+
+.font_32_333 {
+    font-size: 32rpx;
+    font-weight: 700;
+    color: #333;
+}
+
+.font_24_333 {
+    font-size: 24rpx;
+    color: #333;
+}
+
+.font_20_999 {
+    font-size: 20rpx;
+    color: #999
+}
+
+.font_28_ed4343 {
+    font-size: 28rpx;
+    font-weight: 700;
+    color: #ed4343;
+}
+
+/* 分界线 */
+.big_border {
+    width: 100%;
+    height: 18rpx;
+    background-color: #f2f2f2;
+}
+
+
+/* 通用 */
+.size_80 {
+    font-size: 28rpx;
+}
+
+.display_block {
+    display: block;
+}
+
+.size_42 {
+    font-size: 42rpx;
+}
+
+.size_28 {
+    font-size: 28rpx;
+}
+
+.size_26 {
+    font-size: 26rpx;
+}
+
+.size_24 {
+    font-size: 24rpx;
+}
+
+.size_22 {
+    font-size: 22rpx;
+}
+
+.size_20 {
+    font-size: 20rpx;
+}
+
+.size_18 {
+    font-size: 18rpx;
+}
+
+.color_BECCDD {
+    color: #BECCDD;
+    margin-right: 14rpx;
+}
+
+.color_fce2b6 {
+    color: #fce2b6
+}
+
+.color_e2ab51 {
+    color: #e2ab51
+}
+
+.color_999 {
+    color: #999;
+}
+
+.color_333 {
+    color: #333;
+}
+
+.color_6b7278 {
+    color: #6b7278
+}
+
+.color_E2E2E2 {
+    color: #E2E2E2;
+}
+
+.line_height {
+    line-height: 10rpx;
+}
+
+/* 超出隐藏... */
+.overflow_ell {
+    overflow: hidden;
+    /*自动隐藏文字*/
+    text-overflow: ellipsis;
+    /*文字隐藏后添加省略号*/
+    white-space: nowrap;
+    /*强制不换行*/
+    width: 550rpx;
+    /*不允许出现半汉字截断*/
+    padding: 20rpx 0 30rpx 0;
+}
+
+.overflow_ell_dz {
+    overflow: hidden;
+    /*自动隐藏文字*/
+    text-overflow: ellipsis;
+    /*文字隐藏后添加省略号*/
+    white-space: nowrap;
+    /*强制不换行*/
+    width: 200rpx;
+    /*不允许出现半汉字截断*/
+}
+
+/* 因为上面设置了  white-space:nowrap  所以 word-wrap:break-word; 和 word-wrap: break-word不生效 */
+.width_230 {
+    width: 230rpx;
+    /* word-wrap:break-word; */
+    /* word-wrap: break-word; */
+    white-space: pre-wrap;
+}
+
+/* 边框 */
+.border_f2f2f2 {
+    border-bottom: 0.5px solid #f2f2f2
+}
+
+
+/* 边距 */
+.padding_0_28 {
+    margin: 0 28rpx
+}
+
+.padding_50_42 {
+    padding: 50rpx 42rpx
+}
+
+.padding_tb_50_20 {
+    padding-top: 25rpx;
+    padding-bottom: 34rpx;
+}
+
+.padding_18_12 {
+    padding: 18rpx 12rpx;
+    background-color: #f7f9fb;
+    border-radius: 6rpx;
+    margin-bottom: 50rpx;
+}
+
+.margin_0_28 {
+    margin: 0 28rpx;
+}
+
+.margin_r_10 {
+    margin-right: 10rpx;
+}
+
+.margin_r_22 {
+    margin-right: 22rpx;
+}
+
+.margin_b_20 {
+    margin-bottom: 20rpx;
+}
+
+.margin_b_12 {
+    margin-bottom: 12rpx;
+}
+
+.margin_t_20 {
+    margin-top: 20rpx
+}
+
+.margin_r_28 {
+    margin-right: 28rpx;
+    padding-bottom: 28rpx;
+    overflow: hidden;
+}
+
+
+/* 布局方式 */
+.grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.grid_4 {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+
+.grid_4>view {
+    margin-bottom: 40rpx;
+}
+
+.flex_row {
+    display: flex;
+    flex-flow: row nowrap;
+    /* justify-content: space-between; */
+    align-items: center;
+}
+
+.flex_column {
+    display: flex !important;
+    flex-flow: column nowrap;
+}
+
+.align_items {
+    align-items: center;
+}
+
+.display_inline_block {
+    display: inline-block;
+    margin-right: 40rpx;
+}
+
+.column_count_2 {
+    column-count: 2;
+}
+
+.flex_1 {
+    flex: 1;
+}
+
+/* 定位 */
+.posr {
+    position: relative;
+}
+
+
+.posa {
+    position: absolute;
+    left: 32rpx;
+    top: 30rpx;
+}
+
+.posa_b_0 {
+    position: absolute;
+    display: block;
+    width: 100%;
+    bottom: 29rpx;
+    background-color: rgba(0, 0, 0, 0.3);
+    padding: 15rpx 22rpx;
+    border-bottom-right-radius: 6rpx;
+    border-bottom-left-radius: 6rpx;
+}
+
+.posa_b_02 {
+    position: absolute;
+    display: inline-block;
+    bottom: 30rpx;
+    right: 20rpx;
+    background-color: #555351;
+    border-radius: 20rpx;
+    height: 35rpx;
+    line-height: 35rpx;
+    width: 80rpx;
+    text-align: center;
+
+}
+
+/* 查看更多房源 */
+.more_house {
+    text-align: center;
+    margin: 40rpx 0 25rpx 0
+}
+
+/* 隐藏滚动条 */
+::-webkit-scrollbar {
+    width: 0;
+    height: 0;
+    color: transparent;
+}
+
+/* 星星 */
+.com_xx {
+    display: flex;
+    flex-flow: row nowrap;
+}
+
+.com_xx>text {
+    color: #fbdaa2;
+    line-height: 20rpx;
+    font-size: 20rpx;
+}

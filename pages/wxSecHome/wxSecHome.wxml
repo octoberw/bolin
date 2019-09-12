@@ -1,56 +1,29 @@
 <!-- pages/wxSecHome/wxSecHome.wxml -->
-<image class="title_image" src="../../image/wx/img_ejbanner.png" mode="aspectFit|aspectFill|widthFix" lazy-load="false" binderror="" bindload=""></image>
-<view class="body_padding">
+<image class="title_image" src="{{secList.backImage}}" mode="aspectFit|aspectFill|widthFix" lazy-load="false" binderror="" bindload=""></image>
+<view class="body_padding"  bindtap="gotoMTST">
     <view class="flex_row">
-        <text class="title_font">管道疏通</text>
-        <text class="small_title_font">| 价格透明，服务更好</text>
+        <text class="title_font">{{secList.name}}</text>
+        <text class="small_title_font">| {{secList.info}}</text>
     </view>
     <view class="two flex_row" >
-        <view class="flex_column two_style">
-            <image class="icon_big_image" src="../../image/wx/icon_dilou.png" mode="aspectFit|aspectFill|widthFix" lazy-load="false"></image>
-            <text class="two_font">地漏维修</text>
-            <text class="small_two_font">价格透明</text>
-        </view>
-        <view class="flex_column two_style">
-            <image class="icon_big_image" src="../../image/wx/icon_matong.png" style="width:70rpx; height:90rpx; margin-bottom:10rpx"></image>
-            <text class="two_font">马桶维修</text>
-            <text class="small_two_font">随时预约</text>
-        </view>
-        <view class="flex_column two_style">
-            <image class="icon_big_image" src="../../image/wx/icon_dunce.png" style="width:62rpx; height:90rpx; margin-bottom:10rpx" ></image>
-            <text class="two_font">蹲厕维修</text>
-            <text class="small_two_font">专业师傅</text>
-        </view>
+        <block wx:for="{{secList.advice}}" wx:key="">
+            <view data-thirdId="{{item.id}}" class="flex_column two_style">
+                <image data-thirdId="{{item.id}}" class="icon_big_image" src="{{item.avator}}" mode="aspectFit|aspectFill|widthFix" lazy-load="false"></image>
+                <text data-thirdId="{{item.id}}" class="two_font">{{item.name}}</text>
+                <text data-thirdId="{{item.id}}" class="small_two_font">{{item.info}}</text>
+            </view>
+        </block>
     </view>
     <view class="table flex_row">
-        <view class="flex_row three_style three_border_bottom three_border_right">
-            <view class="flex_column">
-                <text class="three_font">洗脸盘疏通</text>
-                <text class="small_three_font">检查更换</text>
+        <block wx:for="{{secList.others}}" wx:key="">
+            <view data-thirdId="{{item.id}}" class="flex_row three_style three_border_bottom three_border_right">
+                <view class="flex_column">
+                    <text data-thirdId="{{item.id}}" class="three_font">{{item.name}}</text>
+                    <text data-thirdId="{{item.id}}" class="small_three_font">{{item.info}}</text>
+                </view>
+                <image data-thirdId="{{item.id}}" class="" src="{{item.avator}}" style="width:51rpx; height:56rpx;" ></image>            
             </view>
-            <image class="" src="../../image/wx/icon_xilianpan.png" style="width:51rpx; height:56rpx;" ></image>            
-        </view>
-        <view class="flex_row three_style three_border_bottom">
-            <view class="flex_column">
-                <text class="three_font">主管道疏通</text>
-                <text class="small_three_font">专业疏通清洗</text>
-            </view>
-            <image class="" src="../../image/wx/icon_zhugaundao.png" style="width:51rpx; height:56rpx;" ></image>           
-        </view>
-        <view class="flex_row three_style three_border_right">
-            <view class="flex_column">
-                <text class="three_font">浴缸疏通</text>
-                <text class="small_three_font">疏通各种型号</text>
-            </view>
-            <image class="" src="../../image/wx/icon_weiyu.png" style="width:51rpx; height:56rpx;" ></image>                       
-        </view>
-        <view class="flex_row three_style">
-            <view class="flex_column">
-                <text class="three_font">下水道疏通</text>
-                <text class="small_three_font">专业管道疏通用车</text>
-            </view>
-            <image class="" src="../../image/wx/icon_xiashuidao.png" style="width:51rpx; height:56rpx;" ></image>                        
-        </view>
+        </block>
     </view>
     <view class="logo">
         <image class="logo" src="../../image/img_logo.png" mode=""></image>

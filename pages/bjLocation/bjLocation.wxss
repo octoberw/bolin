@@ -1,0 +1,107 @@
+/* pages/location/location.wxss */
+.map {
+    width: 100%;
+    height: 524rpx;
+}
+
+.location_body {
+    box-sizing: border-box;
+    /* position: fixed; */
+    width: 100%;
+    padding: 20rpx;
+    background-color: #fff;
+}
+
+.bottom {
+    width: 100%;
+    border-bottom: 1rpx solid #ddd;
+}
+
+.location_body_z {
+    font-size: 20rpx;
+    color: #999;
+    line-height: 74rpx;
+}
+
+.location_body_z>text:first-child {
+    font-size: 20rpx;
+    color: #ddd;
+    margin-right: 12rpx;
+}
+
+.location_body_z>text:last-child {
+    display: inline-block;
+}
+
+.location_body_xdz {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 24rpx;
+    padding-bottom: 24rpx;
+    border-bottom: 1rpx solid #ddd;
+}
+
+.location_body_xdz text {
+    font-size: 26rpx;
+    color: #333;
+    font-weight: 700;
+}
+
+.location_body_xdz input {
+    width: 460rpx;
+    padding-left: 30rpx;
+    font-size: 26rpx;
+    /* padding-bottom: 3px; */
+    color: #999;
+    height: 60rpx;
+    overflow: hidden;
+    /*溢出隐藏*/
+    text-overflow: ellipsis;
+    /*以省略号...显示*/
+    white-space: nowrap;
+}
+
+/* .location_body_xdz text {
+    color: #999;
+} */
+
+.location_body_dz {
+    background-color: #f2f2f2;
+    color: #333;
+}
+
+.location_body_dz view view {
+    border-bottom: 1rpx solid #ddd;
+    padding: 22rpx 32rpx;
+}
+
+.location_body_dz view view text:first-child {
+    font-size: 24rpx;
+    font-weight: 700;
+}
+
+.location_body_dz view view text:last-child {
+    padding-top: 12rpx;
+    font-size: 22rpx;
+}
+
+.foot {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    border-radius: 0;
+    line-height: 100rpx;
+    font-size: 32rpx;
+    text-align: center;
+    background: #333;
+    color: #fbdaa2;
+}
+
+.flex_row {
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+}

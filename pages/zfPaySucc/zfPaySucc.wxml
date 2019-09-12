@@ -1,0 +1,24 @@
+<!-- pages/confirmOrder/confirmOrder.wxml -->
+<view>
+    <view class="ps_bg">
+        <view class="ps_head">
+            <text class="iconfont iconicon_dui"></text>
+        </view>
+        <view class="ps_fw">
+            <view class="flex_column" wx:if="{{num=='yuyue'}}">
+                <text class="title">您的预约已提交成功</text>
+                <text class="title_sec">稍后管家将会联系您进行看房</text>
+                <text class="title_sec">如有疑问可在房源详情页-立即咨询与客服沟通</text>
+            </view>
+            <view class="flex_column" wx:else>
+                <text class="title">恭喜您已下定成功</text>
+                <text class="title_sec">您的房源已下定成功，订单号为:{{num}}</text>
+                <text class="title_sec">期待您的入住</text>
+            </view>
+        </view>
+        <view class="ps_foot">
+            <text bindtap="gotoZfHome">继续逛逛</text>
+            <text bindtap="gotoHome">返回首页</text>
+        </view>
+    </view>
+</view>

@@ -100,3 +100,24 @@
     font-size: 36rpx;
     margin-right: 10rpx;
 }
+
+
+.img_288_209 {
+    width: 288rpx;
+    height: 209rpx;
+    padding-top: 172rpx;
+    margin: 0 auto;
+    display: block;
+}
+
+.all_fff {
+    width: 100vw;
+    height: 100vh;
+    background-color: #fff;
+}
+
+.tip {
+    font-size: 24rpx;
+    color: #999;
+    padding: 20rpx 0 20rpx 28rpx
+}

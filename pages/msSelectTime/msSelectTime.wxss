@@ -1,0 +1,52 @@
+/* pages/dateSelect/dateSelect.wxss */
+.date-day{
+    display: flex;
+    padding:5rpx;
+    text-align:center;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.date-day.bgitem{
+  background-color: #d8ecf9;
+}
+.date-day.active{
+    background: #90ACD2;
+    color:#FFF; 
+}
+.date-day.unavailable{
+    color:#aaa;
+}
+/* 
+.border_ruzhu {
+    border-radius: 6rpx 0 0 6rpx;
+}
+
+.border_lidian {
+    border-radius: 0 6rpx 6rpx 0;
+} */
+
+.date-week{
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    margin:5rpx;
+}
+.week{
+    color:#90ACD2;
+}
+.row{
+  display: flex;
+  flex-direction: row;
+  /* justify-content:space-around; */
+}
+ .item-days{
+  display: flex;
+  flex-direction:column;
+  justify-content: center;
+  align-items: center;
+  font-size: 35rpx;
+} 
+.bgwhite{
+  background-color: #fff;
+}

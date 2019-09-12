@@ -1,0 +1,50 @@
+<!-- pages/wxOrderList/wxOrderList.wxml -->
+<view class="myCleanflex title-border">
+    <view data-num="{{index}}" data-key="{{item.key}}" class="{{num==index?'fontColor':''}}" wx:for="{{arr}}" wx:key="index" bindtap="bindViewTap">
+        {{item.name}}
+    </view>
+</view>
+<view class="" wx:if="{{resList}}">
+    <view class="myCleanBody" catchtap="gotoDetails">
+        <block wx:for="{{resList}}" wx:key="">
+            <view class="myCleanList" bindtap="gotoWxDetails" data-id="{{item.id}}"  data-status="{{item.status}}">
+                <view class="myCleanListFlex">
+                    <view class="myCleanRight">
+                        <view class="myCleanS">
+                            <text class="font_28_333 overflow_ell">{{item.type=='all'?'整租':'合租'}} | {{item.title}}</text>
+                            <text wx:if="{{item.status=='finish'}}" class="myCleanState">已完成</text>
+                            <text wx:if="{{item.status=='cancel'}}" class="myCleanState">已取消</text>
+                            <text wx:if="{{item.status=='nopay'}}" class="myCleanState">待支付</text>
+                        </view>
+                        <view class="myCleanX" >
+                            <view class="myCleanDate">公寓地址</view>
+                            <view class="myCleanTimes overflowEllipsis">{{item.address}}</view>
+                            <view class="myCleanXRight">
+                                <text class="">￥</text>
+                                <text class="">{{item.amountPayable}}</text>
+                            </view>
+                        </view>
+                        <view class="myCleanX" style="margin-top:12rpx;">
+                            <view class="myCleanDate">联系电话</view>
+                            <view class="myCleanTimes">{{item.phone}}</view>
+                        </view>
+                        <view class="myCleanX" style="margin-top:12rpx;">
+                            <view class="myCleanDate">签订时间</view>
+                            <view class="myCleanTimes">{{item.date}}</view>
+                            <text class="myCleanTimes">{{item.timePeriod}}</text>
+                        </view>
+                    </view>
+                </view>
+                <view class="myCleanBtn">
+                    <button catchtap="gotoComment">查看详情</button>
+                </view>
+            </view>
+        </block>
+    </view>
+</view>
+<view  wx:else class="zwdd title-border">
+    <view class="zwdd_col">
+        <image class="img_288" src="../../image/icon_zwdd.png"></image>
+        <text class="zwdd_font">暂无相关订单，快去逛逛吧！</text>
+    </view>
+</view>

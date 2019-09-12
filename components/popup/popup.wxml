@@ -4,8 +4,8 @@
         <text class="popup-title" selectable="false" space="false" decode="false">{{title}}</text>
         <slot></slot>
         <view class="popup-foot">
-            <view bindtap="_error" style="margin-right:20rpx; display:{{showError}}">{{error}}</view>
-            <view bindtap="_success">{{success}}</view>
+            <button form-type="submit" bindtap="_error" style="margin-right:20rpx; display:{{showError}}">{{error}}</button>
+            <button  bindtap="_success">{{success}}</button>
         </view>
     </view>
 </view>

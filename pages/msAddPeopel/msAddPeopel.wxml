@@ -1,0 +1,40 @@
+<!-- pages/msAddPeopel/msAddPeopel.wxml -->
+<view class="padding_35 head size_26 color_99A9BD" style="border-top:1px solid #ddd">
+    <text class="">根据有关部门规定，入住均需登记个人信息，您所填的信息将不会与房东分享。将由泊邻平台妥善保管，以便下次预订时使用。</text>
+</view>
+<!-- <form class="" report-submit="false" bindsubmit="addPeople" bindreset=""> -->
+    <view class=" padding_35">
+        <view class="" style="height:80px;">
+            <view class="flex_row between line_height" style="border-bottom:1px solid #ddd">
+                <text class=" size_28 color_333 margin_r_34">身份证号</text>
+                <view class="flex_row between" style="flex:1">
+                    <input class="size_28 color_333" style="flex:1" value="" type="number" placeholder="请输入正确的身份证号" bindblur="bind_ID" bindconfirm=""></input>
+                    <text wx:if="{{id_pass}}" class="iconfont iconicon_dui"></text>
+                </view>
+            </view>
+            <view wx:if="{{id_pass_cha}}" class="flex_row between line_height_40" >
+                <text class=" size_28 color_fff margin_r_34">身份证号</text>
+                <view class="flex_row color_F52D2D" style="flex:1">
+                    <text class="iconfont iconicon_guanbi size_22 line_height_60 margin_r_15"></text>
+                    <text  class=" size_22 line_height_60">请填写正确的身份证号</text>
+                </view>
+            </view>
+        </view>
+        
+        <view class="flex_row between line_height " style="border-bottom:1px solid #ddd">
+            <text class=" size_28 color_333 margin_r_34">真实姓名</text>
+            <view class="flex_row between" style="flex:1">
+                <input class="size_28 color_333" style="flex:1" value="" type="text" placeholder="请输入正确的姓名" bindblur="bind_name" bindconfirm=""></input>
+                <text wx:if="{{name_pass}}" class="iconfont iconicon_dui"></text>
+            </view>
+        </view>
+        <view wx:if="{{name_pass_cha}}" class="flex_row between line_height_40" >
+            <text class="size_28 color_fff margin_r_34">真实姓名</text>
+            <view class="flex_row color_F52D2D" style="flex:1">
+                <text class="iconfont iconicon_guanbi size_22 line_height_60 margin_r_15"> </text>
+                <text  class=" size_22 line_height_60">请填写正确的姓名</text>
+            </view>
+        </view>
+    </view>
+<button class="foot color_e2ab51" bindtap="addPeople">保存信息</button>
+<!-- </form> -->

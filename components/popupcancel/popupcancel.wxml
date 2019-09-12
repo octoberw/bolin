@@ -1,0 +1,13 @@
+<!-- components/popup/popup.wxml -->
+<view class="popup-bgc" style="display:{{hideview}}" catchtouchmove='{{true}}'>
+    <view class="popup-val">
+        <form class="" report-submit="false" bindsubmit="getVal" bindreset="">
+            <text class="popup-title" selectable="false" space="false" decode="false">{{title}}</text>
+                <textarea name="val" class="popup-text" placeholder="请输入取消服务的原因..." adjust-position="{{true}}" fixed="{{true}}" id=""></textarea>
+            <view class="popup-foot">
+                <button form-type="submit" style="margin-right:20rpx; display:{{showError}}">{{error}}</button>
+                <button  bindtap="_success">{{success}}</button>
+            </view>
+        </form>
+    </view>
+</view>

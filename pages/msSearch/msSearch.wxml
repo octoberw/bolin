@@ -1,0 +1,29 @@
+<view class="padding_48_30">
+    <view class="flex_row  w690"  bindtap="sousuo">
+        <view class="iconfont iconicon_sousuo size_26 color_999 transform_90"></view>
+        <input class="size_26 color_999 w100" value="" type="text|number|idcard|digit|time|date"  placeholder="请输入小区或商圈名"></input>
+    </view>
+    <view class="padding_12">
+        <view class="flex_row space_between margin_t_48">
+            <text class="size_28 color_333 font_700">搜索历史</text>
+            <view class="size_26 color_333">
+                <view class="iconfont iconicon_sousuo size_26 color_999 transform_90" style="display:inline-block"></view>
+                <text class="">清除</text>
+            </view>
+        </view>
+        <view class="flex_row flex_row_wrap margin_t_33">
+            <text class="padding_45 size_24">天河区新优势马路21号</text>
+            <text class="padding_45 size_24">天河区体育中心南路</text>
+            <text class="padding_45 size_24">广东省深圳市南沙区</text>
+        </view>
+        <view class="flex_row space_between margin_t_48">
+            <text class="size_28 color_333 font_700">大家都在搜</text>
+        </view>
+        <view class="flex_row flex_row_wrap margin_t_33">
+            <text class="padding_45_2 size_24">岗顶</text>
+            <text class="padding_45_2 size_24">花城大道</text>
+            <text class="padding_45_2 size_24">上下九</text>
+            <text class="padding_45_2 size_24">五羊邨</text>
+        </view>
+    </view>
+</view>

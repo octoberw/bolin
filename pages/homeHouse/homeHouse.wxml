@@ -1,2 +1,152 @@
-<!--pages/homeHouse/homeHouse.wxml-->
-<text>pages/homeHouse/homeHouse.wxml</text>
+<!-- pages/czHome/czHome.wxml -->
+<view class="height_820" id="topID">   
+    <image class="w100_h450" src="https://bl.hboxs.com/i/banner/banner_zf@2x.png" mode="aspectFit|aspectFill|widthFix"></image>
+    <view class="" bindtap="gotozfScarch">
+        <view class="flex_row  w690">
+            <text class="size_26 color_999">{{location}}</text>
+            <view class="iconfont iconicon_gengduo size_26 color_999 transform_90"></view>
+            <text class="size_26 color_999">请输入小区或商圈名</text>
+        </view>
+    </view>
+</view>
+<view class="flex_row padding_28 h_139" id="topIDt">
+    <block wx:for="{{res.tags}}" wx:key="">
+        <view class="posr" data-id="{{item.id}}" bindtap="clickTitle">
+            <image class="w162_image" src="{{item.img_url}}" mode="aspectFit|aspectFill|widthFix"></image>
+            <view class="flex_column color_fff posa">
+                <text class="size_26 ">{{item.name}}</text>
+                <!-- <text class="size_20">交通便捷</text> -->
+            </view>
+        </view>
+    </block>
+</view>
+
+<!-- 选项栏 -->
+<view class="flex_row border" id="centerID">
+    <view class="flex_row" bindtap="gotoTop_showWZ" >
+        <text class="size_26 color_333">广州市</text>
+        <view class="iconfont iconicon_gengduo size_20 color_999 transform_90"></view>
+    </view>
+    <view class="flex_row" bindtap="gotoTop_showLX">
+        <text class="size_26 color_333">类型</text>
+        <view class="iconfont iconicon_gengduo size_20 color_999 transform_90"></view>
+    </view>
+    <view class="flex_row" bindtap="gotoTop_showZJ">
+        <text class="size_26 color_333">租金</text>
+        <view class="iconfont iconicon_gengduo size_20 color_999 transform_90"></view>
+    </view>
+    <view class="flex_row" bindtap="gotoTop_showSX">
+        <text class="size_26 color_333">筛选</text>
+        <view class="iconfont iconicon_gengduo size_20 color_999 transform_90"></view>
+    </view>
+</view>
+
+<!-- 租金 -->
+<view data-name="mask" class="bgc_000" style="display:{{zujin}}" catchtouchmove="true" catchtap="closeZJ">
+    <view class="flex_column bgc_fff">
+        <text class="size_26 color_333 padding_32" style="font-weight:700">自定义</text>
+        <text data-money="100-4999" class="size_26 color_999 padding_32" bindtap="bindZujin">100-4999元</text>
+        <text data-money="5000-7999" class="size_26 color_999 padding_32" bindtap="bindZujin">5000-7999元</text>
+        <text data-money="8000-9999" class="size_26 color_999 padding_32" bindtap="bindZujin">8000-9999元</text>
+        <text data-money="10000-30000" class="size_26 color_999 padding_32" bindtap="bindZujin">1万以上</text>
+        <form class="" report-submit="false" bindsubmit="bindInputMoney" bindreset="">
+            <view class="padding_40 flex_column">
+                <text class="size_22 color_333 margin_b_20">请输入自定义范围</text>
+                <view class="flex_row" style="justify-content: space-between;">        
+                    <view class="input_280 flex_row" >
+                        <input name="min" class="" value="" type="number" ></input>
+                        <text class="size_22 color_333">元</text>
+                    </view>
+                    <text class="">-</text>        
+                    <view class="flex_row input_280">
+                        <input name="max"  class="" value="" type="number" ></input>
+                        <text class="size_22 color_333">元</text>
+                    </view>
+                </view>
+            </view>
+            <view class="flex_row foot" style="justify-content: space-between;">
+                <button form-type="reset" class="size_24 color_333" style="width:100%;background-color:#fff">重置</button>
+                <button form-type="submit" class="size_24 color_333" style="width:100%;background-color:#fff">确定</button>
+            </view>
+        </form>
+    </view>
+</view>
+
+<!-- 租房类型 -->
+<view data-name="mask" class="bgc_000" style="display:{{leixing}}" catchtouchmove="true" catchtap="closeLX">
+    <view class="flex_column bgc_fff">
+        <text data-type=" " class="size_26 color_333 padding_32" style="font-weight:700" bindtap="bindZufang">全部房源</text>
+        <text data-type="all" class="size_26 color_999 padding_32" bindtap="bindZufang">整租</text>
+        <text data-type="join" class="size_26 color_999 padding_32" bindtap="bindZufang">合租</text>
+    </view>
+</view>
+
+<!-- 选项筛选 -->
+<view data-name="mask" class="bgc_000" style="display:{{shaixuan}};justify-content:flex-end;" catchtouchmove="true" catchtap="closeSX">
+    <view class="flex_column bgc_fff " style="width:80%">
+    <scroll-view class="shaixuan" scroll-y>
+        <view class="padding_28_sx flex_column">  
+        <block wx:for="{{attributeList}}" wx:key="">
+            <text class="size_26 color_333 margin_bottom_30" style="font-weight:700">{{item.parent}}</text>
+            <view class="margin_b_15 grid" style="flex-wrap:wrap">
+                <block wx:for="{{item.children}}" wx:key="">
+                    <text data-id='{{item.id}}' class="size_20 color_999 padding_20_48 {{vid[item.id]==item.id?'click':''}}" bindtap="clickBtn">{{item.name}}</text>
+                </block>
+            </view>
+        </block>     
+        </view>
+    </scroll-view>
+        <view class="flex_row size_24 color_333" style="justify-content:space-around; ">
+            <view class="border_sx_cz" bindtap="reset">重置</view>
+            <view class="border_sx_qd" bindtap="click">确定</view>
+        </view>
+    </view>
+</view>
+
+<!-- 房间位置 -->
+<view data-name="mask" class="bgc_000" style="display:{{weizhi}}" catchtouchmove="true" catchtap="closeWZ">
+    <view class="flex_row bgc_fff align_item height_632">
+        <view class="flex_column bgc_f2f2f2_qy" >
+            <view data-num1="{{index}}" id="{{item.id}}" class="bgc_fff_qy" style="{{num1==index?'background-color:#fff':'background-color:#f2f2f2'}}" wx:for="{{weizhiList}}" wx:key="index"  bindtap="bindChange">
+                <text class="color_333 size_26 {{num1==index?'border_qy_333':'border_qy_fff'}}" >{{item.name}}</text>    
+            </view>
+        </view> 
+        <scroll-view scroll-y  class="flex_column flex_1" style="border-right:1rpx solid #f2f2f2">
+            <view data-num="{{index}}" data-index="{{index}}" class="padding_20_50 {{num==index?'color_333_weight':'color_999_weight'}}" wx:for="{{secWeizhiList}}" wx:key="index" bindtap="bindChangeChild">
+                <text class="size_24">{{item.name}}</text>    
+            </view>
+        </scroll-view>
+        <scroll-view scroll-y  class="flex_column flex_1" >
+            <view  data-num2="{{index}}" class="padding_20_50 color_999" wx:for="{{thirWeizhiList}}" wx:key="index" bindtap="bindChangeSecChild">
+                <text class="size_24">{{item.name}}</text>    
+            </view>
+        </scroll-view>
+    </view>
+</view>
+
+<view class="{{res.longRents.length<4?'height_100':''}}">
+    <block wx:for="{{res.longRents}}" wx:key=""> 
+        <view data-homenum="{{item.num}}" class="" bindtap="gotoZfListHome">
+            <view class="flex_row padding_0_28">
+                <image class="image_350_210" style="border-radius:6rpx" src="{{item.avator}}"></image>
+                <view class="flex_column flex_1">
+                    <text class="size_28 color_333 margin_b_10 overflow_ell" style="font-weight:700">{{item.type=='all'?'整租':'合租'}}|{{item.title}}</text>
+                    <view class="" style="display:flex">
+                        <text class="size_24 color_999 margin_b_20" >{{item.area}}</text><view class=" pingfang_posr"><text class="color_999 pingfang_24">m</text><text class="color_999 pingfang_12">2</text></view>
+                    </view>
+                    <view class="margin_b_15">
+                    <block wx:for="{{item.id}}" wx:key="">
+                        <text class="size_20 color_999" style="padding:8rpx 20rpx;border:1rpx solid #ddd; margin-right:10rpx">{{item.name}}</text>
+                    </block>
+                    </view>
+                    <view class="">
+                        <text class="size_20 color_e2ab51">￥</text>
+                        <text class="size_30 color_e2ab51">{{item.monthlyRent}}</text>
+                        <text class="size_20 color_999">/月</text>
+                    </view>
+                </view>
+            </view>
+            <view class="border_f2f2f2" style="margin:0 28rpx"></view>
+        </view>
+    </block>
+</view>

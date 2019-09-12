@@ -1,0 +1,288 @@
+<!--pages/zfSearchListHome/zfSearchListHome.wxml-->
+<view class="" style="position: relative;">
+    <swiper class="pos_r_head" style="height:380rpx" current="{{current}}" bindtap="previewImage" bindchange="changeCurrent" bindanimationfinish="">
+        <block wx:for="{{imgArr}}" wx:key="">
+            <swiper-item class="" item-id="">
+                <image class="titleImage" src="{{item}}" mode="aspectFit|aspectFill|widthFix"></image>
+            </swiper-item>
+        </block>
+    </swiper>
+    <view class="index">{{current+1}} / {{imgArr.length}}</view>
+</view>
+<view class="padding_0_28 padding_tb_50_20 flex_column" style="line-height:48rpx; border-bottom: 1rpx solid #f2f2f2">
+    <text class="font_32_333" style="margin-right:12rpx">{{res.title}}</text>
+    <view class="" style="display:flex;">
+        <view class="iconfont iconicon_weizhi size_24 color_BECCDD" style="display:inline-block"></view>
+        <text class="size_26 color_999" >{{res.address}}</text>
+    </view>
+</view>
+<view class="flex_row margin_20_28 text_center " style="justify-content: space-around;">
+    <view class="flex_column border_right">
+        <text class="font_26_333 margin_b_20">{{res.houseType}}</text>
+        <text class="font_22_999">房型</text>
+    </view>
+    <view class="padding_1"></view>
+    <view class="flex_column border_right">
+        <view class="flex_row  margin_b_20">
+            <text class="font_26_333">{{res.area}}</text><view class=" pingfang_posr"><text class="pingfang_24">m</text><text class="pingfang_12">2</text></view>
+        </view>
+        <text class="font_22_999">面积</text>
+    </view>
+    <view class="padding_1"></view>
+    <view class="flex_column border_right">
+        <text class="font_26_333 margin_b_20">{{res.orientation}}</text>
+        <text class="font_22_999">朝向</text>
+    </view>
+    <view class="padding_1"></view>
+    <view class="flex_column">
+        <text class="font_26_333 margin_b_20">{{res.floor}}/{{res.totalFloor}}</text>
+        <text class="font_22_999">楼层</text>
+    </view>
+</view>
+<view class="flex_row margin_20_28 padding_20_0" style="flex-flow: row wrap; border-top: 1rpx solid #f2f2f2">
+    <block wx:for="{{res.tag}}" wx:key="">
+        <text class="size_22 color_333 biaoqian" wx:key="">{{item.name}}</text>
+    </block>
+</view>
+
+<view class="big_border"></view>
+
+<view class="" style="position: relative;">
+    <view class="margin_40 grid" style="position: relative; justify-content: space-between; align-items: flex-start">
+            <view class="size_22 color_333 margin_bottom flex_row">
+                <text class="">房型： </text>
+                <text class=""> {{res.houseType}}</text>
+            </view> 
+            <view class="size_22 color_333 margin_bottom flex_row">
+                <text class="">朝向： </text>
+                <text class=""> {{res.orientation}}</text>
+            </view> 
+            <view class="size_22 color_333 margin_bottom flex_row">
+                <text class="">面积： </text>
+                <text class=""> {{res.area}}</text>
+                <view class=" pingfang_posr">
+                    <text class="pingfang_24">m</text>
+                    <text class="pingfang_12">2</text>
+                </view>
+            </view> 
+            <view class="size_22 color_333 margin_bottom flex_row">
+                <text class="">楼层： </text>
+                <text class=""> {{res.floor}}/{{res.totalFloor}}</text>
+            </view>
+            <block wx:for="{{otherProperty}}" wx:key="">
+                <view class="size_22 color_333 margin_bottom flex_row">
+                    <text class="">{{item.k}}： </text>
+                    <text class=""> {{item.v}}</text>
+                </view>
+            </block>
+            <view class="size_22 color_999 margin_bottom flex_row">
+                <text class="">房源编号： </text>
+                <text class=""> {{res.num}}</text>
+            </view>     
+    </view>
+    <!-- <cover-view class="w_216_65">
+        <cover-image class="w_216_65" src="../../image/cz/img_ljzx.png" mode="aspectFit|aspectFill|widthFix"></cover-image>
+        <button class="default" open-type="contact" style="width: 100%; height: 100%;z-index: 9999;opacity: 0;"></button>
+    </cover-view> -->
+    <view class="w_216_65">
+        <image class="w_216_65" src="../../image/cz/img_ljzx.png" mode="aspectFit|aspectFill|widthFix"></image>
+        <button class="default" open-type="contact" style="width: 100%; height: 100%;z-index: 9999;opacity: 0;"></button>
+    </view>
+</view>
+
+
+<view class="padding_t_b flex_column" style="line-height:48rpx;">
+    <text class="font_32_333" style="margin-right:12rpx">周边位置</text>
+    <!-- <text class="size_26 color_999" >距地铁8号线琶洲站50米</text> -->
+    <map id="" class="map" longitude="{{longitude}}" latitude="{{latitude}}" scale="{{scale}}" markers="{{markers}}" bindregionchange="" bindtap="" bindupdated=""></map>
+</view>
+
+<view class="padding_t_b flex_column" style="line-height:48rpx;">
+    <text class="font_32_333" style="margin-right:12rpx">关于房源</text>
+    <view class="conts" style="display:{{show?'-webkit-box':'block'}}">
+        <rich-text class="size_24 color_999" style="display:block; line-height:40rpx;margin-top:20rpx" nodes="{{content}}"></rich-text>
+        <!-- <text class="size_24 color_999" style="display:block; line-height:40rpx;margin-top:20rpx">寻找属于自己理想的家 啊啊啊啊啊  寻找属于自己理想的家 啊啊啊啊啊  寻找属于自己理想的家 啊啊啊啊啊  寻找属于自己理想的家 啊啊啊啊啊  寻找属于自己理想的家 啊啊啊啊啊  寻找属于自己理想的家 啊啊啊啊啊  寻找属于自己理想的家 啊啊啊啊啊  寻找属于自己理想的家 啊啊啊啊啊  寻找属于自己理想的家 啊啊啊啊啊  寻找属于自己理想的家 啊啊啊啊啊  寻找属于自己理想的家 啊啊啊啊啊  寻找属于自己理想的家 啊啊啊啊啊  寻找属于自己理想的家 啊啊啊啊啊  寻找属于自己理想的家 啊啊啊啊啊  寻找属于自己理想的家 啊啊啊啊啊  寻找属于自己理想的家 啊啊啊啊啊  寻找属于自己理想的家 啊啊啊啊啊  </text> -->
+    </view>
+    <text class="show size_24" bindtap="clickShow">{{show?'[展示全部]':'[收起]'}}</text>
+</view>
+
+<view class="padding_t_b flex_column" style="line-height:48rpx; padding-bottom: 0">
+    <text class="font_32_333" style="margin-right:12rpx">配套设施</text>
+    <view class="grid_4 margin_45_35" style="justify-content: space-between">
+        <block wx:if="{{facilities.length > 8 && !showFac}}" wx:for="{{minFacilities}}" wx:key="">
+            <view class="flex_column align_items">
+                <image class="image_66" src="{{item.avator}}" mode="aspectFit|aspectFill|widthFix"></image>
+                <text class="size_20 color_333">{{item.name}}</text>
+            </view>
+        </block>
+        <block wx:if="{{facilities.length < 8 }}" wx:for="{{facilities}}" wx:key="">
+            <view class="flex_column align_items">
+                <image class="image_66" src="{{item.avator}}" mode="aspectFit|aspectFill|widthFix"></image>
+                <text class="size_20 color_333">{{item.name}}</text>
+            </view>
+        </block>
+        <block wx:if="{{facilities.length > 8 && showFac}}" wx:for="{{facilities}}" wx:key="">
+            <view class="flex_column align_items">
+                <image class="image_66" src="{{item.avator}}" mode="aspectFit|aspectFill|widthFix"></image>
+                <text class="size_20 color_333">{{item.name}}</text>
+            </view>
+        </block>
+        <view wx:if="{{facilities.length>8}}" class="flex_column align_items" bindtap="showFacilities">
+            <image class="image_66" src="../../image/cz/icon_all.png" mode="aspectFit|aspectFill|widthFix"></image>
+            <text class="size_20 color_333">{{showAll}}</text>
+        </view>     
+    </view>
+</view>
+
+
+<view class="padding_t_b flex_column" style="line-height:48rpx; ">
+    <text class="font_32_333" style="margin-right:12rpx">泊邻管家</text>
+    <view class="flex_row padding_30" style="justify-content: space-between; align-items: flex-start">
+        <image class="image_80rpx" src="{{res.avator}}" style="border-radius:50%;overflow:hidden" mode="aspectFit|aspectFill|widthFix"></image>
+        <view class="flex_1">
+            <view class="flex_row">
+                <text class="size_80 color_333" style="font-weight:700">{{res.houseKeeper}}</text>
+                <view class="flex_row lxgj" bindtap="callLandlord">
+                    <image style="margin-right:8rpx;" class="image_16" src="../../image/cz/icon_lxgj.png" mode="aspectFit|aspectFill|widthFix"></image>
+                    <text class="size_20">联系管家</text>
+                </view>
+            </view>
+            <text class="size_22 color_333 display_block line_h_30">{{res.intro}}</text>
+        </view>
+    </view>
+</view>
+
+<view class="big_border"></view>
+
+
+<view class="padding_t_b flex_column" style="line-height:48rpx; ">
+    <text class="font_32_333" style="margin-right:12rpx">猜我喜欢</text>
+</view>
+
+<!-- 横向scroll不换行 white-space:nowrap; -->
+<scroll-view class="" style="white-space:nowrap; padding-bottom:50rpx" scroll-x>
+    <!-- scroll-view 外层要一定要是 inline-block -->
+    <block wx:for="{{res.like}}" wx:key="">
+        <view class="display_inline_block" data-num="{{item.num}}" bindtap="gotoZfListHome">
+            <view class="flex_row padding_0_28 padding_tb_46_40" style="justify-content:flex-start;">
+                <image class="image_350_210 margin_r_22" src="{{item.avator}}"></image>
+                <view class="flex_column flex_1">
+                    <text class="font_28_333 margin_b_12 overflow_ell_dz" style="font-weight:700;">{{item.type=='all'?'整租':'合租'}}|{{item.title}}</text>
+                    <view class="font_24_333 flex_column">
+                        <view class=" flex_row" style="align-item:center">
+                            <text class="color_999 size_24">{{item.area}}</text><view class=" pingfang_posr"><text class="color_999 pingfang_24">m</text><text class="color_999 pingfang_12">2</text></view>
+                        </view>
+                        <view class="" style="margin-top:18rpx">    
+                            <block wx:for="{{item.id}}" wx:key="">
+                                <text class="font_20_999 padding_8_20">{{item.name}}</text>
+                            </block>
+                        </view>
+                        <view class="" style="margin-top:18rpx">
+                            <text class="font_22_fff color_e2ab51">￥</text>
+                            <text class="size_28 color_e2ab51 ">{{item.monthlyRent}}</text>
+                            <text class="font_22_fff color_999">/月</text>
+                        </view>
+                    </view>
+                </view>
+            </view>
+        </view>
+    </block>
+</scroll-view>
+
+<!-- 第二版 -->
+<!-- <view class="padding_0_28 padding_tb_50_20 flex_row" style="line-height:48rpx;">
+    <view class="">
+        <text class="font_32_333" style="margin-right:12rpx">软装推荐</text>
+    </view>
+</view> -->
+<!-- 横向scroll不换行 white-space:nowrap; -->
+<!-- <scroll-view class="" style="white-space:nowrap; padding-bottom:50rpx" scroll-x> -->
+    <!-- scroll-view 外层要一定要是 inline-block -->
+    <!-- <view class="display_inline_block" style="margin-left:28rpx">
+        <view class="flex_column">
+            <image class="image_538_300" src="../../image/home/img_1.png"></image>
+            <text class="font_28_333 overflow_ell">干货 | 如何在众多房子中挑选合适的属于自己的</text>
+            <view class="flex_row" style="width:550rpx" style="justify-content: space-between;">
+                <view class="flex_row">
+                    <image class="image_w50 margin_r_10" style="margin-bottom:0" src="../../image/home/img_3.png"></image>
+                    <text class="font_24_333">泊邻团队</text>
+                </view>
+                <view class="flex_row" >
+                    <image class="image_w20 margin_r_10" src="../../image/home/icon_view.png"></image>
+                    <text class="font_24_333 color_999 margin_r_22">1369</text>
+                    <image class="image_w20 margin_r_10" src="../../image/home/icon_like.png"></image>
+                    <text class="font_24_333 color_999">8633</text>
+                </view>
+            </view>
+        </view>
+    </view>
+    <view class="display_inline_block">
+        <view class="flex_column">
+            <image class="image_538_300" src="../../image/home/img_1.png"></image>
+            <text class="font_28_333 overflow_ell">干货 | 如何在众多房子中挑选合适的属于自己的</text>
+            <view class="flex_row" style="width:550rpx" style="justify-content: space-between;">
+                <view class="flex_row">
+                    <image class="image_w50 margin_r_10" style="margin-bottom:0" src="../../image/home/img_3.png"></image>
+                    <text class="font_24_333">泊邻团队</text>
+                </view>
+                <view class="flex_row" >
+                    <image class="image_w20 margin_r_10" src="../../image/home/icon_view.png"></image>
+                    <text class="font_24_333 color_999 margin_r_22">1369</text>
+                    <image class="image_w20 margin_r_10" src="../../image/home/icon_like.png"></image>
+                    <text class="font_24_333 color_999">8633</text>
+                </view>
+            </view>
+        </view>
+    </view>
+    <view class="display_inline_block">
+        <view class="flex_column">
+            <image class="image_538_300" src="../../image/home/img_1.png"></image>
+            <text class="font_28_333 overflow_ell">干货 | 如何在众多房子中挑选合适的属于自己的</text>
+            <view class="flex_row" style="width:550rpx" style="justify-content: space-between;">
+                <view class="flex_row">
+                    <image class="image_w50 margin_r_10" style="margin-bottom:0" src="../../image/home/img_3.png"></image>
+                    <text class="font_24_333">泊邻团队</text>
+                </view>
+                <view class="flex_row" >
+                    <image class="image_w20 margin_r_10" src="../../image/home/icon_view.png"></image>
+                    <text class="font_24_333 color_999 margin_r_22">1369</text>
+                    <image class="image_w20 margin_r_10" src="../../image/home/icon_like.png"></image>
+                    <text class="font_24_333 color_999">8633</text>
+                </view>
+            </view>
+        </view>
+    </view>
+    <view class="display_inline_block">
+        <view class="flex_column">
+            <image class="image_538_300" src="../../image/home/img_1.png"></image>
+            <text class="font_28_333 overflow_ell">干货 | 如何在众多房子中挑选合适的属于自己的</text>
+            <view class="flex_row" style="width:550rpx" style="justify-content: space-between;">
+                <view class="flex_row">
+                    <image class="image_w50 margin_r_10" style="margin-bottom:0" src="../../image/home/img_3.png"></image>
+                    <text class="font_24_333">泊邻团队</text>
+                </view>
+                <view class="flex_row" >
+                    <image class="image_w20 margin_r_10" src="../../image/home/icon_view.png"></image>
+                    <text class="font_24_333 color_999 margin_r_22">1369</text>
+                    <image class="image_w20 margin_r_10" src="../../image/home/icon_like.png"></image>
+                    <text class="font_24_333 color_999">8633</text>
+                </view>
+            </view>
+        </view>
+    </view>
+</scroll-view> -->
+
+<view class="height_98"></view>
+
+<cover-view class="flex_row posa_0" style="justify-content:space-between">
+    <cover-view class=" color_333 bgc_fff">
+        <cover-view class="size_42 line_h_98">￥{{res.monthlyRent}}</cover-view>
+        <cover-view class="size_28 line_h_102">/月</cover-view>
+    </cover-view>
+    <cover-view class="size_28 color_fce2b6 bgc_333" style="border-right:1rpx solid #f2f2f2" bindtap="gotoPay">
+        立即下定
+    </cover-view>
+    <cover-view class="size_28 bgc_333 color_fff" bindtap="gotoAppointment">
+        预约看房
+    </cover-view>
+</cover-view>

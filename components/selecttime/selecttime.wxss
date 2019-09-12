@@ -31,9 +31,21 @@
     color: #333;
 }
 
+.margin_r_15 {
+    margin-right: 15rpx;
+}
+
 .time_sel_sjd text:last-child {
     font-size: 24rpx;
     color: #999;
+}
+
+.size_24 {
+    font-size: 24rpx;
+}
+
+.color_999 {
+    color: #999 !important;
 }
 
 .time_flex {
@@ -54,7 +66,7 @@
     flex-flow: column;
 }
 
-.time_sel_day text:first-child {
+.bgc_fff {
     background-color: #fff;
 }
 
@@ -92,10 +104,10 @@
     margin: 0 16rpx 20rpx 0;
 }
 
-.time_sel_right_val>view>view>text.bg {
-    background-color: #333;
-    color: #fbdaa2;
-    border: 1rpx solid #333;
+.bg {
+    background-color: #333 !important;
+    color: #fbdaa2 !important;
+    border: 1rpx solid #333 !important;
 }
 
 .foot {

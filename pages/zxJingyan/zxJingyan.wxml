@@ -1,0 +1,29 @@
+<view class="height_820" id="topID">   
+    <image class="w100_h450" src="../../image/zx/img_jjjybanner.png" mode="aspectFit|aspectFill|widthFix"></image>
+    <view class="" bindtap="">
+        <view class="flex_row  w690">
+            <text class="size_26 color_999">{{location}}</text>
+            <view class="iconfont iconicon_sousuo size_26 color_999 transform_90"></view>
+            <input class="size_26 color_999" bindblur="Scarch" placeholder="搜一搜“小户型”"></input>
+        </view>
+    </view>
+</view>
+
+<view class="gird">
+    <block wx:for="{{res}}" wx:key="">
+        <view class="flex_column image_538" data-id="{{item.id}}" bindtap="gotoZxJingyanDetails">
+            <image class="image_538_300" style="margin-bottom:5px" src="{{item.avator}}"></image>
+            <text class=" size_28 color_333 overflow_ell" style="margin-bottom:10px">{{item.title}}</text>
+            <view class="flex_row jus_between">
+                <view class="flex_row">
+                    <image class="image_w50 margin_r_10" style="margin-bottom:0" src="{{item.designer.avator}}"></image>
+                    <text class=" size_24 color_333">{{item.designer.name}}</text>
+                </view>
+                <view class="flex_row">
+                    <image class="image_w20 margin_r_10" src="../../image/home/icon_like.png"></image>
+                    <text class=" size_24 color_999">{{item.likes}}</text>
+                </view>
+            </view>
+        </view>
+    </block>
+</view>

@@ -1,0 +1,281 @@
+/* pages/homeshow/homeshow.wxss */
+.w_750 {
+    width: 100%;
+}
+
+.size_24 {
+    font-size: 24rpx;
+}
+
+/* 维修样式 */
+.table {
+    /* flex-wrap: wrap; */
+    /* border-radius: 6rpx; */
+}
+
+.flex_row_wx {
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+}
+
+.three_style {
+    width: 100%;
+    justify-content: space-between;
+    padding: 35rpx 34rpx;
+    border: 1rpx solid #f2f2f2;
+}
+
+.three_style:nth-child(odd) {
+    border-right: 0;
+}
+
+.three_font {
+    font-size: 22rpx;
+    color: #333;
+}
+
+.small_three_font {
+    font-size: 20rpx;
+    color: #999;
+}
+
+.three_border_bottom {
+    border-bottom: 1rpx solid #f2f2f2;
+}
+
+.three_border_right {
+    border-right: 1rpx solid #f2f2f2;
+}
+
+.flex_column {
+    display: flex;
+    flex-flow: column nowrap;
+}
+
+.gird {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin: 28rpx
+}
+
+/* 长租样式 */
+/* 房源 */
+.image_350_210 {
+    width: 350rpx;
+    height: 210rpx;
+    margin-right: 22rpx;
+}
+
+.padding_0_28 {
+    padding: 50rpx 28rpx 50rpx 28rpx;
+    justify-content: flex-start;
+}
+
+.flex_1 {
+    flex: 1;
+}
+
+.margin_b_15 {
+    margin-bottom: 15rpx;
+}
+
+.margin_b_10 {
+    margin-bottom: 10rpx;
+}
+
+.margin_b_20 {
+    margin-bottom: 20rpx;
+}
+
+/* 设计师 */
+.magin_50_29 {
+    margin: 50rpx 20rpx 0 20rpx;
+    padding-bottom: 50rpx;
+    border-bottom: 1rpx solid rgba(242,242,242,1);
+}
+
+.image_80 {
+    width: 80rpx;
+    height: 80rpx;
+    border-radius: 50%;
+}
+
+.margin_26{
+    margin-right: 26rpx;
+}
+
+.image_125{
+    width: 125rpx;
+    height: 125rpx;
+    margin-right: 10rpx;
+    border-radius: 4rpx;
+}
+
+.margin_t_28{
+    margin-top: 28rpx;
+    margin-left: 105rpx;
+}
+
+.renzheng {
+    width: 84rpx;
+    height: 30rpx;
+    line-height: 30rpx;
+    border-radius:15px;
+    background-color: rgba(242,247,254,1);
+    text-align: center;
+    margin-left: 15rpx;
+}
+
+.biaoqian{
+    width: 116rpx;
+    height: 30rpx;
+    line-height: 30rpx;
+    border-radius:15px;
+    border: 1rpx solid #ddd;
+    text-align: center;
+}
+
+.transform_90 {
+    transform: rotate(90deg);
+    margin-left: 10rpx;
+    margin-right: 15rpx;
+}
+
+/* 民宿 */
+.image_692_415 {
+    width: 100%;
+    height: 415rpx;
+    margin-bottom: 40rpx;
+    border-radius: 8rpx;
+}
+
+.w32_h30 {
+    width: 32rpx;
+    height: 30rpx;
+}
+
+.margin_r_8 {
+    margin-right: 8rpx;
+}
+
+.padding_0_28 {
+    padding: 40rpx 28rpx;
+    justify-content: flex-start;
+}
+
+.between {
+    justify-content: space-between
+}
+
+.image_80_80 {
+    position: absolute;
+    width: 80rpx;
+    height: 80rpx;
+    border-radius: 50%;
+    border: 8rpx solid #fff;
+    /* box-shadow: 0 0 0 10rpx rgba(255, 255, 255, .8); */
+    right: 47rpx;
+    bottom: 0
+}
+
+.flex_1 {
+    flex: 1;
+}
+
+.margin_b_15 {
+    margin-bottom: 15rpx;
+}
+
+.margin_b_10 {
+    margin-bottom: 10rpx;
+}
+
+.margin_b_20 {
+    margin-bottom: 20rpx;
+}
+
+/* 通用 */
+.border_f2f2f2 {
+    border-bottom: 1rpx solid #f2f2f2
+}
+
+.flex_row {
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+}
+
+.flex_column {
+    display: flex;
+    flex-flow: column nowrap;
+}
+
+.size_18 {
+    font-size: 18rpx;
+}
+
+.size_20 {
+    font-size: 20rpx;
+}
+
+.size_22 {
+    font-size: 22rpx;
+}
+
+.size_24 {
+    font-size: 24rpx;
+}
+
+.size_26 {
+    font-size: 26rpx;
+}
+
+.size_28 {
+    font-size: 28rpx;
+}
+
+.size_30 {
+    font-size: 30rpx
+}
+
+.color_fff {
+    color: #fff;
+}
+
+.color_999 {
+    color: #999;
+}
+
+.color_333 {
+    color: #333
+}
+
+.color_e2ab51 {
+    color: #e2ab51
+}
+
+/* 超出隐藏... */
+.overflow_ell {
+    overflow: hidden;
+    /*自动隐藏文字*/
+    text-overflow: ellipsis;
+    /*文字隐藏后添加省略号*/
+    white-space: nowrap;
+    /*强制不换行*/
+    width: 330rpx;
+    /*不允许出现半汉字截断*/
+    /* padding: 20rpx 0 30rpx 0; */
+}
+
+.overflow_ell_1 {
+    overflow: hidden;
+    /*自动隐藏文字*/
+    text-overflow: ellipsis;
+    /*文字隐藏后添加省略号*/
+    white-space: nowrap;
+    /*强制不换行*/
+    width: 670rpx;
+    /*不允许出现半汉字截断*/
+    /* padding: 20rpx 0 30rpx 0; */
+}

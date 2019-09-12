@@ -1,18 +1,64 @@
 // pages/wxComment/wxComment.js
+
+import api from '../../api/api'
+import {
+  moreEvaluate
+} from '../../api/bjUrl/wx'
+import {
+  bjmoreEvaluate
+} from '../../api/bjUrl/cleaningOrder'
+
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
+    res: "1", // 评论内容数组
+    total: '',
+    fr: ''
+  },
 
+  showImage() {
+    wx.previewImage({
+      current: '',
+      urls: [],
+    });
+  },
+
+  bjmoreEvaluate() {
+    api.get(bjmoreEvaluate)
+      .then(res => {
+        for (let i of res.evaluates) {
+          i.star = parseInt(i.star)
+        }
+        this.setData({
+          res: res.evaluates,
+          total: res.total
+        })
+      })
+  },
+
+  wxmoreEvaluate() {
+    api.get(moreEvaluate)
+      .then(res => {
+        for (let i of res.evaluates) {
+          i.star = parseInt(i.star)
+        }
+        this.setData({
+          res: res.evaluates,
+          total: res.total
+        })
+      })
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-
+    this.setData({
+      fr: options.fr
+    })
   },
 
   /**
@@ -26,7 +72,11 @@ Page({
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
-
+    if (this.data.fr == 'wx') {
+      this.wxmoreEvaluate()
+    } else if (this.data.fr == 'bj') {
+      this.bjmoreEvaluate()
+    }
   },
 
   /**

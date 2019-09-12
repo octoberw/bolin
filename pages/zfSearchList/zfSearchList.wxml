@@ -1,0 +1,162 @@
+<!-- pages/zfSearchList/zfSearchList.wxml -->
+<view class="" id="centerID">
+    <view class="flex_row  w690">
+        <view class="iconfont iconicon_sousuo size_26 color_999 transform_90"></view>
+        <input class="size_26 color_999 w100" value="" type="text|number|idcard|digit|time|date" bindconfirm="sousuo" placeholder="请输入小区或商圈名"></input>
+    </view>   
+    <!-- 选项栏 -->
+    <view class="flex_row border" >
+        <view class="flex_row" bindtap="gotoTop_showWZ" >
+            <text class="size_26 color_333">广州市</text>
+            <view class="iconfont iconicon_gengduo size_20 color_999 transform_90"></view>
+        </view>
+        <view class="flex_row" bindtap="gotoTop_showLX">
+            <text class="size_26 color_333">类型</text>
+            <view class="iconfont iconicon_gengduo size_20 color_999 transform_90"></view>
+        </view>
+        <view class="flex_row" bindtap="gotoTop_showZJ">
+            <text class="size_26 color_333">租金</text>
+            <view class="iconfont iconicon_gengduo size_20 color_999 transform_90"></view>
+        </view>
+        <view class="flex_row" bindtap="gotoTop_showSX">
+            <text class="size_26 color_333">筛选</text>
+            <view class="iconfont iconicon_gengduo size_20 color_999 transform_90"></view>
+        </view>
+    </view>
+</view>
+
+<!-- 租金 -->
+<view data-name="mask" class="bgc_000" style="display:{{zujin}}" catchtouchmove="true" catchtap="closeZJ">
+    <view class="flex_column bgc_fff">
+        <text class="size_26 color_333 padding_32" style="font-weight:700">自定义</text>
+        <text class="size_26 color_999 padding_32">100-1000元</text>
+        <text class="size_26 color_999 padding_32">1000-2000元</text>
+        <text class="size_26 color_999 padding_32">2000-3000元</text>
+        <text class="size_26 color_999 padding_32">4000-5000元</text>
+        <view class="padding_40 flex_column">
+            <text class="size_22 color_333 margin_b_20">请输入自定义范围</text>
+            <view class="flex_row" style="justify-content: space-between;">        
+                <view class="input_280 flex_row" >
+                    <input class="" value="" type="number" ></input>
+                    <text class="size_22 color_333">元</text>
+                </view>
+                <text class="">-</text>        
+                <view class="flex_row input_280">
+                    <input class="" value="" type="number" ></input>
+                    <text class="size_22 color_333">元</text>
+                </view>
+            </view>
+        </view>
+        <view class="flex_row foot" style="justify-content: space-between;">
+            <view class="size_24 color_333">重置</view>
+            <view class="size_24 color_333">确定</view>
+        </view>
+    </view>
+</view>
+
+<!-- 租房类型 -->
+<view data-name="mask" class="bgc_000" style="display:{{leixing}}" catchtouchmove="true" catchtap="closeLX">
+    <view class="flex_column bgc_fff">
+        <text class="size_26 color_333 padding_32" style="font-weight:700">全部房源</text>
+        <text class="size_26 color_999 padding_32">整租</text>
+        <text class="size_26 color_999 padding_32">合租</text>
+    </view>
+</view>
+
+<!-- 选项筛选 -->
+<view data-name="mask" class="bgc_000" style="display:{{shaixuan}};justify-content:flex-end;" catchtouchmove="true" catchtap="closeSX">
+    <view class="flex_column bgc_fff " style="justify-content:space-between;">
+        <view class="padding_28_sx flex_column">       
+            <text class="size_26 color_333 margin_bottom_30" style="font-weight:700">类型</text>
+            <view class="margin_b_15 flex_row" style="flex-wrap:wrap">
+                <text data-id='0' class="size_20 color_999 padding_20_48 {{vid[0]=='on'?'click':''}}" bindtap="clickBtn">整租</text>
+                <text data-id='1' class="size_20 color_999 padding_20_48 {{vid[1]=='on'?'click':''}}"  bindtap="clickBtn">合租</text>
+            </view>
+            <text class="size_26 color_333 margin_bottom_30" style="font-weight:700">面积</text>
+            <view class="margin_b_15 flex_row" style="flex-wrap:wrap">
+                <text data-id='2' class="size_20 color_999 padding_20_48 {{vid[2]=='on'?'click':''}}" bindtap="clickBtn">8-20m2</text>
+                <text data-id='3' class="size_20 color_999 padding_20_48 {{vid[3]=='on'?'click':''}}" bindtap="clickBtn">8-20m2</text>
+                <text data-id='4' class="size_20 color_999 padding_20_48 {{vid[4]=='on'?'click':''}}" bindtap="clickBtn">8-20m2</text>
+            </view>
+            <text class="size_26 color_333 margin_bottom_30" style="font-weight:700">楼层数</text>
+            <view class="margin_b_15 flex_row" style="flex-wrap:wrap">
+                <text data-id='5' class="size_20 color_999 padding_20_48 {{vid[5]=='on'?'click':''}}"  bindtap="clickBtn">1-10层</text>
+                <text data-id='6' class="size_20 color_999 padding_20_48 {{vid[6]=='on'?'click':''}}" bindtap="clickBtn">10-20层</text>
+                <text data-id='7' class="size_20 color_999 padding_20_48 {{vid[7]=='on'?'click':''}}" bindtap="clickBtn">20-30层</text>
+            </view>
+            <text class="size_26 color_333 margin_bottom_30" style="font-weight:700">户型</text>
+            <view class="flex_row" style="flex-wrap:wrap">
+                <text data-id='8' class="size_20 color_999 padding_20_48 {{vid[8]=='on'?'click':''}}" bindtap="clickBtn">一室一厅</text>
+                <text data-id='9' class="size_20 color_999 padding_20_48 {{vid[9]=='on'?'click':''}}" bindtap="clickBtn">二室一厅</text>
+                <text data-id='10'  class="size_20 color_999 padding_20_48 {{vid[10]=='on'?'click':''}}" bindtap="clickBtn">三室一厅</text>
+            </view>
+            <view class="margin_b_15 flex_row" style="flex-wrap:wrap">
+                <text data-id='11' class="size_20 color_999 padding_20_48 {{vid[11]=='on'?'click':''}}" bindtap="clickBtn">三室二厅</text>
+                <text data-id='12' class="size_20 color_999 padding_20_48 {{vid[12]=='on'?'click':''}}" bindtap="clickBtn">四室二厅</text>
+            </view>
+            <text class="size_26 color_333 margin_bottom_30" style="font-weight:700">房源特色</text>
+            <view class="flex_row" style="flex-wrap:wrap">
+                <text data-id='13' class="size_20 color_999 padding_20_48 {{vid[13]=='on'?'click':''}}" bindtap="clickBtn">地铁周边</text>
+                <text data-id='14' class="size_20 color_999 padding_20_48 {{vid[14]=='on'?'click':''}}" bindtap="clickBtn">热门商圈</text>
+                <text data-id='15' class="size_20 color_999 padding_20_48 {{vid[15]=='on'?'click':''}}" bindtap="clickBtn">坐北向南</text>
+            </view>
+            <view class="margin_b_15 flex_row" style="flex-wrap:wrap">
+                <text data-id='16' class="size_20 color_999 padding_20_48 {{vid[16]=='on'?'click':''}}" bindtap="clickBtn">绿化率高</text>
+                <text data-id='17' class="size_20 color_999 padding_20_48 {{vid[17]=='on'?'click':''}}" bindtap="clickBtn">首选精品</text>
+            </view>
+            <text class="size_26 color_333 margin_bottom_30" style="font-weight:700">房源风格</text>
+            <view class="margin_b_15 flex_row" style="flex-wrap:wrap">
+                <text data-id='18' class="size_20 color_999 padding_20_48 {{vid[18]=='on'?'click':''}}" bindtap="clickBtn">北欧清新</text>
+                <text data-id='19' class="size_20 color_999 padding_20_48 {{vid[19]=='on'?'click':''}}" bindtap="clickBtn">简约生活</text>
+                <text data-id='20' class="size_20 color_999 padding_20_48 {{vid[20]=='on'?'click':''}}" bindtap="clickBtn">兰亭别苑</text>
+            </view>
+        </view>
+        <view class="flex_row size_24 color_333" style="justify-content:space-around; ">
+            <view class="border_sx_cz">重置</view>
+            <view class="border_sx_qd">确定</view>
+        </view>
+    </view>
+</view>
+
+<!-- 房间位置 -->
+<view data-name="mask" class="bgc_000" style="display:{{weizhi}}" catchtouchmove="true" catchtap="closeWZ">
+    <view class="flex_row bgc_fff align_item height_632">
+        <view class="flex_column bgc_f2f2f2_qy" >
+            <view data-num1="{{index}}" id="{{item.id}}" class="bgc_fff_qy" style="{{num1==index?'background-color:#fff':'background-color:#f2f2f2'}}" wx:for="{{tree}}" wx:key="index"  bindtap="bindChange">
+                <text class="color_333 size_26 {{num1==index?'border_qy_333':'border_qy_fff'}}" >{{item.name}}</text>    
+            </view>
+        </view> 
+        <scroll-view scroll-y  class="flex_column flex_1" style="border-right:1rpx solid #f2f2f2">
+            <view data-num="{{index}}" data-index="{{index}}" class="padding_20_50 {{num==index?'color_333_weight':'color_999_weight'}}" wx:for="{{childTree}}" wx:key="index" bindtap="bindChangeChild">
+                <text class="size_24">{{item.name}}</text>    
+            </view>
+        </scroll-view>
+        <scroll-view scroll-y  class="flex_column flex_1" >
+            <view  class="padding_20_50 color_999" wx:for="{{childChildTree}}" wx:key="index" bindtap="">
+                <text class="size_24">{{item}}</text>    
+            </view>
+        </scroll-view>
+    </view>
+</view>
+
+<block wx:for="{{houseList}}" wx:key="index"> 
+    <view class="" bindtap="toHouse">
+        <view class="flex_row padding_0_28">
+            <image class="image_350_210" src="{{item.image}}"></image>
+            <view class="flex_column flex_1">
+                <text class="size_28 color_333 margin_b_10 overflow_ell" style="font-weight:700">整租|琶洲新村1房1厅</text>
+                <text class="size_18 color_999 margin_b_20" >78.6m2 | 地铁上盖</text>
+                <view class="margin_b_15">
+                    <text class="size_20 color_999" style="padding:8rpx 20rpx;border:1rpx solid #ddd; margin-right:10rpx">交通方便</text>
+                    <text class="size_20 color_999" style="padding:8rpx 20rpx;border:1rpx solid #ddd; margin-right:10rpx">房东超好</text>
+                </view>
+                <view class="">
+                    <text class="size_20 color_e2ab51">￥</text>
+                    <text class="size_30 color_e2ab51">2000</text>
+                    <text class="size_20 color_999">/月</text>
+                </view>
+            </view>
+        </view>
+        <view class="border_f2f2f2" style="margin:0 28rpx"></view>
+    </view>
+</block>

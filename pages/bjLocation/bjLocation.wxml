@@ -1,0 +1,31 @@
+<!-- pages/location/location.wxml -->
+<view>
+  <map id="" class="map" longitude="{{longitude}}" latitude="{{latitude}}" scale="{{scale}}" markers="{{markers}}" include-points="{{markers}}" show-location="true" bindregionchange="" bindtap="" bindupdated=""></map>
+  <view class="location_body">
+    <view class="bottom">
+      <view class="location_body_z">
+        <text class="iconfont iconicon_tishi"></text>
+        <text>注：请在服务人员服务范围内搜索您的地址</text>
+      </view>
+    </view>
+    <view class="location_body_xdz">
+      <text>小区/大厦/街道</text>
+      <form class="" report-submit="false" bindsubmit="gotoAppointmentView" bindreset="">
+        <view class="flex_row">
+          <input name="location" type="text" value="{{inputVal}}" placeholder="请输入您的地址" bindblur="getVal" focus="true" adjust-position></input>
+          <text class="iconfont iconicon_guanbi" bindtap="closeInputVal"></text>
+        </view>
+        <!-- <view class="foot" bindtap="gotoAppointmentView">确认</view> -->
+        <button wx:if="{{location.length<=0}}" class="foot" type="text" form-type="submit">确认</button>
+      </form>
+    </view>
+    <view class="location_body_dz" wx:if="{{location.length>0}}"  style="margin-bottom:100px">
+      <view style="display:flex; flex-flow:column">
+        <view data-fullname="{{item.fullName}}" data-areaid="{{item.areaId}}" wx:for="{{location}}" wx:key="{{}}" style="display:flex; flex-flow:column" bindtap="getInputVal">
+          <text>{{item.plot+item.unit}}</text>
+          <text>{{item.fullName}}</text>      
+        </view>
+      </view>
+    </view>
+  </view>
+</view>
