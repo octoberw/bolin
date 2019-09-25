@@ -170,6 +170,13 @@ Page({
     var checkInDate = Moment(new Date()).format('yyyy-MM-DD') // 当前日期
     var checkOutDate = Moment(new Date()).add(1, 'day').format('yyyy-MM-DD') // 结束日期
     var days = Moment(new Date()).differ(checkInDate, checkOutDate)
+
+    this.setData({
+      checkInDate: checkInDate,
+      checkOutDate: checkOutDate,
+      days: days
+    })
+
     // 日期选择
     //设缓存缓存起来的日期
     wx.setStorage({

@@ -1,3 +1,6 @@
+// 登陆
+const wxLogin = '/wechat/root/login.htm'
+
 // 查看收藏夹
 const showCollects = '/app/member/favorite/showCollects.htm'
 
@@ -28,6 +31,12 @@ const detail = '/app/checkinNote/detail.htm'
 // 积分列表
 const pointList = '/app/member/pointRecord/pointList.htm'
 
+// 点赞
+const addLikes = '/app/member/like/addLikes.htm'
+
+// 取消点赞
+const cancleLikes = '/app/member/like/cancleLikes.htm'
+
 module.exports = {
     showCollects,
     addCollects,
@@ -38,5 +47,8 @@ module.exports = {
     addFeedBack,
     feedBackList,
     detail,
-    pointList
+    pointList,
+    wxLogin,
+    addLikes,
+    cancleLikes
 }

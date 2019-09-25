@@ -38,6 +38,10 @@ Page({
     showAll: '展示全部',
   },
 
+  goComment() {
+    wx.navigateTo({url: '/pages/wxComment/wxComment?fr=ms'});
+  },
+
   cons(){
     wx.makePhoneCall({
       phoneNumber: '13119640013',
@@ -46,7 +50,7 @@ Page({
 
   callLandlord(){
     wx.makePhoneCall({
-      phoneNumber: res.phone,
+      phoneNumber: this.data.res.phone,
     });
   },
 
@@ -111,11 +115,18 @@ Page({
   },
 
   gotoZfListHome(e) {
-    this.homeStayDetail(e.currentTarget.dataset.num)
-    wx.pageScrollTo({
-      scrollTop: 0,
-      duration: 500
-    });
+    if (e.currentTarget.dataset.types == 'join') {
+      wx.navigateTo({
+        url: `../msSearchListHome/msSearchListHome?num=${e.currentTarget.dataset.num}`,
+      });
+    } else if (e.currentTarget.dataset.types == 'self') {
+      wx.navigateToMiniProgram({
+        appId: 'wxc147016e2b3bf9d6',
+        path: e.currentTarget.dataset.outline,
+        extraData: {},
+        envVersion: 'release',
+      });
+    }
   },
 
   // 展示全部配套设置

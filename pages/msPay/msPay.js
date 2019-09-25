@@ -75,11 +75,8 @@ Page({
         res.tag = res.tag.slice(0, 3)
         that.setData({
           res: res,
-          roomRate: res.roomRate * getDate.days + res.tip
+          roomRate: Math.floor((res.roomRate * getDate.days + res.tip) * 100) / 100
         })
-        // console.log(that.data.res)
-        // console.log(this.data.checkInDate)
-        // console.log(this.data.checkOutDate)
       })
   },
 
@@ -126,15 +123,24 @@ Page({
         },
         header: {
           'content-type': 'application/json',
-          'token': token.token
+          'token': token.token ? token.token : ''
         },
         method: 'POST',
         success: (res) => {
-          console.log(res)
           if (res.data.code === 0) {
             var res = res.data.data
             wx.redirectTo({
               url: `../msPaySuccess/msPaySuccess?hs=${res.hs}&id=${res.id}`
+            });
+          } else if (res.data.code === 2) {
+            wx.navigateTo({ 
+              url: '/pages/homeLogin/homeLogin',
+            });
+          } else {
+            wx.showToast({
+              title: res.data.errmsg,
+              icon: 'none',
+              duration: 1500,
             });
           }
         },

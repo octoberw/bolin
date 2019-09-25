@@ -66,11 +66,16 @@
         <view class="bgc_fff">
             <view class="flex_row_between">
                 <text class="size_26 color_333">请选择签订时间</text>
-                <text class="size_24 color_999">已选{{titleMouth+1}}月{{titleDays+1}}日</text>
+                <text class="size_24 color_999">已选{{titleYear}}年{{titleMouth+1}}月{{titleDays+1}}日</text>
             </view>
             <view class="small_border"></view>
             <view class="">
                 <picker-view indicator-style="height: 50px;" style="width: 100%;height:150px" value="{{value}}" bindchange="bindChange">
+                    <picker-view-column>
+                        <view class="size_24 color_333" style="line-height: 50px;text-align:center" wx:for="{{yearArr}}" wx:key="index">
+                            {{item}}年
+                        </view>
+                    </picker-view-column>
                     <picker-view-column>
                         <view class="size_24 color_333" style="line-height: 50px;text-align:center" wx:for="{{mouths}}" wx:key="index">
                             {{item}}月

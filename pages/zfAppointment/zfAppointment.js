@@ -17,12 +17,13 @@ Page({
     titleYear: "",
     titleMouth: "",
     titleDays: "",
-    value: [1, 1],
+    value: [2019, 1, 1],
     showPickerView: 'none',
     showTextarea: 'block',
 
     res: '', // 房源详情
-    isTrue: true
+    isTrue: true,
+    yearArr: []
   },
 
   showSelectTime() {
@@ -53,11 +54,13 @@ Page({
   bindChange(e) {
     var that = this
     var val = (e.detail.value)[0]
+    console.log(e)
     var newDays = that.data.days
     that.setData({
       newDays: newDays[val],
-      titleMouth: e.detail.value[0],
-      titleDays: e.detail.value[1]
+      titleYear: this.data.yearArr[e.detail.value[0]],
+      titleMouth: e.detail.value[1],
+      titleDays: e.detail.value[2]
     })
   },
 
@@ -73,13 +76,13 @@ Page({
       })
       return
     }
-    if(this.data.isTrue) {
+    if (this.data.isTrue) {
       this.setData({
         isTrue: false
       })
       setTimeout(() => {
         this.setData({
-          isTrue:true
+          isTrue: true
         })
       }, 3000);
       api.post(addReservation, {
@@ -90,8 +93,10 @@ Page({
           'date': `${that.data.titleYear}-${that.data.titleMouth}-${that.data.titleDays}`
         })
         .then(res => {
-          if(res == '操作成功') {
-            wx.redirectTo({url: '../zfPaySucc/zfPaySucc?num=yuyue'})
+          if (res == '操作成功') {
+            wx.redirectTo({
+              url: '../zfPaySucc/zfPaySucc?num=yuyue'
+            })
           }
         })
     }
@@ -120,6 +125,7 @@ Page({
     var times = Date.parse(new Date())
     var date = new Date(times)
     var year = date.getFullYear()
+    var yearArr = [year, year + 1]
 
     // 判断是否闰年的三个条件
     var cond1 = (year % 4 == 0)
@@ -166,9 +172,9 @@ Page({
       mouths: mouths,
       days: days,
       newDays: days[0], // 初始化  (一开始没点击月份，就初始化日期数据出来)
-      titleYear: year
+      titleYear: year,
+      yearArr: yearArr
     })
-    console.log(that.data.days)
   },
 
   /**

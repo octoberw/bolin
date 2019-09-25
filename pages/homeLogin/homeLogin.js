@@ -1,3 +1,7 @@
+import api from '../../api/api'
+import {
+  wxLogin
+} from '../../api/bjUrl/user'
 
 Page({
 
@@ -10,17 +14,64 @@ Page({
 
 
   // login
+  // onGotUserInfo(e) {
+  //   wx.setStorage({
+  //     key: 'ENCRYPTEDDATA_IV',
+  //     data: {
+  //       encryptedData: e.detail.encryptedData,
+  //       iv: e.detail.iv
+  //     }
+  //   });
+
+  //   wx.navigateBack({
+  //     delta: 1
+  //   });
+  // },
+
   onGotUserInfo(e) {
-    wx.setStorage({
-      key: 'ENCRYPTEDDATA_IV',
-      data: {
-        encryptedData: e.detail.encryptedData,
-        iv: e.detail.iv
-      }
-    });
-    
-    wx.navigateBack({
-      delta: 1
+    this.getSetting(e.detail.encryptedData, e.detail.iv)
+  },
+
+  getSetting(encryptedData, ivStrData) {
+    wx.getSetting({
+      success: (result) => {
+        if (result.authSetting['scope.userInfo']) {
+          wx.login({
+            timeout: 1000,
+            success: (resLogin) => {
+              api.post(wxLogin, {
+                  'code': resLogin.code,
+                  'encryptedData': encryptedData,
+                  'ivStr': ivStrData
+                })
+                .then(res => {
+                  wx.clearStorage();
+
+                  wx.setStorage({
+                    key: 'LOGIN',
+                    data: {
+                      id: res.id,
+                    }
+                  });
+                  wx.setStorage({
+                    key: 'TOKEN',
+                    data: {
+                      token: res.token,
+                    }
+                  });
+                  wx.navigateBack({
+                    delta: 1
+                  });
+                })
+            }
+          });
+        } else if (result.authSetting['scope.userInfo'] === false) {
+          wx.clearStorage();
+          wx.switchTab({
+            url: '/pages/home/home'
+          });
+        }
+      },
     });
   },
 
@@ -49,7 +100,7 @@ Page({
    * 生命周期函数--监听页面隐藏
    */
   onHide: function () {
-
+    
   },
 
   /**

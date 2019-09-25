@@ -13,7 +13,7 @@
     <view class="title-border"></view>
     <view class="flex_row" wx:if="{{item.reply=='true'}}">
         <image class="touxiang" src="/image/home/img_bolintouxiang.png"></image>
-        <view class="w_600" >
+        <view class="w_600">
             <view class="jus_between">
                 <text class="name">泊邻管理员</text>
                 <text class="time">{{item.modifyDate}}</text>

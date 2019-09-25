@@ -1,0 +1,10 @@
+/* components/likes/likes.wxss */
+/* .dis_block {
+    display: 
+} */
+.img_like {
+    display: block;
+    width: 30rpx;
+    height: 26rpx;
+    margin-right: 15rpx
+}

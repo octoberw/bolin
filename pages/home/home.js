@@ -3,7 +3,7 @@ import api from '../../api/api'
 import {
   home,
   show,
-  articleList
+  articleList,
 } from '../../api/bjUrl/homeApi'
 
 const app = getApp();
@@ -89,7 +89,12 @@ Page({
     wx.navigateTo({
       url: `../homeTjListDetail/homeTjListDetail?id=${e.currentTarget.dataset.shorttermid}&yuyue=ShorTerm`,
     });
+  },
 
+  goArticle(e) {
+    wx.navigateTo({
+      url: `../homeTjListDetail/homeTjListDetail?id=${e.currentTarget.dataset.articleid}&yuyue=Article`,
+    });
   },
 
   // 精选房源跳转
@@ -199,16 +204,17 @@ Page({
       })
   },
 
-  // 获取文章列表
-  articleList() {
+  // 获取文章列表s
+  articleList(pageNumberData) {
     api.get(articleList, {
-        'pageNumber': this.data.pageNumber
+        'pageNumber': pageNumberData ? pageNumberData : 1
       })
       .then(res => {
         res.articles = this.data.articles.concat(res.articles)
         this.setData({
           articles: res.articles,
-          pageNumber: res.pageNumber
+          pageNumber: res.pageNumber,
+          total: res.totalPages
         })
       })
   },
@@ -218,7 +224,7 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-
+    this.articleList()
   },
 
   /**
@@ -237,7 +243,6 @@ Page({
       animation: true,
     });
     this.show()
-    this.articleList()
   },
 
   /**
@@ -257,15 +262,22 @@ Page({
   /**
    * 页面相关事件处理函数--监听用户下拉动作
    */
-  onPullDownRefresh: function () {
-
-  },
+  onPullDownRefresh: function () {},
 
   /**
    * 页面上拉触底事件的处理函数
    */
   onReachBottom: function () {
-
+    if (this.data.pageNumber < this.data.total) {
+      this.articleList(this.data.pageNumber + 1)
+      console.log(this.data.pageNumber + 1)
+    } else {
+      wx.showToast({
+        title: '已无更多数据',
+        icon: 'none',
+        duration: 1500,
+      })
+    }
   },
 
   /**

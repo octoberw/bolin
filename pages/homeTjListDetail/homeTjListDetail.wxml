@@ -21,7 +21,8 @@
         <text class=" size_24 color_333">{{res.autor}}</text>
     </view>
     <view class="flex_row">
-        <text class=" size_24 color_999">点赞数：{{res.likes}}</text>
+        <islike id="islike" isLike="{{res.isLike}}" likeId="{{id}}" bindlikes="likeCount" type="{{yuyue}}"></islike>
+        <text class=" size_24 color_999">点赞数：{{likes}}</text>
     </view>
 </view>
 
@@ -34,7 +35,7 @@
 
 <view class="border_padding"></view>
 
-<view class="bgc_f2f2f2">
+<view class="bgc_f2f2f2" wx:if="{{res.more.length>0}}">
     <view class=" color_333 size_32 margin_0_28 margin_t_48" style="font-weight: 700">相关推荐</view>
     <view class="gird">
         <block wx:for="{{res.more}}" wx:key="">
@@ -57,8 +58,31 @@
         </block>
     </view>
 </view>
+<view class="bgc_f2f2f2" wx:elif="{{recommends.length>0}}">
+    <view class=" color_333 size_32 margin_0_28 margin_t_48" style="font-weight: 700">相关推荐</view>
+    <view class="gird">
+        <block wx:for="{{recommends}}" wx:key="">
+            <view class="flex_column border_r_4" data-articleid="{{item.id}}" bindtap="gotoTjListDetail">
+                <image class="image_538_300" mode="widthFix" src="{{item.listImg}}"></image>
+                <view class="padding_19 flex_column_1">
+                    <text class=" size_24 color_333 overflow_ell" style="margin-bottom:10px;font-weight:700">{{item.title}}</text>
+                    <!-- <view class="flex_row jus_between">
+                        <view class="flex_row">
+                            <image class="image_w50 margin_r_10" style="margin-bottom:0" src="{{item.avator}}"></image>
+                            <text class=" size_24 color_333">{{item.autor}}</text>
+                        </view>
+                        <view class="flex_row">
+                            <image class="image_w20 margin_r_10" src="../../image/home/icon_like.png"></image>
+                            <text class=" size_24 color_999">{{item.likes}}</text>
+                        </view>
+                    </view> -->
+                </view>
+            </view>
+        </block>
+    </view>
+</view>
 
-<view class="foot" data-num="{{res.num}}" data-types="{{res.type}}" data-outline="{{res.outLine}}" bindtap="gotoDetail">立刻预约</view>
+<view wx:if="{{yuyue != 'Article'}}" class="foot" data-num="{{res.num}}" data-types="{{res.type}}" data-outline="{{res.outLine}}" bindtap="gotoDetail">立刻预约</view>
 
 <view class="w_216_65">
     <image class="w_216_65" src="../../image/cz/img_ljzx.png" mode="aspectFit|aspectFill|widthFix"></image>

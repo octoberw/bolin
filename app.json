@@ -105,12 +105,6 @@
         "text": "合作"
       },
       {
-        "pagePath": "pages/homeCommunity/homeCommunity",
-        "iconPath": "./image/home/icon_shequ.png",
-        "selectedIconPath": "./image/home/icon_shequ_2.png",
-        "text": "留言"
-      },
-      {
         "pagePath": "pages/homeMy/homeMy",
         "iconPath": "./image/home/icon_wode.png",
         "selectedIconPath": "./image/home/icon_wode_2.png",

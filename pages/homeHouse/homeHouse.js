@@ -478,24 +478,6 @@ Page({
       tree: treeData.treeData
     })
 
-    // var vids = that.data.vid
-    // for (let i = 0; i < 21; i++) {
-    //   vids.push(i)
-    // }
-    // that.setData({
-    //   vid: vids
-    // })
-  },
-
-  /**
-   * 生命周期函数--监听页面初次渲染完成
-   */
-  onReady: function () {},
-
-  /**
-   * 生命周期函数--监听页面显示
-   */
-  onShow: function () {
     var that = this
     // 获取位置
     new qqmap().getLocateInfo()
@@ -540,6 +522,26 @@ Page({
             })
           })
       })
+
+    // var vids = that.data.vid
+    // for (let i = 0; i < 21; i++) {
+    //   vids.push(i)
+    // }
+    // that.setData({
+    //   vid: vids
+    // })
+  },
+
+  /**
+   * 生命周期函数--监听页面初次渲染完成
+   */
+  onReady: function () {},
+
+  /**
+   * 生命周期函数--监听页面显示
+   */
+  onShow: function () {
+    
   },
 
   /**

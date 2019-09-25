@@ -30,6 +30,14 @@
     text-align: center;
 }
 
+.posr{
+    position: relative;
+}
+
+.posa {
+    position: absolute;
+}
+
 input {
     display: inline-block;
     text-align: right;

@@ -26,8 +26,8 @@
         <text class=" size_24 color_333">{{res.name}}</text>
     </view>
     <view class="flex_row">
-        <image class="image_w20 margin_r_10" src="../../image/home/icon_like.png"></image>
-        <text class=" size_24 color_999">点赞数：{{res.likes}}</text>
+        <islike id="islike" isLike="{{res.isLike}}" likeId="{{id}}" bindlikes="likeCount" type="Experience"></islike>
+        <text class=" size_24 color_999">点赞数：{{likes}}</text>
     </view>
 </view>
 

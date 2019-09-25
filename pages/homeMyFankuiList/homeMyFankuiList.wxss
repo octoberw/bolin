@@ -1,6 +1,5 @@
 /* pages/homeMyFankuiList/homeMyFankuiList.wxss */
 .val {
-    width: 600rpx;
     font-size: 24rpx;
     font-family: PingFang SC;
     font-weight: 500;
@@ -60,6 +59,6 @@
     background: rgba(242, 242, 242, 1);
 }
 
-/* .w_600 {
-    width: 600rpx;
-} */
+.w_600 {
+    flex: 1;
+}

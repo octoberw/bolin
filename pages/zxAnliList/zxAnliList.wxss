@@ -107,6 +107,7 @@
 
 /* 背景幕 */
 .bgc_000 {
+    z-index: 999;
     width: 100%;
     height: 100vh;
     position: absolute;

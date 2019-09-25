@@ -22,7 +22,14 @@ Page({
     current: 0, // 图片集下标
     shoucang: '',
     id: '',
-    onceTurn: true
+    onceTurn: true,
+    likes:''
+  },
+
+  likeCount(e) {
+    this.setData({
+      likes: e.detail.likes
+    })
   },
 
   cancelShoucang() {
@@ -66,6 +73,10 @@ Page({
     this.setData({
       showQR: 'none'
     })
+  },
+
+  gotoSJS() {
+    wx.navigateTo({url: `../zxSJS/zxSJS?id=${this.data.id}`});
   },
 
   // 长按识别二维码
@@ -161,6 +172,7 @@ Page({
 
         this.setData({
           res: res,
+          likes: res.likes,
           imgArr: imgArr,
           content: res.content.replace(/\<img/g, '<img style="width:auto;height:auto;display:block"'),
           shoucang: res.isCollect
@@ -172,10 +184,11 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
+    this.islike = this.selectComponent("#islike")
+
     this.setData({
       id: options.id
     })
-    this.anliDetail(options.id)
   },
 
   /**
@@ -189,6 +202,7 @@ Page({
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
+    this.anliDetail(this.data.id)
 
   },
 

@@ -18,11 +18,13 @@ Page({
     titleYear: "",
     titleMouth: "",
     titleDays: "",
-    value: [1, 1],
+    value: [2019, 1, 1],
     showPickerView: 'none',
 
     res: '', // 房源详情
-    isTrue: true
+    isTrue: true,
+    yearArr: []
+
   },
 
   showSelectTime() {
@@ -53,8 +55,9 @@ Page({
     var newDays = that.data.days
     that.setData({
       newDays: newDays[val],
-      titleMouth: e.detail.value[0],
-      titleDays: e.detail.value[1]
+      titleYear: this.data.yearArr[e.detail.value[0]],
+      titleMouth: e.detail.value[1],
+      titleDays: e.detail.value[2]
     })
   },
 
@@ -62,7 +65,6 @@ Page({
   // 提交表单
   getVal(e) {
     var that = this
-    let getLoginId = wx.getStorageSync("LOGIN");
     if (e.detail.value.name == '' || this.data.titleMouth == '' || e.detail.value.phone == '') {
       wx.showToast({
         title: '请填写完整的信息',
@@ -71,7 +73,7 @@ Page({
       })
       return
     }
-    if(this.data.isTrue) {
+    if (this.data.isTrue) {
       this.setData({
         isTrue: false
       })
@@ -84,8 +86,7 @@ Page({
           'address': that.data.res.address,
           'amountPayable': that.data.res.monthlyRent,
           'earnest': that.data.res.earnest,
-          'type': (that.data.res.type)=='整租'?'all':'join',
-          'memberId': getLoginId.id,
+          'type': (that.data.res.type) == '整租' ? 'all' : 'join',
           'num': that.data.res.num,
           'person': e.detail.value.name,
           'phone': e.detail.value.phone,
@@ -95,19 +96,19 @@ Page({
         })
         .then(res => {
           console.log(res)
-          wxPay.Pay('/wechat/pay/rentOrderPay.htm',res.ts,'ts')
-          .then((rest) => {
-            if (rest === 'succ') {
-              wx.redirectTo({
-                url: `../zfPaySucc/zfPaySucc?num=${res.ts}`,
-              });
-            } 
-            // else if (rest === 'fail') {
-            //   wx.redirectTo({
-            //     url: `../bjDailyClean/bjDailyClean?sn=${res.orderSn}`,
-            //   });
-            // }
-          })
+          wxPay.Pay('/wechat/pay/rentOrderPay.htm', res.ts, 'ts')
+            .then((rest) => {
+              if (rest === 'succ') {
+                wx.redirectTo({
+                  url: `../zfPaySucc/zfPaySucc?num=${res.ts}`,
+                });
+              }
+              // else if (rest === 'fail') {
+              //   wx.redirectTo({
+              //     url: `../bjDailyClean/bjDailyClean?sn=${res.orderSn}`,
+              //   });
+              // }
+            })
         })
     }
   },
@@ -120,7 +121,7 @@ Page({
   onLoad: function (options) {
     var that = this
 
-    
+
 
     api.get(rentDetail, {
         'num': options.num
@@ -138,6 +139,7 @@ Page({
     var times = Date.parse(new Date())
     var date = new Date(times)
     var year = date.getFullYear()
+    var yearArr = [year, year + 1]
 
     // 判断是否闰年的三个条件
     var cond1 = (year % 4 == 0)
@@ -184,7 +186,8 @@ Page({
       mouths: mouths,
       days: days,
       newDays: days[0], // 初始化  (一开始没点击月份，就初始化日期数据出来)
-      titleYear: year
+      titleYear: year,
+      yearArr: yearArr
     })
     console.log(that.data.days)
   },

@@ -1,7 +1,8 @@
 // pages/homeTjListDetail/homeTjListDetail.js
 import api from '../../api/api'
 import {
-  detail
+  detail,
+  articleDeatil
 } from '../../api/bjUrl/homeApi'
 import {
   addCollects,
@@ -23,7 +24,15 @@ Page({
     shoucang: '', // 收藏
     id: '',
     onceTurn: true,
-    dianzan: '' //点赞
+    dianzan: '', //点赞
+    likes: '',
+    recommends:''
+  },
+
+  likeCount(e) {
+    this.setData({
+      likes: e.detail.likes
+    })
   },
 
   cancelShoucang() {
@@ -66,6 +75,10 @@ Page({
     } else if (this.data.yuyue === 'ShorTerm') {
       wx.navigateTo({
         url: `../homeTjListDetail/homeTjListDetail?id=${e.currentTarget.dataset.id}&yuyue=ShorTerm`,
+      });
+    } else {
+      wx.navigateTo({
+        url: `../homeTjListDetail/homeTjListDetail?id=${e.currentTarget.dataset.articleid}&yuyue=Article`,
       });
     }
   },
@@ -159,39 +172,58 @@ Page({
         'optimizationId': idData
       })
       .then(res => {
-
         var imgArr = []
         if (res.images != null) {
           imgArr = res.images.split(',')
         }
-
-        console.log(res.isCollect)
-
         this.setData({
           res: res,
+          likes: res.likes,
           imgArr: imgArr,
           content: res.content.replace(/\<img/g, '<img style="width:auto;height:auto;display:block"'),
-          shoucang: res.isCollect
+          shoucang: res.isCollect,
+          
         })
         wx.setNavigationBarTitle({
           title: res.kindTitle,
         });
-        console.log(this.data.shoucang)
       })
   },
 
+  // 文章详情接口
+  articleDeatil(idData) {
+    api.get(articleDeatil, {
+      'id': idData
+    })
+    .then(res => {
+      var imgArr = []
+      if (res.article.img_url != null) {
+        imgArr = res.article.img_url.split(',')
+      }
+      res.article.isLike = res.isLike
+      this.setData({
+        res: res.article,
+        likes: res.article.likes,
+        imgArr: imgArr,
+        content: res.article.content.replace(/\<img/g, '<img style="width:auto;height:auto;display:block"'),
+        shoucang: res.isCollect,
+        recommends: res.recommends
+      })
+    })
+    wx.setNavigationBarTitle({
+      title: '泊邻文章',
+    });
+  },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    console.log(options.id)
-    console.log('类型',options.yuyue)
+    this.islike = this.selectComponent("#islike")
     this.setData({
       yuyue: options.yuyue,
       id: options.id
     })
-    this.detail(options.id)
   },
 
   /**
@@ -205,7 +237,11 @@ Page({
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
-
+    if(this.data.yuyue === 'Article') {
+      this.articleDeatil(this.data.id)
+    } else {
+      this.detail(this.data.id)
+    }
   },
 
   /**

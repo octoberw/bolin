@@ -49,8 +49,8 @@
         <text class=" size_24 color_333">{{res.name}}</text>
     </view>
     <view class="flex_row">
-        <image class="image_w20 margin_r_10" src="../../image/home/icon_like.png"></image>
-        <text class=" size_24 color_999">点赞数：{{res.collects}}</text>
+        <islike id="islike" isLike="{{res.isLike}}" likeId="{{id}}" bindlikes="likeCount" type="Decorate"></islike>
+        <text class=" size_24 color_999">点赞数：{{likes}}</text>
     </view>
 </view>
 
@@ -67,7 +67,7 @@
             <view class="flex_1">
                 <view class="flex_row">
                     <text class=" size_28 color_333" style="font-weight:700">{{res.name}}</text>
-                    <view class="flex_row lxgj" bindtap="showQR">
+                    <view class="flex_row lxgj" data-id="{{res.recommend.id}}"  bindtap="gotoSJS">
                         <image style="margin-right:8rpx;" class="image_16" src="../../image/zx/icon_lxgj.png" mode="aspectFit|aspectFill|widthFix"></image>
                         <text class="size_20">联系设计师</text>
                     </view>

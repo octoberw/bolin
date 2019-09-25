@@ -5,6 +5,9 @@ import {
   cancelOrder
 } from '../../api/bjUrl/cz'
 
+import wxPay from '../../utils/pay'
+
+
 Page({
 
   /**
@@ -27,6 +30,17 @@ Page({
           });
         }
       })
+  },
+
+  pay() {
+    wxPay.Pay('/wechat/pay/rentOrderPay.htm', this.data.res.rt, 'ts')
+    .then((rest) => {
+      if (rest === 'succ') {
+        wx.redirectTo({
+          url: `/pages/zfOrderListDetails/zfOrderListDetails?id=${this.data.res.id}`,
+        });
+      }
+    })
   },
 
   /**

@@ -111,6 +111,7 @@
     position: absolute;
     background-color: rgba(0, 0, 0, .3);
     overflow: hidden;
+    z-index: 9999;
 }
 
 .bgc_fff {

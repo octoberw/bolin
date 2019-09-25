@@ -1,3 +1,5 @@
 {
-  "usingComponents": {}
+  "usingComponents": {
+    "islike":"/components/likes/likes"
+  }
 }

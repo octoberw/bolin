@@ -7,6 +7,9 @@ import {
 import {
   bjmoreEvaluate
 } from '../../api/bjUrl/cleaningOrder'
+import {
+  msmoreEvaluate
+} from '../../api/bjUrl/ms'
 
 Page({
 
@@ -52,6 +55,19 @@ Page({
       })
   },
 
+  msmoreEvaluate() {
+    api.get(moreEvaluate)
+    .then(res => {
+      for (let i of res.evaluates) {
+        i.star = parseInt(i.star)
+      }
+      this.setData({
+        res: res.evaluates,
+        total: res.total
+      })
+    })
+  },
+
   /**
    * 生命周期函数--监听页面加载
    */
@@ -76,6 +92,8 @@ Page({
       this.wxmoreEvaluate()
     } else if (this.data.fr == 'bj') {
       this.bjmoreEvaluate()
+    } else if (this.data.fr == 'ms') {
+      this.msmoreEvaluate()
     }
   },
 

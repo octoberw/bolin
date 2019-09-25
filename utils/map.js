@@ -1,6 +1,6 @@
 const wxqqmap = require('../utils/qqmap-wx-jssdk.min'),
     qqwxmap = new wxqqmap({
-        // key: 'WT6BZ-PSSWU-KM5V7-2DOVQ-WAX3E-SRF3Y' // 必填，这里最好填自己申请的的
+        // key: XRFBZ-YD6KI-PQGGS-5V2SZ-S7FUE-QZBKH // 必填，这里最好填自己申请的的
         key: 'GTDBZ-WFSRX-JOT4W-7WYBD-Z2CTO-7QBEM' // 必填，这里最好填自己申请的的
     });
 import util from './util.js';

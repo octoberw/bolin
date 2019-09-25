@@ -21,7 +21,14 @@ Page({
     current: 0, // 图片集下标
     shoucang: '',
     id: '',
-    onceTurn: true
+    onceTurn: true,
+    likes: ''
+  },
+
+  likeCount(e) {
+    this.setData({
+      likes: e.detail.likes
+    })
   },
 
   cancelShoucang() {
@@ -132,6 +139,7 @@ Page({
 
         this.setData({
           res: res,
+          likes: res.likes,
           imgArr: imgArr,
           content: res.content.replace(/\<img/g, '<img style="width:auto;height:auto;display:block"'),
           shoucang: res.isCollect
@@ -144,6 +152,8 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
+    this.islike = this.selectComponent("#islike")
+
     this.setData({
       id: options.id
     })

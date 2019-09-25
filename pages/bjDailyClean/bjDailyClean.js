@@ -92,6 +92,9 @@ Page({
 
   // 获取周边服务者接口
   map(latitudeData, longitudeData) {
+    if(latitudeData ===0 || longitudeData ===0) {
+      return 
+    }
     var that = this
     api.post(map, {
         'distance': 3,
@@ -119,7 +122,6 @@ Page({
             title: ""
           })
         }
-
         that.setData({
           markers: markers
         })
@@ -154,6 +156,7 @@ Page({
             icon: 'none',
             duration: 1500,
           });
+          return
         }
       })
   },
@@ -162,8 +165,21 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    var that = this
 
+  },
+
+  /**
+   * 生命周期函数--监听页面初次渲染完成
+   */
+  onReady: function () {
+
+  },
+
+  /**
+   * 生命周期函数--监听页面显示
+   */
+  onShow: function () {
+    var that = this
     // 初始化地图
     wx.getLocation({
       type: 'gcj02',
@@ -178,20 +194,7 @@ Page({
         // that.moveTolocation()
       },
     });
-  },
-
-  /**
-   * 生命周期函数--监听页面初次渲染完成
-   */
-  onReady: function () {
-
-  },
-
-  /**
-   * 生命周期函数--监听页面显示
-   */
-  onShow: function () {
-
+    // this.map(this.data.latitudeID, this.data.longitudeID)
   },
 
   /**

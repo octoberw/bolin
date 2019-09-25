@@ -189,7 +189,7 @@
     </view>
 </view>
 <view class="padding_t_b">
-    <view class=" flex_row jus_bet ">
+    <view class=" flex_row jus_bet " bindtap="goComment">
         <text class="font_32_333" style="margin-right:12rpx">用户评价</text>
         <text class="iconfont iconicon_gengduo color_999"></text>
     </view>
@@ -259,13 +259,13 @@
 <scroll-view class="" style="white-space:nowrap; padding-bottom:50rpx" scroll-x>
     <!-- scroll-view 外层要一定要是 inline-block -->
     <block wx:for="{{res.like}}" wx:key="">
-        <view class="display_inline_block" data-num="{{item.num}}" bindtap="gotoZfListHome">
+        <view class="display_inline_block" data-num="{{item.num}}" data-types="{{item.types}}" bindtap="gotoZfListHome">
             <view class="flex_row padding_0_28 padding_tb_46_40" style="justify-content:flex-start;">
                 <image class="image_350_210 margin_r_22" src="{{item.avator}}"></image>
                 <view class="flex_column flex_1">
-                    <text class="font_28_333 margin_b_12 overflow_ell" style="font-weight:700;">{{item.type=='all'?'整租':'合租'}}|{{item.title}}</text>
+                    <text class="font_28_333 margin_b_12 overflow_ell" style="font-weight:700;">{{item.type=='join'?'非自营':'自营'}}|{{item.title}}</text>
                     <view class="font_24_333 flex_column">
-                        <text class="color_999 size_18">{{item.bed}} | {{item.houseType}} | 可住：{{item.orderPeople}}</text>
+                        <text class="color_999 size_18">{{item.bed}} | {{item.houseType}} | 可住：{{item.peopleCounting}}</text>
                         <view class="" style="margin-top:18rpx">
                             <block wx:for="{{item.id}}" wx:key="">
                                 <text class="font_20_999 padding_8_20">{{item.name}}</text>

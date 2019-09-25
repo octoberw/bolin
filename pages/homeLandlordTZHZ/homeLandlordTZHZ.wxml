@@ -14,7 +14,10 @@
                     <text class=" size_28 color_333" style="font-weight:700">面积</text>
                     <view class=" flex_row">
                         <input name="area" class=" size_28 color_999" value="" type="number" placeholder="未填写"></input>
-                        <text class=" size_28 color_333">m2</text>
+                        <view class="size_28 color_333 posr">
+                            <text class="">m</text>
+                            <text class=" posa" style="font-size:8px">2</text>
+                        </view>
                     </view>
                 </view>
                 <view class=" flex_row jus_between border_bottom">

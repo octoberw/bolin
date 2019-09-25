@@ -1,6 +1,6 @@
 <view class="small_border"></view>
 <view class="flex_row padding_0_28 padding_tb_46_40" style="justify-content:flex-start;">
-    <image class="image_350_210 margin_r_22" src="../../image/home/img_2.png "></image>
+    <image class="image_350_210 margin_r_22" src="{{res.avator}}"></image>
     <view class="flex_column flex_1" style="flex:1;">
         <text class="size_24 color_333 margin_b_12" style="font-weight:700;">{{res.type}}|{{res.title}}</text>
         <view class=" flex_row">
@@ -84,8 +84,8 @@
 <view class="foot flex_row " >
     <view wx:if="{{res.status=='nopay'}}" class="w100_foot height_98 size_28 color_666 bgc_quxiao" bindtap="showYuyue" style="text-align:center">取消订单</view>
     <view wx:if="{{res.status=='cancel'}}" class="w100_foot height_98 size_28 color_666 bgc_quxiao" style="text-align:center">订单已取消</view>
-    <view wx:if="{{res.status=='nopay'}}" class="flex_column height_98_zf jus_center w100_foot" style="background-color:#333">
-        <text class=" size_32 color_FBDAA2" bindtap="showYuyue" style="text-align:center">立即支付</text>
+    <view wx:if="{{res.status=='nopay'}}" class="flex_column height_98_zf jus_center w100_foot" style="background-color:#333" bindtap="pay">
+        <text class=" size_32 color_FBDAA2" style="text-align:center">立即支付</text>
         <text class=" size_20 color_FBDAA2" style="text-align:center">剩余支付时间30:00</text>
     </view>
 </view>

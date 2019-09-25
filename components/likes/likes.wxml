@@ -1,0 +1,5 @@
+<!-- components/likes/likes.wxml -->
+<view class="" bindtap="tapLike">
+    <image wx:if="{{isLike}}" class="img_like" src="/image/icon_like_active.png"></image>
+    <image wx:else class="img_like" src="/image/icon_like.png"></image>
+</view>

@@ -264,7 +264,7 @@
     </block>
 </scroll-view>
 <!-- 第五版 -->
-<view class="padding_0_28 padding_tb_50_20 flex_row" style="line-height:48rpx;">
+<view wx:if="{{articles.length>0}}" class="padding_0_28 padding_tb_50_20 flex_row" style="line-height:48rpx;">
     <view class="">
         <text class="font_32_333" style="margin-right:12rpx">泊邻故事</text>
         <text class="font_22_999">| 泊邻让您的生活更加精致</text>
@@ -273,7 +273,7 @@
 </view>
 <view class=" margin_0_28 column_count_2">
     <block wx:for="{{articles}}" wx:key="">
-        <view class="margin_r_28 posr image_333">
+        <view class="margin_r_28 posr image_333" data-articleid="{{item.id}}" bindtap="goArticle">
             <image class="image_333" src="{{item.listImg}}" mode="widthFix"  style="vertical-align: top;"></image>
             <view class="posa_b_0 flex_column image_333" >
                 <text class=" font_26_fff overflow_ell_wz">{{item.title}}</text>

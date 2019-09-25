@@ -1,4 +1,6 @@
 {
-  "usingComponents": {},
+  "usingComponents": {
+    "islike":"/components/likes/likes"
+  },
   "navigationBarTitleText": "家居经验"
 }

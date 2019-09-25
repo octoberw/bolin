@@ -31,6 +31,9 @@ const searchHome = '/app/homeStay/searchHome.htm'
 // 订单添加评论
 const addEvalute = '/app/homeStayEvaluate/addEvalute.htm'
 
+// 更多评论
+const msmoreEvaluate = '/app/homeStay/moreEvaluate.htm'
+
 module.exports = {
     location,
     homeStayIndex,
@@ -42,5 +45,6 @@ module.exports = {
     destination,
     houserAttribute,
     searchHome,
-    addEvalute
+    addEvalute,
+    msmoreEvaluate
 }
